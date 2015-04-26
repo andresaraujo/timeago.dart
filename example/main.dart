@@ -10,7 +10,7 @@ main() {
 
   var updateElement = () {
     int currentTime = new DateTime.now().millisecondsSinceEpoch;
-    autoElm.text = fuzzy.timeAgo(currentTime - (currentTime - fixedTime));
+    autoElm.text = fuzzy.timeAgo(fixedTime);
   };
 
   new Timer.periodic(new Duration(seconds: 1), (timer) {
