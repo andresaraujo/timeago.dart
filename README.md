@@ -21,7 +21,7 @@ main() async {
 ```
 
 ### Live Demo
-[Here](andresaraujo.github.io/timeago.dart)
+[Here](http://andresaraujo.github.io/timeago.dart/)
 
 ## Features and bugs
 
