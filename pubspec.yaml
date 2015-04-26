@@ -9,3 +9,4 @@ dependencies:
   intl: ">=0.12.2 <0.13.0"
 dev_dependencies:
   unittest: '>=0.11.0 <0.12.0'
+  browser: any

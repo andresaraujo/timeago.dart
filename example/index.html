@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeago.dart</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background-color: #F07925;
+            text-align: center;
+        }
+        .locales {
+            text-align: left;
+            float: left;
+        }
+        .locales a {
+            text-decoration: none;
+            padding: 1px;
+            border: 1px solid #443B1F;
+            color: #FFFFFF;
+        }
+        .bodyContainer {
+            clear: both;
+            font-family: 'Droid Sans', sans-serif;
+            font-weight: 400;
+            font-size: 3.5em;
+            color: #443B1F;
+        }
+        .timeAgo {
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .other {
+            font-size: 0.4em;
+            color: #FFFFFF;
+        }
+        .other p {
+            color: #443B1F;
+        }
+        .other ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="locales">
+    <a href="#">en</a>
+    <a href="#">en_short</a>
+    <a href="#">es</a>
+    <a href="#">es_short</a>
+</div>
+<div class="bodyContainer">
+
+    <p>This page was loaded</p>
+    <span id="timeAgo" class="timeAgo"></span>
+    <div class="other">
+        <p>Other examples:</p>
+        <ul id="other"></ul>
+    </div>
+</div>
+
+<script type="application/dart" src="main.dart"></script>
+<script data-pub-inline src="packages/browser/dart.js"></script>
+</body>
+</html>
