@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.1
+- Add fr and ja locales
+
 ## 0.1.0
 - Update messages to be more concise
 
