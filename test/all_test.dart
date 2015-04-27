@@ -10,10 +10,10 @@ main() {
   group('Ago', () {
     test('less than a minute ago', () {
       String result = fuzzy.timeAgo(fixedTime - (1 * 1 * 1000));
-      expect(result, equals('less than a minute ago'));
+      expect(result, equals('just a moment ago'));
 
       result = fuzzy.timeAgo(fixedTime - (1 * 44 * 1000));
-      expect(result, equals('less than a minute ago'));
+      expect(result, equals('just a moment ago'));
     });
 
     test('about a minute ago', () {
