@@ -36,27 +36,28 @@ main() {
 }
 
 addOtherExamples(TimeAgo fuzzy, Function addToOther) {
-  addToOther(fuzzy.timeAgo(fixedTime - (1 * 44 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (1 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (5 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (50 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (5 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (25 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (5 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (5 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (13 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(fixedTime - (3 * 12 * 30 * 24 * 60 * 60 * 1000)));
+  int currentTime = new DateTime.now().millisecondsSinceEpoch;
+  addToOther(fuzzy.timeAgo(currentTime - (1 * 44 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (1 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (5 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (50 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (5 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (25 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (5 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (5 * 30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (13 * 30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeAgo(currentTime - (3 * 12 * 30 * 24 * 60 * 60 * 1000)));
   addToOther("-");
-  addToOther(fuzzy.timeUntil(fixedTime - (1 * 44 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (1 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (5 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (50 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (5 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (25 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (5 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (5 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (13 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(fixedTime - (3 * 12 * 30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (1 * 44 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (1 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (5 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (50 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (5 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (25 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (5 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (5 * 30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (13 * 30 * 24 * 60 * 60 * 1000)));
+  addToOther(fuzzy.timeUntil(currentTime - (3 * 12 * 30 * 24 * 60 * 60 * 1000)));
 }

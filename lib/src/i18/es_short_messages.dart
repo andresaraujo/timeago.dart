@@ -13,22 +13,22 @@ class MessageLookup extends MessageLookupByLibrary {
   static suffixAgo() => "";
   static suffixFromNow() => "";
 
-  static lessThanOneMinute() => "~1m";
-  static aboutAMinute() => "1m";
+  static lessThanOneMinute() => "ahora";
+  static aboutAMinute() => "1 min";
   static minutes(minutes) =>
-      "${Intl.plural(minutes, zero: '', one: '${minutes}m', other: '${minutes}m')}";
-  static aboutAnHour() => "~1h";
+      "${Intl.plural(minutes, zero: '', one: '${minutes} min', other: '${minutes} min')}";
+  static aboutAnHour() => "~1 hr";
   static hours(hours) =>
-      "${Intl.plural(hours, zero: '', one: '${hours}h', other: '${hours}h')}";
-  static aDay() => "~1d";
+      "${Intl.plural(hours, zero: '', one: '${hours} hr', other: '${hours} hr')}";
+  static aDay() => "~1 día";
   static days(days) =>
-      "${Intl.plural(days, zero: '', one: '${days}d', other: '${days}d')}";
-  static aboutAMonth() => "~1me";
+      "${Intl.plural(days, zero: '', one: '${days} día', other: '${days} día')}";
+  static aboutAMonth() => "~1 mes";
   static months(months) =>
-      "${Intl.plural(months, zero: '', one: '${months}me', other: '${months}me')}";
-  static aboutAYear() => "~1a";
+      "${Intl.plural(months, zero: '', one: '${months} meses', other: '${months} meses')}";
+  static aboutAYear() => "~1 año";
   static years(years) =>
-      "${Intl.plural(years, zero: '', one: '${years}a', other: '${years}a')}";
+      "${Intl.plural(years, zero: '', one: '${years} año', other: '${years} año')}";
 
   static wordSeparator() => " ";
 

@@ -16,12 +16,12 @@ String suffixFromNow() => Intl.message('from now',
     args: [],
     desc: "A message when for suffix from now");
 
-String lessThanOneMinute() => Intl.message('less than a minute',
+String lessThanOneMinute() => Intl.message('just a moment',
     name: "lessThanOneMinute",
     args: [],
     desc: "A message when the elapsed time was less than one minute");
 
-String aboutAMinute() => Intl.message('about a minute',
+String aboutAMinute() => Intl.message('a minute',
     name: "aboutAMinute",
     args: [],
     desc: "A message when the elapsed time was about a minute");
@@ -34,7 +34,7 @@ String minutes(int minutes) => Intl.message("${Intl.plural(minutes,
     args: [minutes],
     desc: "A message indicating the number of minutes");
 
-String aboutAnHour() => Intl.message('about an hour',
+String aboutAnHour() => Intl.message('an hour',
     name: "aboutAnHour",
     args: [],
     desc: "A message when the elapsed time was about an hour");
@@ -58,7 +58,7 @@ String days(int days) => Intl.message("${Intl.plural(days,
     args: [days],
     desc: "A message indicating the number of days");
 
-String aboutAMonth() => Intl.message('about a month',
+String aboutAMonth() => Intl.message('a month',
     name: "aboutAMonth",
     args: [],
     desc: "A message when the elapsed time was about a month");
@@ -71,7 +71,7 @@ String months(int months) => Intl.message("${Intl.plural(months,
     args: [months],
     desc: "A message indicating the number of months");
 
-String aboutAYear() => Intl.message('about a year',
+String aboutAYear() => Intl.message('a year',
     name: "aboutAYear",
     args: [],
     desc: "A message when the elapsed time was about a year");

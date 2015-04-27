@@ -18,10 +18,10 @@ main() {
 
     test('about a minute ago', () {
       String result = fuzzy.timeAgo(fixedTime - (1 * 45 * 1000));
-      expect(result, equals('about a minute ago'));
+      expect(result, equals('a minute ago'));
 
       result = fuzzy.timeAgo(fixedTime - (1 * 89 * 1000));
-      expect(result, equals('about a minute ago'));
+      expect(result, equals('a minute ago'));
     });
 
     test('n minutes ago', () {
@@ -34,10 +34,10 @@ main() {
 
     test('about an hour ago', () {
       String result = fuzzy.timeAgo(fixedTime - (45 * 60 * 1000));
-      expect(result, equals('about an hour ago'));
+      expect(result, equals('an hour ago'));
 
       result = fuzzy.timeAgo(fixedTime - (89 * 60 * 1000));
-      expect(result, equals('about an hour ago'));
+      expect(result, equals('an hour ago'));
     });
 
     test('n hours ago', () {
@@ -66,10 +66,10 @@ main() {
 
     test('about a month ago', () {
       String result = fuzzy.timeAgo(fixedTime - (30 * 24 * 60 * 60 * 1000));
-      expect(result, equals('about a month ago'));
+      expect(result, equals('a month ago'));
 
       result = fuzzy.timeAgo(fixedTime - (59 * 24 * 60 * 60 * 1000));
-      expect(result, equals('about a month ago'));
+      expect(result, equals('a month ago'));
     });
 
     test('n a month ago', () {
@@ -82,10 +82,10 @@ main() {
 
     test('about a year ago', () {
       String result = fuzzy.timeAgo(fixedTime - (365 * 24 * 60 * 60 * 1000));
-      expect(result, equals('about a year ago'));
+      expect(result, equals('a year ago'));
 
       result = fuzzy.timeAgo(fixedTime - (2 * 364 * 24 * 60 * 60 * 1000));
-      expect(result, equals('about a year ago'));
+      expect(result, equals('a year ago'));
     });
 
     test('n years ago', () {

@@ -13,13 +13,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static suffixAgo() => "";
   static suffixFromNow() => "";
 
-  static lessThanOneMinute() => "menos de un minuto";
+  static lessThanOneMinute() => "un momento";
   static aboutAMinute() => "un minuto";
   static minutes(minutes) =>
-      "unos ${Intl.plural(minutes, zero: '', one: '${minutes} minuto', other: '${minutes} minutos')}";
+      "${Intl.plural(minutes, zero: '', one: '${minutes} minuto', other: '${minutes} minutos')}";
   static aboutAnHour() => "una hora";
   static hours(hours) =>
-      "unas ${Intl.plural(hours, zero: '', one: '${hours} hora', other: '${hours} horas')}";
+      "${Intl.plural(hours, zero: '', one: '${hours} hora', other: '${hours} horas')}";
   static aDay() => "un día";
   static days(days) =>
       "${Intl.plural(days, zero: '', one: '${days} día', other: '${days} días')}";
