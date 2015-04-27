@@ -12,16 +12,21 @@ main() async {
     int current = new DateTime.now().millisecondsSinceEpoch;
     
     print(time.timeAgo(current - (15 * 60 * 1000))); // 15 minutes ago
+    print(time.timeUntil(current - (15 * 60 * 1000))); // 15 minutes from now
     
-    //change locale
+    //change locale to spanish
     await time.changeLocale("es");
     
     print(time.timeAgo(current - (15 * 60 * 1000))); // hace 15 minutos
+    print(time.timeUntil(current - (15 * 60 * 1000))); // dentro de 15 minutos
 }
 ```
 
 ### Live Demo
 [Here](http://andresaraujo.github.io/timeago.dart/)
+
+### To do
+- Add more locales
 
 ## Features and bugs
 
