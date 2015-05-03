@@ -2,6 +2,8 @@
 
 A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 
+[![Pub](https://img.shields.io/pub/v/timeago.svg?style=flat-square)](timeago)
+
 ## Usage
 
 ```dart
