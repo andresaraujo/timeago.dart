@@ -42,6 +42,7 @@ Future initializeMessages(String localeName) {
   var canonicalizedLocale = Intl.canonicalizedLocale(localeName);
   var lib = _deferredLibraries[canonicalizedLocale];
   var load = lib == null ? new Future.value(false) : lib();
+
   return load.then(
       (_) => messageLookup.addLocale(localeName, _findGeneratedMessagesFor));
 }

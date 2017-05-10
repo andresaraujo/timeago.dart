@@ -10,17 +10,26 @@ A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 import 'package:timeago/timeago.dart';
 
 main() async {
-    TimeAgo time = new TimeAgo();
-    int current = new DateTime.now().millisecondsSinceEpoch;
+    TimeAgo ta = new TimeAgo();
+    final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
+    final fifteenFromNow = new DateTime.now().add(new Duration(minutes: 15));
     
-    print(time.timeAgo(current - (15 * 60 * 1000))); // 15 minutes ago
-    print(time.timeUntil(current - (15 * 60 * 1000))); // 15 minutes from now
+    print(ta.format(fifteenAgo)); // 15 minutes ago
+    print(ta.format(fifteenFromNow, until: true)); // 15 minutes from now
     
-    //change locale to spanish
-    await time.changeLocale("es");
+    // There's also a shorthand for a default time ago object
+    print(timeAgo(new DateTime.now())); // just a moment ago
     
-    print(time.timeAgo(current - (15 * 60 * 1000))); // hace 15 minutos
-    print(time.timeUntil(current - (15 * 60 * 1000))); // dentro de 15 minutos
+    
+    // Load locale messages, only need to do this once per locale
+    await TimeAgo.initializeLocale("es");
+    
+    // Change locale
+    ta.locale = 'es';
+    
+    print(ta.format(fifteenAgo)); // hace 15 minutos
+    print(ta.format(fifteenFromNow, until: true)); // dentro de 15 minutos
+    
 }
 ```
 

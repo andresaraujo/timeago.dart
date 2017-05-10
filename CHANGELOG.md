@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0
+- API change for better clarity
+
 ## 0.1.2
 - Increase `intl` dependency to accept <0.15.0
 
