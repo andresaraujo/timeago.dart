@@ -11,25 +11,25 @@ import 'package:timeago/timeago.dart';
 
 main() async {
     TimeAgo ta = new TimeAgo();
-    final current = new DateTime.now();
+    final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
+    final fifteenFromNow = new DateTime.now().add(new Duration(minutes: 15));
     
-    print(ta.timeAgo(current.subtract(new Duration(minutes: 15)))); // 15 minutes ago
-    print(ta.timeAgo(
-      current.add(new Duration(minutes: 15))),
-      until: true
-    ); // 15 minutes from now
+    print(ta.format(fifteenAgo)); // 15 minutes ago
+    print(ta.format(fifteenFromNow, until: true)); // 15 minutes from now
     
-    //change locale to spanish
+    // There's also a shorthand for a default time ago object
+    print(timeAgo(new DateTime.now())); // just a moment ago
+    
+    
+    // Load locale messages, only need to do this once per locale
     await TimeAgo.initializeLocale("es");
     
-    print(time.timeAgo(current - (15 * 60 * 1000))); // hace 15 minutos
-    print(time.timeUntil(current - (15 * 60 * 1000))); // dentro de 15 minutos
+    // Change locale
+    ta.locale = 'es';
     
-    print(ta.timeAgo(current.subtract(new Duration(minutes: 15)))); // hace 15 minutos
-    print(ta.timeAgo(
-      current.add(new Duration(minutes: 15))),
-      until: true
-    ); // dentro de 15 minutos
+    print(ta.format(fifteenAgo)); // hace 15 minutos
+    print(ta.format(fifteenFromNow, until: true)); // dentro de 15 minutos
+    
 }
 ```
 

@@ -2,7 +2,6 @@ import 'dart:html' as html;
 import 'dart:async' show Timer;
 import 'package:timeago/timeago.dart';
 
-String selectedLocale = 'en';
 
 main() async {
   var mainElement = html.querySelector("#timeAgo") as html.SpanElement;
