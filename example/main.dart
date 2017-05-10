@@ -2,62 +2,74 @@ import 'dart:html' as html;
 import 'dart:async' show Timer;
 import 'package:timeago/timeago.dart';
 
-int fixedTime = new DateTime.now().millisecondsSinceEpoch;
-main() {
-  var autoElm = html.querySelector("#timeAgo") as html.SpanElement;
+String selectedLocale = 'en';
 
-  var fuzzy = new TimeAgo();
+main() async {
+  var mainElement = html.querySelector("#timeAgo") as html.SpanElement;
 
-  var updateElement = () {
-    int currentTime = new DateTime.now().millisecondsSinceEpoch;
-    autoElm.text = fuzzy.timeAgo(fixedTime);
+  await TimeAgo.initializeLocale('es');
+
+  var updateMainElement = () {
+    mainElement.text = timeAgo(new DateTime.now());
   };
 
   new Timer.periodic(new Duration(seconds: 1), (timer) {
-    updateElement();
+    updateMainElement();
   });
-  updateElement();
+  updateMainElement();
 
   //Other examples
   var otherElm = html.querySelector("#other") as html.UListElement;
 
-  var addToOther = (str) {
+  var addToOther = (String str) {
     otherElm.append(new html.LIElement()..text = str);
   };
 
-  addOtherExamples(fuzzy, addToOther);
+  addOtherExamples(addToOther);
 
-  html.querySelectorAll("a").onClick.listen((event) async {
-    var locale = event.target.text;
-    await fuzzy.changeLocale(locale);
+  html
+      .querySelectorAll("a")
+      .onClick
+      .listen((html.MouseEvent event) async {
+    html.Element el = event.target as html.AnchorElement;
+    await TimeAgo.initializeLocale(el.text);
+    defaultTimeAgo.locale = el.text;
     otherElm.innerHtml = "";
-    addOtherExamples(fuzzy, addToOther);
+    addOtherExamples(addToOther);
   });
 }
 
-addOtherExamples(TimeAgo fuzzy, Function addToOther) {
-  int currentTime = new DateTime.now().millisecondsSinceEpoch;
-  addToOther(fuzzy.timeAgo(currentTime - (1 * 44 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (1 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (5 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (50 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (5 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (25 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (5 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (5 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (13 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeAgo(currentTime - (3 * 12 * 30 * 24 * 60 * 60 * 1000)));
+addOtherExamples(Function addToOther) {
+  var currentTime = new DateTime.now();
+  addToOther(
+      timeAgo(currentTime.subtract(new Duration(microseconds: 1 * 44 * 1000))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(minutes: 1))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(minutes: 5))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(minutes: 50))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(hours: 5))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(days: 1))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(days: 5))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(days: 30))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(days: 30 * 5))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(days: 365))));
+  addToOther(timeAgo(currentTime.subtract(new Duration(days: 365 * 5))));
+
   addToOther("-");
-  addToOther(fuzzy.timeUntil(currentTime - (1 * 44 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (1 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (5 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (50 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (5 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (25 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (5 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (5 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (13 * 30 * 24 * 60 * 60 * 1000)));
-  addToOther(fuzzy.timeUntil(currentTime - (3 * 12 * 30 * 24 * 60 * 60 * 1000)));
+
+  addToOther(
+      timeUntil(currentTime.add(new Duration(microseconds: 1 * 44 * 1000))));
+  addToOther(timeUntil(currentTime.add(new Duration(minutes: 1))));
+  addToOther(timeUntil(currentTime.add(new Duration(minutes: 5))));
+  addToOther(timeUntil(currentTime.add(new Duration(minutes: 50))));
+  addToOther(timeUntil(currentTime.add(new Duration(hours: 5))));
+  addToOther(timeUntil(currentTime.add(new Duration(days: 1))));
+  addToOther(timeUntil(currentTime.add(new Duration(days: 5))));
+  addToOther(timeUntil(currentTime.add(new Duration(days: 30))));
+  addToOther(timeUntil(currentTime.add(new Duration(days: 30 * 5))));
+  addToOther(timeUntil(currentTime.add(new Duration(days: 365))));
+  addToOther(timeUntil(currentTime.add(new Duration(days: 365 * 5))));
+}
+
+timeUntil(DateTime date) {
+  return timeAgo(date, until: true);
 }
