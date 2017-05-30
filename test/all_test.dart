@@ -5,7 +5,7 @@ import 'package:timeago/timeago.dart';
 
 final now = new DateTime.now();
 
-main() {
+void main() {
   TimeAgo fuzzy = new TimeAgo();
   group('Ago', () {
     test('less than a minute ago', () {

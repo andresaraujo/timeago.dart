@@ -1,9 +1,11 @@
+// ignore: implementation_imports
 import 'dart:html' as html;
 import 'dart:async' show Timer;
 import 'package:timeago/timeago.dart';
 
 
 main() async {
+  // ignore: all
   var mainElement = html.querySelector("#timeAgo") as html.SpanElement;
 
   await TimeAgo.initializeLocale('es');

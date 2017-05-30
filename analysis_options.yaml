@@ -1,2 +1,34 @@
 analyzer:
   strong-mode: true
+  exclude:
+    - lib/src/i18/**
+    - example/**
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_as
+    - avoid_empty_else
+    - avoid_init_to_null
+    - avoid_return_types_on_setters
+    - camel_case_types
+    - constant_identifier_names
+    - empty_constructor_bodies
+    - hash_and_equals
+    - implementation_imports
+    - library_names
+    - library_prefixes
+    - non_constant_identifier_names
+    - one_member_abstracts
+    - overriden_field
+    - package_api_docs
+    - package_names
+    - package_prefixed_library_names
+    - prefer_is_not_empty
+    - slash_for_doc_comments
+    - sort_constructors_first
+    - sort_unnamed_constructors_first
+    - super_goes_last
+    - type_init_formals
+    - unnecessary_brace_in_string_interp
+    - unnecessary_getters_setters

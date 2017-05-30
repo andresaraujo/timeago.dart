@@ -11,11 +11,7 @@ class TimeAgo {
     locale = locale ?? 'en_US';
   }
 
-  String _locale;
-
-  get locale => _locale;
-
-  set locale(String locale) => _locale = locale;
+  String locale;
 
   ///
   /// Initialize messages for [locale]
@@ -45,8 +41,8 @@ class TimeAgo {
   /// ```
   ///
   ///
-  format(DateTime date, {String locale, until: false}) {
-    locale ??= _locale;
+  String format(DateTime date, {String locale, until: false}) {
+    this.locale ??= locale;
     var millis;
 
     if (date is int) {
@@ -113,5 +109,5 @@ final defaultTimeAgo = new TimeAgo();
 ///
 /// Shorthand for `defaultTimeAgo.format`
 ///
-timeAgo(DateTime date, {String locale, until: false}) =>
+String timeAgo(DateTime date, {String locale, until: false}) =>
     defaultTimeAgo.format(date, locale: locale, until: until);

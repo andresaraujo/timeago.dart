@@ -36,7 +36,7 @@ MessageLookupByLibrary _findExact(localeName) {
   }
 }
 
-/** User programs should call this before using [localeName] for messages.*/
+/// User programs should call this before using [localeName] for messages.
 Future initializeMessages(String localeName) {
   initializeInternalMessageLookup(() => new CompositeMessageLookup());
   var canonicalizedLocale = Intl.canonicalizedLocale(localeName);
