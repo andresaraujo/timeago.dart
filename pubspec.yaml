@@ -6,7 +6,7 @@ author: Andres Araujo <a.araujo.azua@gmail.com>
 homepage: https://github.com/andresaraujo/timeago.dart
 
 environment:
-  sdk: '>=1.0.0 <2.0.0'
+  sdk: '>=1.23.0 <2.0.0'
 
 dependencies:
   intl: ^0.15.0
