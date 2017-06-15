@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.2
+- Update intl dependency
+
 ## 1.0.0
 - API change for better clarity
 
