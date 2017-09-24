@@ -2,23 +2,10 @@
 import 'dart:html' as html;
 import 'dart:async' show Timer;
 import 'package:timeago/timeago.dart';
-import 'package:timeago/src/all_messages.dart' as messages;
-import 'package:timeago/src/i18/messages_all.dart';
-import 'package:intl/intl.dart';
 
 TimeAgo ta = new TimeAgo();
 
 main() async {
-
-  //Intl.defaultLocale = "zh";
-  initializeMessages('zh').then((_) {
-    Intl.withLocale('zh', (){
-
-    print(messages.years(5));
-    });
-  });
-
-
 
   // ignore: all
   var mainElement = html.querySelector("#timeAgo") as html.SpanElement;
