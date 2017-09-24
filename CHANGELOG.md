@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+- Adds Chinese and Simplified Chinese thanks to @oraclebox
+
 ## 1.0.2
 - Update intl dependency
 
