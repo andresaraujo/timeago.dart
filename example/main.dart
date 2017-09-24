@@ -1,76 +1,76 @@
 // ignore: implementation_imports
-import 'dart:html' as html;
 import 'dart:async' show Timer;
+import 'dart:html';
 import 'package:timeago/timeago.dart';
 
-TimeAgo ta = new TimeAgo();
+final mainContainer = querySelector("#main");
+final listContainer = querySelector("#list");
 
 main() async {
+  final loadedTime = new DateTime.now();
 
-  // ignore: all
-  var mainElement = html.querySelector("#timeAgo") as html.SpanElement;
-
+  // Preload spanish messages
   await TimeAgo.initializeLocale('es');
 
-  var updateMainElement = () {
-    mainElement.text = timeAgo(new DateTime.now());
+  final updateMainContainer = () {
+    final now = new DateTime.now();
+    final difference = now.difference(loadedTime);
+    mainContainer.text = timeAgo(now.subtract(difference));
   };
 
-  new Timer.periodic(new Duration(seconds: 1), (timer) {
-    updateMainElement();
-  });
-  updateMainElement();
+  querySelectorAll(".locale-link").onClick.listen((event) async {
+    final el = event.target as AnchorElement;
 
-  //Other examples
-  var otherElm = html.querySelector("#other") as html.UListElement;
-
-  var addToOther = (String str) {
-    otherElm.append(new html.LIElement()..text = str);
-  };
-
-  addOtherExamples(addToOther);
-
-  html
-      .querySelectorAll("a")
-      .onClick
-      .listen((html.MouseEvent event) async {
-    html.Element el = event.target as html.AnchorElement;
+    // Initialize selected locale
     await TimeAgo.initializeLocale(el.text);
+
+    // Set locale for the default time ago object
     defaultTimeAgo.locale = el.text;
-    otherElm.innerHtml = "";
-    addOtherExamples(addToOther);
+
+    // Recreate list items
+    listContainer.innerHtml = "";
+    createListItems();
   });
+
+  updateMainContainer();
+  createListItems();
+
+  new Timer.periodic(new Duration(seconds: 1), (_) => updateMainContainer());
 }
 
-addOtherExamples(Function addToOther) {
-  var currentTime = new DateTime.now();
-  addToOther(
+addItem(String text) {
+  listContainer.append(new LIElement()..text = text);
+}
+
+createListItems() {
+  final currentTime = new DateTime.now();
+  addItem(
       timeAgo(currentTime.subtract(new Duration(microseconds: 1 * 44 * 1000))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(minutes: 1))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(minutes: 5))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(minutes: 50))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(hours: 5))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(days: 1))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(days: 5))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(days: 30))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(days: 30 * 5))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(days: 365))));
-  addToOther(timeAgo(currentTime.subtract(new Duration(days: 365 * 5))));
+  addItem(timeAgo(currentTime.subtract(new Duration(minutes: 1))));
+  addItem(timeAgo(currentTime.subtract(new Duration(minutes: 5))));
+  addItem(timeAgo(currentTime.subtract(new Duration(minutes: 50))));
+  addItem(timeAgo(currentTime.subtract(new Duration(hours: 5))));
+  addItem(timeAgo(currentTime.subtract(new Duration(days: 1))));
+  addItem(timeAgo(currentTime.subtract(new Duration(days: 5))));
+  addItem(timeAgo(currentTime.subtract(new Duration(days: 30))));
+  addItem(timeAgo(currentTime.subtract(new Duration(days: 30 * 5))));
+  addItem(timeAgo(currentTime.subtract(new Duration(days: 365))));
+  addItem(timeAgo(currentTime.subtract(new Duration(days: 365 * 5))));
 
-  addToOther("-");
+  addItem("-");
 
-  addToOther(
+  addItem(
       timeUntil(currentTime.add(new Duration(microseconds: 1 * 44 * 1000))));
-  addToOther(timeUntil(currentTime.add(new Duration(minutes: 1))));
-  addToOther(timeUntil(currentTime.add(new Duration(minutes: 5))));
-  addToOther(timeUntil(currentTime.add(new Duration(minutes: 50))));
-  addToOther(timeUntil(currentTime.add(new Duration(hours: 5))));
-  addToOther(timeUntil(currentTime.add(new Duration(days: 1))));
-  addToOther(timeUntil(currentTime.add(new Duration(days: 5))));
-  addToOther(timeUntil(currentTime.add(new Duration(days: 30))));
-  addToOther(timeUntil(currentTime.add(new Duration(days: 30 * 5))));
-  addToOther(timeUntil(currentTime.add(new Duration(days: 365))));
-  addToOther(timeUntil(currentTime.add(new Duration(days: 365 * 5))));
+  addItem(timeUntil(currentTime.add(new Duration(minutes: 1))));
+  addItem(timeUntil(currentTime.add(new Duration(minutes: 5))));
+  addItem(timeUntil(currentTime.add(new Duration(minutes: 50))));
+  addItem(timeUntil(currentTime.add(new Duration(hours: 5))));
+  addItem(timeUntil(currentTime.add(new Duration(days: 1))));
+  addItem(timeUntil(currentTime.add(new Duration(days: 5))));
+  addItem(timeUntil(currentTime.add(new Duration(days: 30))));
+  addItem(timeUntil(currentTime.add(new Duration(days: 30 * 5))));
+  addItem(timeUntil(currentTime.add(new Duration(days: 365))));
+  addItem(timeUntil(currentTime.add(new Duration(days: 365 * 5))));
 }
 
 timeUntil(DateTime date) {

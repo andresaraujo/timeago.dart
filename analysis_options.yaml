@@ -1,32 +1,39 @@
 analyzer:
   strong-mode: true
+  errors:
+    unused_import: error
+    unused_local_variable: error
+    dead_code: error
   exclude:
     - lib/src/i18/**
     - example/**
 
 linter:
   rules:
-    - always_declare_return_types
-    - avoid_as
-    - avoid_empty_else
-    - avoid_init_to_null
-    - avoid_return_types_on_setters
-    - camel_case_types
-    - constant_identifier_names
-    - empty_constructor_bodies
-    - hash_and_equals
-    - implementation_imports
-    - library_names
-    - library_prefixes
-    - non_constant_identifier_names
-    - one_member_abstracts
-    - package_api_docs
-    - package_names
-    - package_prefixed_library_names
-    - prefer_is_not_empty
-    - slash_for_doc_comments
-    - sort_constructors_first
-    - sort_unnamed_constructors_first
-    - super_goes_last
-    - type_init_formals
-    - unnecessary_getters_setters
+     # Errors
+     - avoid_empty_else
+     - comment_references
+     - control_flow_in_finally
+     - empty_statements
+     - hash_and_equals
+     - test_types_in_equals
+     - throw_in_finally
+     - unrelated_type_equality_checks
+     - valid_regexps
+
+     # Style
+     - avoid_init_to_null
+     - avoid_return_types_on_setters
+     - await_only_futures
+     - camel_case_types
+     - directives_ordering
+     - empty_catches
+     - empty_constructor_bodies
+     - library_names
+     - library_prefixes
+     - non_constant_identifier_names
+     - omit_local_variable_types
+     - prefer_final_fields
+     - prefer_is_not_empty
+     - slash_for_doc_comments
+     - type_init_formals

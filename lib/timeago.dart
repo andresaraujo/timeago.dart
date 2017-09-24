@@ -3,8 +3,8 @@ library timeago;
 import 'dart:async';
 import 'package:intl/intl.dart';
 
-import 'src/i18/messages_all.dart' as i18;
 import 'src/all_messages.dart' as messages;
+import 'src/i18/messages_all.dart' as i18;
 
 class TimeAgo {
   TimeAgo({String locale}) {

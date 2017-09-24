@@ -6,10 +6,10 @@ import 'package:timeago/timeago.dart';
 final now = new DateTime.now();
 
 void main() {
-  TimeAgo fuzzy = new TimeAgo();
+  final fuzzy = new TimeAgo();
   group('Ago', () {
     test('less than a minute ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(seconds: 1)));
+      var result = fuzzy.format(now.subtract(new Duration(seconds: 1)));
       expect(result, equals('just a moment ago'));
 
       result = fuzzy.format(now.subtract(new Duration(seconds: 44)));
@@ -17,7 +17,7 @@ void main() {
     });
 
     test('about a minute ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(seconds: 45)));
+      var result = fuzzy.format(now.subtract(new Duration(seconds: 45)));
       expect(result, equals('a minute ago'));
 
       result = result = fuzzy.format(now.subtract(new Duration(seconds: 89)));
@@ -25,7 +25,7 @@ void main() {
     });
 
     test('n minutes ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(seconds: 90)));
+      var result = fuzzy.format(now.subtract(new Duration(seconds: 90)));
       expect(result, equals('2 minutes ago'));
 
       result = fuzzy.format(now.subtract(new Duration(minutes: 44)));
@@ -33,7 +33,7 @@ void main() {
     });
 
     test('about an hour ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(minutes: 45)));
+      var result = fuzzy.format(now.subtract(new Duration(minutes: 45)));
       expect(result, equals('an hour ago'));
 
       result = fuzzy.format(now.subtract(new Duration(minutes: 89)));
@@ -41,7 +41,7 @@ void main() {
     });
 
     test('n hours ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(minutes: 90)));
+      var result = fuzzy.format(now.subtract(new Duration(minutes: 90)));
       expect(result, equals('2 hours ago'));
 
       result = fuzzy.format(now.subtract(new Duration(hours: 23)));
@@ -49,7 +49,7 @@ void main() {
     });
 
     test('a day ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(hours: 24)));
+      var result = fuzzy.format(now.subtract(new Duration(hours: 24)));
       expect(result, equals('a day ago'));
 
       result = fuzzy.format(now.subtract(new Duration(hours: 47)));
@@ -57,7 +57,7 @@ void main() {
     });
 
     test('n days ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(hours: 48)));
+      var result = fuzzy.format(now.subtract(new Duration(hours: 48)));
       expect(result, equals('2 days ago'));
 
       result = fuzzy.format(now.subtract(new Duration(days: 29)));
@@ -65,7 +65,7 @@ void main() {
     });
 
     test('about a month ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(days: 30)));
+      var result = fuzzy.format(now.subtract(new Duration(days: 30)));
       expect(result, equals('a month ago'));
 
       result = fuzzy.format(now.subtract(new Duration(days: 59)));
@@ -73,7 +73,7 @@ void main() {
     });
 
     test('n a month ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(days: 60)));
+      var result = fuzzy.format(now.subtract(new Duration(days: 60)));
       expect(result, equals('2 months ago'));
 
       result = fuzzy.format(now.subtract(new Duration(days: 364)));
@@ -81,7 +81,7 @@ void main() {
     });
 
     test('about a year ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(days: 365)));
+      var result = fuzzy.format(now.subtract(new Duration(days: 365)));
       expect(result, equals('a year ago'));
 
       result = fuzzy.format(now.subtract(new Duration(days: 364 * 2)));
@@ -89,7 +89,7 @@ void main() {
     });
 
     test('n years ago', () {
-      String result = fuzzy.format(now.subtract(new Duration(days: 365 * 2)));
+      var result = fuzzy.format(now.subtract(new Duration(days: 365 * 2)));
       expect(result, equals('2 years ago'));
 
       result = fuzzy.format(now.subtract(new Duration(days: 365 * 5)));
