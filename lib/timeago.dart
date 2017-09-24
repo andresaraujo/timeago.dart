@@ -8,7 +8,7 @@ import 'src/all_messages.dart' as messages;
 
 class TimeAgo {
   TimeAgo({String locale}) {
-    locale = locale ?? 'en_US';
+    this.locale = locale ?? 'en_US';
   }
 
   String locale;
@@ -42,7 +42,7 @@ class TimeAgo {
   ///
   ///
   String format(DateTime date, {String locale, until: false}) {
-    this.locale ??= locale;
+    final _locale = locale ?? this.locale;
     var millis;
 
     if (date is int) {
@@ -56,8 +56,7 @@ class TimeAgo {
     String prefix;
     String suffix;
     String time;
-
-    Intl.withLocale(locale, () {
+    Intl.withLocale(_locale, () {
       if (until && elapsed < 0) {
         elapsed = elapsed.abs();
         prefix = messages.prefixFromNow();
