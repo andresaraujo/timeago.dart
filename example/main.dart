@@ -1,7 +1,7 @@
 // ignore: implementation_imports
 import 'dart:async' show Timer;
 import 'dart:html';
-import 'package:timeago/timeago.dart';
+import 'package:timeago/browser_timeago.dart';
 
 final mainContainer = querySelector("#main");
 final listContainer = querySelector("#list");
@@ -10,7 +10,7 @@ main() async {
   final loadedTime = new DateTime.now();
 
   // Preload spanish messages
-  await TimeAgo.initializeLocale('es');
+  defaultTimeAgo.initializeLocale('es');
 
   final updateMainContainer = () {
     final now = new DateTime.now();
@@ -22,7 +22,7 @@ main() async {
     final el = event.target as AnchorElement;
 
     // Initialize selected locale
-    await TimeAgo.initializeLocale(el.text);
+    defaultTimeAgo.initializeLocale(el.text);
 
     // Set locale for the default time ago object
     defaultTimeAgo.locale = el.text;

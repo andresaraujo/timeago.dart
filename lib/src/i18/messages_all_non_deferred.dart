@@ -5,22 +5,23 @@ import 'package:intl/message_lookup_by_library.dart';
 import 'package:intl/src/intl_helpers.dart';
 import 'package:intl/intl.dart';
 
-import 'en_short_messages.dart' deferred as en_short;
-import 'es_messages.dart' deferred as es;
-import 'es_short_messages.dart' deferred as es_short;
-import 'fr_messages.dart' deferred as fr;
-import 'ja_messages.dart' deferred as ja;
-import 'zh_CN_messages.dart' deferred as zh_cn;
-import 'zh_messages.dart' deferred as zh;
+import 'en_short_messages.dart' as en_short;
+import 'es_messages.dart' as es;
+import 'es_short_messages.dart' as es_short;
+import 'fr_messages.dart' as fr;
+import 'ja_messages.dart' as ja;
+import 'zh_CN_messages.dart' as zh_cn;
+import 'zh_messages.dart' as zh;
 
-Map<String, Function> _deferredLibraries = {
-  'en_short': () => en_short.loadLibrary(),
-  'es': () => es.loadLibrary(),
-  'es_short': () => es_short.loadLibrary(),
-  'fr': () => fr.loadLibrary(),
-  'ja': () => ja.loadLibrary(),
-  'zh_CN': () => zh_cn.loadLibrary(),
-  'zh': () => zh.loadLibrary()
+typedef Future<dynamic> LibraryLoader();
+Map<String, LibraryLoader> _deferredLibraries = {
+  'en_short': () => new Future.value(null),
+  'es': () => new Future.value(null),
+  'es_short': () => new Future.value(null),
+  'fr': () => new Future.value(null),
+  'ja': () => new Future.value(null),
+  'zh_CN': () => new Future.value(null),
+  'zh': () => new Future.value(null)
 };
 
 MessageLookupByLibrary _findExact(localeName) {
