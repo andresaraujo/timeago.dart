@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0
+- Split import declaration into browser(lazy load) and server.
+
+For browser(lazy load) use: `import 'package:timeago/browser_timeago.dart';`
+For Flutter/server use: `import 'package:timeago/browser_timeago.dart';`
+
+Breaking: `TimeAgo.initializeLocale` is no longer a static method
+
+
 ## 1.1.0
 - Adds Chinese and Simplified Chinese thanks to @oraclebox
 
