@@ -13,8 +13,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static suffixAgo() => "";
   static suffixFromNow() => "";
 
-  static lessThanOneMinute() => "gerade eben";
-  static aboutAMinute() => "eine Minute";
+  static lessThanOneMinute() => "weniger als einer Minute";
+  static aboutAMinute() => "einer Minute";
   static minutes(minutes) =>
       "${Intl.plural(minutes, zero: '', one: '${minutes} Minute', other: '${minutes} Minuten')}";
   static aboutAnHour() => "~1 Stunde";
