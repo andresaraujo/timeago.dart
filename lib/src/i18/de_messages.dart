@@ -1,4 +1,4 @@
-library timeago.en_short_messages;
+library timeago.de;
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
