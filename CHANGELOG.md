@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.1
+- Adds German translation thanks to @btastic 
+
 ## 1.2.0
 - Split import declaration into browser(lazy load) and server.
 
