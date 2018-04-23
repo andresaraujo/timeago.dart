@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.2
+- Adds Portuguese translation thanks to @jeanpimentel
+
 ## 1.2.1
 - Adds German translation thanks to @btastic 
 
