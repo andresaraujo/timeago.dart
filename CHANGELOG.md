@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.3
+- Fixes Portuguese not working in non deferred import
+
 ## 1.2.2
 - Adds Portuguese translation thanks to @jeanpimentel
 
