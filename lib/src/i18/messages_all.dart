@@ -9,6 +9,7 @@ import 'de_messages.dart' deferred as de;
 import 'en_short_messages.dart' deferred as en_short;
 import 'es_messages.dart' deferred as es;
 import 'es_short_messages.dart' deferred as es_short;
+import 'fa_messages.dart' deferred as fa;
 import 'fr_messages.dart' deferred as fr;
 import 'ja_messages.dart' deferred as ja;
 import 'pt_BR_messages.dart' deferred as pt_br;
@@ -21,6 +22,7 @@ Map<String, Function> _deferredLibraries = {
   'en_short': () => en_short.loadLibrary(),
   'es': () => es.loadLibrary(),
   'es_short': () => es_short.loadLibrary(),
+  'fa': () => fa.loadLibrary(),
   'fr': () => fr.loadLibrary(),
   'ja': () => ja.loadLibrary(),
   'pt_BR': () => pt_br.loadLibrary(),
@@ -39,6 +41,8 @@ MessageLookupByLibrary _findExact(localeName) {
       return es.messages;
     case 'es_short':
       return es_short.messages;
+    case 'fa':
+      return fa.messages;
     case 'fr':
       return fr.messages;
     case 'ja':
