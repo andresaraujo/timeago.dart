@@ -96,4 +96,52 @@ void main() {
       expect(result, equals('5 years ago'));
     });
   });
+
+  group('Locale', () {
+    test('show messages in supported locales', () async {
+      await fuzzy.initializeLocale('es');
+      await fuzzy.initializeLocale('es_short');
+      await fuzzy.initializeLocale('en_short');
+      await fuzzy.initializeLocale('fa');
+      await fuzzy.initializeLocale('fr');
+      await fuzzy.initializeLocale('ja');
+      await fuzzy.initializeLocale('zh');
+      await fuzzy.initializeLocale('zh_CN');
+      await fuzzy.initializeLocale('pt_BR');
+      await fuzzy.initializeLocale('pt_BR_short');
+
+      var result = timeAgo(now.subtract(new Duration(seconds: 1)));
+      expect(result, equals('چند لحظه پیش'));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'en_short');
+      expect(result, equals('now'));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'es');
+      expect(result, equals('hace un momento'));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'es_short');
+      expect(result, equals('ahora'));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'fa');
+      expect(result, equals("il y a moins d\'une minute"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'fr');
+      expect(result, equals("il y a moins d\'une minute"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'ja');
+      expect(result, equals("1 分未満 前"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'zh');
+      expect(result, equals("少於一分鐘 前"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'zh_CN');
+      expect(result, equals("少于一分钟 前"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'pt_BR');
+      expect(result, equals("há poucos segundos"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'pt_BR_short');
+      expect(result, equals("agora"));
+    });
+  });
 }
