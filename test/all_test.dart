@@ -102,6 +102,7 @@ void main() {
       await fuzzy.initializeLocale('es');
       await fuzzy.initializeLocale('es_short');
       await fuzzy.initializeLocale('en_short');
+      await fuzzy.initializeLocale('fa');
       await fuzzy.initializeLocale('fr');
       await fuzzy.initializeLocale('ja');
       await fuzzy.initializeLocale('zh');
@@ -121,6 +122,9 @@ void main() {
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'es_short');
       expect(result, equals('ahora'));
 
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'fa');
+      expect(result, equals("چند لحظه پیش"));
+
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'fr');
       expect(result, equals("il y a moins d\'une minute"));
 
@@ -138,6 +142,8 @@ void main() {
 
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'pt_BR_short');
       expect(result, equals("agora"));
+      
     });
   });
 }
+
