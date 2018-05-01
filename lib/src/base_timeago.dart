@@ -30,7 +30,7 @@ class BaseTimeAgo {
   /// By default it will use the "ago" prefix.
   ///
   /// By default, this uses "es_US" locale, to change locale call
-  /// [initializeLocale] first.
+  /// [initializeLocale] first (await).
   ///
   /// ```
   /// final ta = new TimeAgo();
@@ -43,7 +43,7 @@ class BaseTimeAgo {
   /// ```
   ///
   ///
-  String format(DateTime date, {String locale, until: false}) {
+  String format(DateTime date, {String locale, bool until: false}) {
     final _locale = locale ?? this.locale;
     var millis;
 
