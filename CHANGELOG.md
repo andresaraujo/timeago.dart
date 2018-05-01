@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.4
+- Adds Farsi translation thanks to @siavash-mohseni
+
 ## 1.2.3
 - Fixes Portuguese not working in non deferred import
 

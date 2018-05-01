@@ -1,4 +1,4 @@
-library timeago.es_messages;
+library timeago.fa_messages;
 
 import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
