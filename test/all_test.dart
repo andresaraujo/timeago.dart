@@ -1,13 +1,36 @@
 library timeago.test;
 
 import 'package:test/test.dart';
-import 'package:timeago/timeago.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 final now = new DateTime.now();
 
 void main() {
-  final fuzzy = new TimeAgo();
-  group('Ago', () {
+
+  /*group('Ago', ()
+  {
+    test('less than a minute ago', () async {
+      var result = await timeago.format(now.subtract(new Duration(seconds: 1)));
+      expect(result, equals('just a moment ago'));
+
+      result = await timeago.format(now.subtract(new Duration(seconds: 1)), locale: 'en_short');
+      expect(result, equals('now'));
+
+      result = await timeago.format(now.subtract(new Duration(seconds: 1)), locale: 'es');
+      expect(result, equals('hace un momento'));
+    });
+  });*/
+
+  group('Config', ()
+  {
+    test('locale', () async {
+      timeago.setDefaultConfig(locale: 'es');
+
+      var result = await timeago.format(now.subtract(new Duration(seconds: 1)), clock: () => new DateTime.now().subtract(new Duration(days: 5)));
+      expect(result, equals('hace un momento'));
+    });
+  });
+  /*group('Ago', () {
     test('less than a minute ago', () {
       var result = fuzzy.format(now.subtract(new Duration(seconds: 1)));
       expect(result, equals('just a moment ago'));
@@ -139,5 +162,5 @@ void main() {
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'pt_BR_short');
       expect(result, equals("agora"));
     });
-  });
+  });*/
 }
