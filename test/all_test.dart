@@ -104,6 +104,7 @@ void main() {
       await fuzzy.initializeLocale('en_short');
       await fuzzy.initializeLocale('fa');
       await fuzzy.initializeLocale('fr');
+      await fuzzy.initializeLocale('it');
       await fuzzy.initializeLocale('ja');
       await fuzzy.initializeLocale('zh');
       await fuzzy.initializeLocale('zh_CN');
@@ -127,6 +128,9 @@ void main() {
 
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'fr');
       expect(result, equals("il y a moins d\'une minute"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'it');
+      expect(result, equals("meno di un minuto fa"));
 
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'ja');
       expect(result, equals("1 分未満 前"));
