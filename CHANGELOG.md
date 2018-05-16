@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.5
+- Adds Italian translation thanks to @nicofossa
+
 ## 1.2.4
 - Adds Farsi translation thanks to @siavash-mohseni
 
