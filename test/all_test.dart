@@ -110,6 +110,7 @@ void main() {
       await fuzzy.initializeLocale('zh_CN');
       await fuzzy.initializeLocale('pt_BR');
       await fuzzy.initializeLocale('pt_BR_short');
+      await fuzzy.initializeLocale('ru');
 
       var result = timeAgo(now.subtract(new Duration(seconds: 1)));
       expect(result, equals('just a moment ago'));
@@ -146,6 +147,9 @@ void main() {
 
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'pt_BR_short');
       expect(result, equals("agora"));
+
+      result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'ru');
+      expect(result, equals("минуту назад"));
       
     });
   });
