@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.6
+- Adds Russian translation thanks to @asstet
+
 ## 1.2.5
 - Adds Italian translation thanks to @nicofossa
 
