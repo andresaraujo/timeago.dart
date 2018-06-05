@@ -15,6 +15,7 @@ import 'it_messages.dart' deferred as it;
 import 'ja_messages.dart' deferred as ja;
 import 'pt_BR_messages.dart' deferred as pt_br;
 import 'pt_BR_short_messages.dart' deferred as pt_br_short;
+import 'ru_messages.dart' deferred as ru;
 import 'zh_CN_messages.dart' deferred as zh_cn;
 import 'zh_messages.dart' deferred as zh;
 
@@ -30,6 +31,7 @@ Map<String, Function> _deferredLibraries = {
   'ja': () => ja.loadLibrary(),
   'pt_BR': () => pt_br.loadLibrary(),
   'pt_BR_short': () => pt_br_short.loadLibrary(),
+  'ru': () => ru.loadLibrary(),
   'zh_CN': () => zh_cn.loadLibrary(),
   'zh': () => zh.loadLibrary()
 };
@@ -56,6 +58,8 @@ MessageLookupByLibrary _findExact(localeName) {
       return pt_br.messages;
     case 'pt_BR_short':
       return pt_br_short.messages;
+    case 'ru':
+      return ru.messages;
     case 'zh_CN':
       return zh_cn.messages;
     case 'zh':
@@ -87,7 +91,8 @@ bool _messagesExistFor(String locale) {
 
 MessageLookupByLibrary _findGeneratedMessagesFor(locale) {
   var actualLocale =
-      Intl.verifiedLocale(locale, _messagesExistFor, onFailure: (_) => null);
+  Intl.verifiedLocale(locale, _messagesExistFor, onFailure: (_) => null);
   if (actualLocale == null) return null;
   return _findExact(actualLocale);
 }
+
