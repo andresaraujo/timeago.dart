@@ -1,6 +1,9 @@
 # Changelog
 
 ## 1.2.6
+- Fixes to German translation
+
+## 1.2.6
 - Adds Russian translation thanks to @asstet
 
 ## 1.2.5

@@ -22,7 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "${Intl.plural(hours, zero: '', one: '${hours} Stunde', other: '${hours} Stunden')}";
   static aDay() => "~1 Tag";
   static days(days) =>
-      "${Intl.plural(days, zero: '', one: '${days} Tag', other: '${days} Tage')}";
+      "${Intl.plural(days, zero: '', one: '${days} Tag', other: '${days} Tagen')}";
   static aboutAMonth() => "~1 Monat";
   static months(months) =>
       "${Intl.plural(months, zero: '', one: '${months} Monat', other: '${months} Monate')}";

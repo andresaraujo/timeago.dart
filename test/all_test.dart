@@ -111,6 +111,7 @@ void main() {
       await fuzzy.initializeLocale('pt_BR');
       await fuzzy.initializeLocale('pt_BR_short');
       await fuzzy.initializeLocale('ru');
+      await fuzzy.initializeLocale('de');
 
       var result = timeAgo(now.subtract(new Duration(seconds: 1)));
       expect(result, equals('just a moment ago'));
@@ -123,6 +124,9 @@ void main() {
 
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'es_short');
       expect(result, equals('ahora'));
+
+      result = timeAgo(now.subtract(new Duration(days: 2)), locale: 'de');
+      expect(result, equals("vor 2 Tagen"));
 
       result = timeAgo(now.subtract(new Duration(seconds: 1)), locale: 'fa');
       expect(result, equals("چند لحظه پیش"));
