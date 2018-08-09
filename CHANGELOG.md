@@ -1,7 +1,7 @@
 # Changelog
 
 ## 1.3.0
-- Dar 2.0 support
+- Dart 2.0 support
 
 ## 1.2.6
 - Fixes to German translation
