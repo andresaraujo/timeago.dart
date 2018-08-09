@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'all_messages.dart' as messages;
 
 typedef InitializeMessages = Future Function(String localName);
+
 class BaseTimeAgo {
   InitializeMessages initializeMessages;
   BaseTimeAgo(this.initializeMessages, {String locale}) {
@@ -45,15 +46,8 @@ class BaseTimeAgo {
   ///
   String format(DateTime date, {String locale, bool until: false}) {
     final _locale = locale ?? this.locale;
-    var millis;
 
-    if (date is int) {
-      millis = date;
-    } else if (date is DateTime) {
-      millis = date.millisecondsSinceEpoch;
-    }
-
-    var elapsed = new DateTime.now().millisecondsSinceEpoch - millis;
+    var elapsed = new DateTime.now().difference(date).inMilliseconds;
 
     String prefix;
     String suffix;
