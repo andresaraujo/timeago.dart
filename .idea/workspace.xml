@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="499a3ca4-170d-49b1-991d-d4d5267aba02" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/browser_timeago.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/all_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/base_timeago.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/de_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/en_short_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/es_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/es_short_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/fr_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/ja_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/messages_all.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/messages_all_non_deferred.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/pt_BR_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/pt_BR_short_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/zh_CN_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/i18/zh_messages.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/timeago.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/timeago/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/all_test.dart" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/timeago/example/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pt_br_messages.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/pt_br_messages.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lookupmessages.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/lookupmessages.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeago.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/timeago/lib/timeago.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="expect.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-0.12.42/lib/src/frontend/expect.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2635">
+              <caret line="165" selection-start-line="165" selection-end-line="165" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_test.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/timeago/test/all_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding>
+                <element signature="e#23#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_</find>
+      <find>Tagen</find>
+      <find>EnglishMessages</find>
+      <find>locale</find>
+      <find>prin</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/lib/browser_timeago.dart" />
+        <option value="$PROJECT_DIR$/lib/src/base_timeago.dart" />
+        <option value="$PROJECT_DIR$/lib/src/i18/messages_all.dart" />
+        <option value="$PROJECT_DIR$/lib/src/i18/messages_all_non_deferred.dart" />
+        <option value="$PROJECT_DIR$/lib/src/i18/fa_messages.dart" />
+        <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/lib/src/messages/lookupmessages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/en_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/tt.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/es_messages.dart" />
+        <option value="$PROJECT_DIR$/test/all_test.dart" />
+        <option value="$PROJECT_DIR$/lib/src/i18/de_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/de_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/fr_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/ja_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/i18/pt_BR_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/zh_cn_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/zh_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/pt_br_short_messages.dart" />
+        <option value="$PROJECT_DIR$/lib/src/messages/pt_br_messages.dart" />
+        <option value="$PROJECT_DIR$/example/main.dart" />
+        <option value="$PROJECT_DIR$/lib/timeago.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/analysis_options.yaml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="778" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="timeago.dart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="timeago.dart" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/messages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/timeago_flutter/timeago_flutter" />
+      <recent name="$PROJECT_DIR$/timeago" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="filePath" value="$PROJECT_DIR$/test/all_test.dart" />
+    </configuration>
+    <configuration name="test" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <option name="filePath" value="$PROJECT_DIR$/timeago/test/all_test.dart" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="499a3ca4-170d-49b1-991d-d4d5267aba02" name="Default" comment="" />
+      <created>1524492365813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524492365813</updated>
+      <workItem from="1524492368876" duration="706000" />
+      <workItem from="1524668369424" duration="10627000" />
+      <workItem from="1525194032674" duration="430000" />
+      <workItem from="1526481022563" duration="359000" />
+      <workItem from="1528217612440" duration="247000" />
+      <workItem from="1530119675463" duration="1768000" />
+      <workItem from="1532723918833" duration="2995000" />
+      <workItem from="1532795208867" duration="12526000" />
+      <workItem from="1533083527618" duration="855000" />
+      <workItem from="1533084411521" duration="663000" />
+      <workItem from="1533738131426" duration="128000" />
+      <workItem from="1533853368163" duration="122000" />
+    </task>
+    <task id="LOCAL-00001" summary="1.2.2 Release">
+      <created>1524492990134</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524492990134</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1.2.3 Release, Fix non deferred pt locale">
+      <created>1524670401602</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524670401602</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.2.4 Release, Add Farsi translation">
+      <created>1525194344682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525194344682</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.2.5 Release, Add Italian translation">
+      <created>1526481242764</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526481242764</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.2.6 Release, Add Russian translation">
+      <created>1528217728094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528217728094</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.2.7 Release, Fixes german to translation">
+      <created>1530120521567</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1530120521567</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="test - 2018.07.28 at 17h 29m 46s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 31m 16s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 31m 50s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 33m 04s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 33m 28s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 34m 42s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 35m 16s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 36m 19s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 36m 48s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="test - 2018.07.28 at 17h 37m 17s.xml">
+      <configuration name="test" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31426000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1280" height="778" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494043" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32892805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32892805" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4434655" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32892805" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1.2.2 Release" />
+    <MESSAGE value="1.2.3 Release, Fix non deferred pt locale" />
+    <MESSAGE value="1.2.4 Release, Add Farsi translation" />
+    <MESSAGE value="1.2.5 Release, Add Italian translation" />
+    <MESSAGE value="1.2.6 Release, Add Russian translation" />
+    <MESSAGE value="1.2.7 Release, Fixes german to translation" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.2.7 Release, Fixes german to translation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/timeago/test/all_test.dart</url>
+          <line>61</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/timeago/example/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/pt_br_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/lookupmessages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/timeago.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-0.12.42/lib/src/frontend/expect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/test/all_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" selection-start-line="13" selection-end-line="15" />
+          <folding>
+            <element signature="e#23#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/example/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/pt_br_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/lookupmessages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/timeago.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-0.12.42/lib/src/frontend/expect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/test/all_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#23#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/intl-0.15.6/lib/intl.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3910">
+          <caret line="264" column="13" selection-start-line="264" selection-start-column="13" selection-end-line="264" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/dart/2.0.0-dev.67.0/libexec/lib/core/date_time.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3757">
+          <caret line="223" column="2" selection-start-line="223" selection-start-column="2" selection-end-line="223" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/all_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/en_short_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/timeago/lib/timeago.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="28" column="80" lean-forward="true" selection-start-line="28" selection-start-column="80" selection-end-line="28" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/en_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/es_short_messages.dart" />
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-0.12.42/lib/test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="148" column="21" selection-start-line="148" selection-start-column="21" selection-end-line="148" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/test-0.12.42/lib/src/frontend/expect.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2635">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/lookupmessages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/fr_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/ja_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/fr_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/de_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/pt_BR_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/de_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/ja_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/zh_cn_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/zh_CN_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/pt_BR_short_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/lib/src/i18/zh_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/zh_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/messages/pt_br_short_messages.dart" />
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/pt_br_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/example/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/src/messages/es_messages.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/analysis_options.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/CHANGELOG.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/lib/timeago.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/timeago/test/all_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding>
+            <element signature="e#23#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
