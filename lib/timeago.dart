@@ -12,5 +12,5 @@ final defaultTimeAgo = new TimeAgo();
 ///
 /// Shorthand for `defaultTimeAgo.format`
 ///
-String timeAgo(DateTime date, {String locale, until: false}) =>
+String timeAgo(DateTime date, {String locale, bool until: false}) =>
     defaultTimeAgo.format(date, locale: locale, until: until);
