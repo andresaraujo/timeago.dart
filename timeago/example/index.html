@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeago.dart</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background-color: #F07925;
+            text-align: center;
+        }
+        .locales {
+            text-align: left;
+            float: left;
+        }
+        .locales a {
+            text-decoration: none;
+            padding: 1px;
+            border: 1px solid #443B1F;
+            color: #FFFFFF;
+        }
+        .bodyContainer {
+            clear: both;
+            font-family: 'Droid Sans', sans-serif;
+            font-weight: 400;
+            font-size: 3.5em;
+            color: #443B1F;
+        }
+        .main {
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .other {
+            font-size: 0.4em;
+            color: #FFFFFF;
+        }
+        .other p {
+            color: #443B1F;
+        }
+        .other ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="locales">
+    <a href="#" class="locale-link">de</a>
+    <a href="#" class="locale-link">en</a>
+    <a href="#" class="locale-link">en_short</a>
+    <a href="#" class="locale-link">es</a>
+    <a href="#" class="locale-link">es_short</a>
+    <a href="#" class="locale-link">fa</a>
+    <a href="#" class="locale-link">fr</a>
+    <a href="#" class="locale-link">ja</a>
+    <a href="#" class="locale-link">pt_BR</a>
+    <a href="#" class="locale-link">pt_BR_short</a>
+    <a href="#" class="locale-link">ru</a>
+    <a href="#" class="locale-link">zh</a>
+    <a href="#" class="locale-link">zh_CN</a>
+    <a href="#" class="locale-link">it</a>
+</div>
+<div class="bodyContainer">
+
+    <p>This page was loaded</p>
+    <span id="main" class="main"></span>
+
+    <div class="other">
+        <p>Other examples:</p>
+        <ul id="list"></ul>
+    </div>
+</div>
+
+<script defer src="main.dart.js"></script>
+</body>
+</html>
