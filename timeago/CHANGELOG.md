@@ -14,6 +14,21 @@ To add the remaining just call `setLocaleMessages`, see example.
 
 - See test and example folder file for examples
 
+## 1.3.0
+- Dart 2.0 support
+
+## 1.2.6
+- Fixes to German translation
+
+## 1.2.6
+- Adds Russian translation thanks to @asstet
+
+## 1.2.5
+- Adds Italian translation thanks to @nicofossa
+
+## 1.2.4
+- Adds Farsi translation thanks to @siavash-mohseni
+
 ## 1.2.3
 - Fixes Portuguese not working in non deferred import
 

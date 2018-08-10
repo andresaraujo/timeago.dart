@@ -6,4 +6,7 @@ export 'package:timeago/src/messages/ja_messages.dart';
 export 'package:timeago/src/messages/pt_br_messages.dart';
 export 'package:timeago/src/messages/zh_cn_messages.dart';
 export 'package:timeago/src/messages/zh_messages.dart';
+export 'package:timeago/src/messages/it_messages.dart';
+export 'package:timeago/src/messages/fa_messages.dart';
+export 'package:timeago/src/messages/ru_messages.dart';
 export 'package:timeago/src/timeago.dart';
