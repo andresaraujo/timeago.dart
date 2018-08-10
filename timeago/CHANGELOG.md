@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.1
+- Adds missing Fa, It and Ru Locales from merge conflict
+
 ## 2.0.0
 BREAKING CHANGES:
 - v2 of this library does not depend on package `intl` anymore, It didn't make sense for the small amount
