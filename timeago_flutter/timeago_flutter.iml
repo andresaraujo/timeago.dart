@@ -12,6 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/flutter_assets/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/timeago_flutter_example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/timeago_flutter_example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/timeago_flutter_example/build" />

@@ -6,72 +6,51 @@ A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 
 [![Build Status](https://travis-ci.org/andresaraujo/timeago.dart.svg?branch=master)](https://travis-ci.org/andresaraujo/timeago.dart)
 
+## About v2
+
+- v2 of this library does not depend on package `intl` anymore, It didn't make sense for the small amount
+of text and now we can use the same code for browser, Flutter and server.
+
+- API is now a lot simpler, no need to create instance just use the `format` method.
+
+- Allows to add and override locales messages with `setLocaleMessages`
+
+- All v1 locale messages are available to use, currently library only loads by default `en`, `en_short`, `es` and `es_short`.
+To add the remaining just call `setLocaleMessages`, see example.
+
+
 ## Usage
 
 The easiest way to use this library via top-level function `timeAgo(date)`:
 
 ```dart
-main() async {
+import 'package:timeago/timeago.dart' as timeago;
+
+main() {
     final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
 
-    print(timeAgo(fifteenAgo)); // 15 minutes ago
+    print(timeago.format(fifteenAgo)); // 15 minutes ago
+    print(timeago.format(fifteenAgo, locale: 'en_short')); // 15m
+    print(timeago.format(fifteenAgo, locale: 'es')); // hace 15 minutos
 }
 ```
 
-If you are using it in multiple places and want a little more control you can create your own instance:
-
+### Adding new locales
 
 ```dart
-import 'package:timeago/timeago.dart';
-
-main() async {
-    TimeAgo ta = new TimeAgo();
+main() {
     final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
-    final fifteenFromNow = new DateTime.now().add(new Duration(minutes: 15));
-    
-    print(ta.format(fifteenAgo)); // 15 minutes ago
-    print(ta.format(fifteenFromNow, until: true)); // 15 minutes from now
-    
-    // Change locale
-    ta.locale = 'es';
-    
-    print(ta.format(fifteenAgo)); // hace 15 minutos
-    print(ta.format(fifteenFromNow, until: true)); // dentro de 15 minutos
-    
+
+    // Add a new locale messages
+    timeago.setLocaleMessages('fr', timeago.FrMessages());
+
+    // Override a locale message
+    timeago.setLocaleMessages('en', CustomMessages());
+
+    print(timeago.format(fifteenAgo)); // 15 min ago
+    print(timeago.format(fifteenAgo, locale: 'fr')); // environ 15 minutes
 }
 ```
-
-### Using on the Browser(lazy load localizations)
-
-While you can use TimeAgo as previously described in the browser it will load all the current localization messages at once.
-To lazyload localizations use `import 'package:timeago/browser_timeago.dart';` instead:
-
-```dart
-import 'package:timeago/browser_timeago.dart';
-
-main() async {
-    TimeAgo ta = new TimeAgo();
-    final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
-    final fifteenFromNow = new DateTime.now().add(new Duration(minutes: 15));
-    
-    print(ta.format(fifteenAgo)); // 15 minutes ago
-    print(ta.format(fifteenFromNow, until: true)); // 15 minutes from now
-    
-    
-    // Lazy Load locale messages, only need to do this once per locale.
-    await ta.initializeLocale("es");
-    
-    // Change locale
-    ta.locale = 'es';
-    
-    print(ta.format(fifteenAgo)); // hace 15 minutos
-    print(ta.format(fifteenFromNow, until: true)); // dentro de 15 minutos
-    
-}
-```
-
-### Live Demo
-[Here](http://andresaraujo.github.io/timeago.dart/)
 
 ## Features and bugs
 

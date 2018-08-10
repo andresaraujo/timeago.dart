@@ -19,19 +19,22 @@ Map<String, LookupMessages> _lookupMessagesMap = {
 };
 
 setLocaleMessages(String locale, LookupMessages lookupMessages) {
+  assert(locale != null, '[locale] must not be null');
   assert(lookupMessages != null, '[lookupMessages] must not be null');
   _lookupMessagesMap[locale] =  lookupMessages;
 }
 
-format(DateTime date, { String locale = 'en', DateTime clock, allowFromNow = false }) {
-  final messages = _lookupMessagesMap[locale] ?? EnMessages();
+format(DateTime date, { String locale, DateTime clock, allowFromNow }) {
+  final _locale = locale ?? 'en';
+  final _allowFromNow = allowFromNow ?? false;
+  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
   var prefix;
   var suffix;
 
-  if (allowFromNow && elapsed < 0) {
+  if (_allowFromNow && elapsed < 0) {
     elapsed = date.isBefore(_clock) ? elapsed : elapsed.abs();
     prefix = messages.prefixFromNow();
     suffix = messages.suffixFromNow();
