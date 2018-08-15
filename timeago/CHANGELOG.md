@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.2
+- Adds Nl translation thanks to @Elvander
+
 ## 2.0.1
 - Adds missing Fa, It and Ru Locales from merge conflict
 
