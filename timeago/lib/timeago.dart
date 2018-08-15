@@ -9,4 +9,5 @@ export 'package:timeago/src/messages/zh_messages.dart';
 export 'package:timeago/src/messages/it_messages.dart';
 export 'package:timeago/src/messages/fa_messages.dart';
 export 'package:timeago/src/messages/ru_messages.dart';
+export 'package:timeago/src/messages/nl_messages.dart';
 export 'package:timeago/src/timeago.dart';
