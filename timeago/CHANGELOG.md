@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.3
+- Adds missing return type (`String`) to `format` function
+
 ## 2.0.2
 - Adds Nl translation thanks to @Elvander
 

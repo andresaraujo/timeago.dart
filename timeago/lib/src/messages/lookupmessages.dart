@@ -14,5 +14,5 @@ abstract class LookupMessages {
   String months(int months);
   String aboutAYear(int year);
   String years(int years);
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

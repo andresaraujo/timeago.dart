@@ -17,29 +17,32 @@ Map<String, LookupMessages> _lookupMessagesMap = {
 /// setLocaleMessages('fr', FrMessages())
 /// ```
 ///
-/// If you want to define locale message implement [LookupMessages] interface with
-/// the desired messages
+/// If you want to define locale message implement [LookupMessages] interface
+/// with the desired messages
 ///
-setLocaleMessages(String locale, LookupMessages lookupMessages) {
+void setLocaleMessages(String locale, LookupMessages lookupMessages) {
   assert(locale != null, '[locale] must not be null');
   assert(lookupMessages != null, '[lookupMessages] must not be null');
-  _lookupMessagesMap[locale] =  lookupMessages;
+  _lookupMessagesMap[locale] = lookupMessages;
 }
 
-///
 /// Formats provided [date] to a fuzzy time like 'a moment ago'
-/// If [locale] is passed will look for message for that locale, if you want to add or override locales use [setLocaleMessages]. Defaults to 'en'
-/// If [clock] is passed this will be the point of reference for calculating the elapsed time. Defaults to DateTime.now()
-/// if [allowFromNow] is passed, format will use the From prefix, ie. a date 5 minutes from now in 'en' locale will display as "5 minutes from now"
-format(DateTime date, { String locale, DateTime clock, allowFromNow }) {
+///
+/// - If [locale] is passed will look for message for that locale, if you want
+///   to add or override locales use [setLocaleMessages]. Defaults to 'en'
+/// - If [clock] is passed this will be the point of reference for calculating
+///   the elapsed time. Defaults to DateTime.now()
+/// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
+///   5 minutes from now in 'en' locale will display as "5 minutes from now"
+String format(DateTime date,
+    {String locale, DateTime clock, bool allowFromNow}) {
   final _locale = locale ?? 'en';
   final _allowFromNow = allowFromNow ?? false;
   final messages = _lookupMessagesMap[_locale] ?? EnMessages();
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
-  var prefix;
-  var suffix;
+  String prefix, suffix;
 
   if (_allowFromNow && elapsed < 0) {
     elapsed = date.isBefore(_clock) ? elapsed : elapsed.abs();
