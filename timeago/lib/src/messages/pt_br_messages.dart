@@ -11,7 +11,7 @@ class PtBrMessages implements LookupMessages {
   String aboutAnHour(int minutes) => 'uma hora';
   String hours(int hours) => '${hours} horas';
   String aDay(int hours) => 'um dia';
-  String days(int days) => '${days} diase';
+  String days(int days) => '${days} dias';
   String aboutAMonth(int days) => 'um mês';
   String months(int months) => '${months} meses';
   String aboutAYear(int year) => 'um ano';
