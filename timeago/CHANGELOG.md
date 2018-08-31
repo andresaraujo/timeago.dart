@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.4
+- Fix plural days in pt_BR thanks to @leocavalcante
+
 ## 2.0.3
 - Adds missing return type (`String`) to `format` function
 
