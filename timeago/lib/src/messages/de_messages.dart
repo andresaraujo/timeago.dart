@@ -13,8 +13,8 @@ class DeMessages implements LookupMessages {
   String aDay(int hours) => '~1 Tag';
   String days(int days) => '$days Tage';
   String aboutAMonth(int days) => '~1 Monat';
-  String months(int months) => '$months Monate';
+  String months(int months) => '$months Monaten';
   String aboutAYear(int year) => '~1 Jahr';
-  String years(int years) => '$years Jahre';
+  String years(int years) => '$years Jahren';
   wordSeparator() => ' ';
 }
