@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.5
+- Fix plural day in german translation
+
 ## 2.0.4
 - Fix plural days in pt_BR thanks to @leocavalcante
 
