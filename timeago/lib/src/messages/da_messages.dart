@@ -16,10 +16,10 @@ class DaMessages implements LookupMessages {
   String months(int months) => '$months måneder';
   String aboutAYear(int year) => 'omkring et år';
   String years(int years) => '$years år';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
 
-class EnShortMessages implements LookupMessages {
+class DaShortMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => '';
@@ -35,5 +35,5 @@ class EnShortMessages implements LookupMessages {
   String months(int months) => '$months md';
   String aboutAYear(int year) => '~1 år';
   String years(int years) => '$years år';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
