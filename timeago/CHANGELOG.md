@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.6
+- Fix zh_cn_messages thanks to @zjinys
+
 ## 2.0.5
 - Fix plural day in german translation
 
