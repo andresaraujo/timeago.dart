@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.7
+- Add danish thanks to @nikolajskov
+
 ## 2.0.6
 - Fix zh_cn_messages thanks to @zjinys
 
