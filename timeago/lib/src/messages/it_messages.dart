@@ -16,5 +16,5 @@ class ItMessages implements LookupMessages {
   String months(int months) => '${months} mesi';
   String aboutAYear(int year) => 'circa un anno';
   String years(int years) => '${years} anni';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

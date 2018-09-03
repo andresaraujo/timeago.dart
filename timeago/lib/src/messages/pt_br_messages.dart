@@ -16,7 +16,7 @@ class PtBrMessages implements LookupMessages {
   String months(int months) => '${months} meses';
   String aboutAYear(int year) => 'um ano';
   String years(int years) => '${years} anos';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
 
 class PtBrShortMessages implements LookupMessages {
@@ -35,5 +35,5 @@ class PtBrShortMessages implements LookupMessages {
   String months(int months) => '${months} meses';
   String aboutAYear(int year) => '~1 ano';
   String years(int years) => '${years} anos';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

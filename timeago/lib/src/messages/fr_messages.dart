@@ -16,5 +16,5 @@ class FrMessages implements LookupMessages {
   String months(int months) => 'environ $months mois';
   String aboutAYear(int year) => 'un an';
   String years(int years) => '$years ans';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

@@ -16,5 +16,5 @@ class RuMessages implements LookupMessages {
   String months(int months) => '${months} месяцев';
   String aboutAYear(int year) => 'год';
   String years(int years) => '${years} лет';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

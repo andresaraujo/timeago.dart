@@ -16,5 +16,5 @@ class DeMessages implements LookupMessages {
   String months(int months) => '$months Monaten';
   String aboutAYear(int year) => '~1 Jahr';
   String years(int years) => '$years Jahren';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

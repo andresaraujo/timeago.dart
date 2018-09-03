@@ -16,5 +16,5 @@ class ZhMessages implements LookupMessages {
   String months(int months) => '約 ${months} 月';
   String aboutAYear(int year) => '約1年';
   String years(int years) => '約 ${years} 年';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

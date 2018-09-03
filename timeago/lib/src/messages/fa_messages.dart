@@ -16,5 +16,5 @@ class FaMessages implements LookupMessages {
   String months(int months) => '${months} ماه';
   String aboutAYear(int year) => '~یک سال';
   String years(int years) => '${years} سال';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

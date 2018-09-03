@@ -16,7 +16,7 @@ class EsMessages implements LookupMessages {
   String months(int months) => '$months meses';
   String aboutAYear(int year) => 'un año';
   String years(int years) => '$years años';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
 class EsShortMessages implements LookupMessages {
   String prefixAgo() => '';
@@ -34,5 +34,5 @@ class EsShortMessages implements LookupMessages {
   String months(int months) => '$months meses';
   String aboutAYear(int year) => '~1 año';
   String years(int years) => '$years años';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

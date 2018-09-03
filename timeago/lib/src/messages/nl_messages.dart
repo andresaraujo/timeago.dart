@@ -16,7 +16,7 @@ class NlMessages implements LookupMessages {
   String months(int months) => '$months maanden';
   String aboutAYear(int year) => 'ongeveer één jaar';
   String years(int years) => '$years jaren';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
 
 class NlShortMessages implements LookupMessages {
@@ -35,5 +35,5 @@ class NlShortMessages implements LookupMessages {
   String months(int months) => '$months ma';
   String aboutAYear(int year) => '~1 jr';
   String years(int years) => '$years jr';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }

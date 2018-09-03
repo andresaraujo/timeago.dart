@@ -16,7 +16,7 @@ class EnMessages implements LookupMessages {
   String months(int months) => '$months months';
   String aboutAYear(int year) => 'about a year';
   String years(int years) => '$years years';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
 
 class EnShortMessages implements LookupMessages {
@@ -35,5 +35,5 @@ class EnShortMessages implements LookupMessages {
   String months(int months) => '$months mo';
   String aboutAYear(int year) => '~1 yr';
   String years(int years) => '$years yr';
-  wordSeparator() => ' ';
+  String wordSeparator() => ' ';
 }
