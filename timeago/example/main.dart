@@ -11,6 +11,7 @@ main() async {
   timeago.setLocaleMessages('de', timeago.DeMessages());
   timeago.setLocaleMessages('fr', timeago.FrMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
+  timeago.setLocaleMessages('id', timeago.IdMessages());
   timeago.setLocaleMessages('pt_BR', timeago.PtBrMessages());
   timeago.setLocaleMessages('pt_BR_short', timeago.PtBrShortMessages());
   timeago.setLocaleMessages('zh_CN', timeago.ZhCnMessages());
@@ -78,6 +79,6 @@ createListItems() {
   addItem(timeUntil(currentTime.add(new Duration(days: 365 * 5))));
 }
 
-timeUntil(DateTime date) {
+String timeUntil(DateTime date) {
   return timeago.format(date, locale: locale, allowFromNow: true);
 }
