@@ -5,7 +5,7 @@ class TrMessages implements LookupMessages {
   String prefixFromNow() => '';
   String suffixAgo() => 'önce';
   String suffixFromNow() => 'şimdi';
-  String lessThanOneMinute(int seconds) => 'biraz önce';
+  String lessThanOneMinute(int seconds) => 'biraz';
   String aboutAMinute(int minutes) => 'bir dakika';
   String minutes(int minutes) => '$minutes dakika';
   String aboutAnHour(int minutes) => 'bir saat';
