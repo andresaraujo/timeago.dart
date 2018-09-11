@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.8
+- Add Turkish thanks to @ferdigokdemir
+- Add Indonesian thanks to @skybur
+
 ## 2.0.7
 - Add danish thanks to @nikolajskov
 
