@@ -12,4 +12,5 @@ export 'package:timeago/src/messages/fa_messages.dart';
 export 'package:timeago/src/messages/ru_messages.dart';
 export 'package:timeago/src/messages/nl_messages.dart';
 export 'package:timeago/src/messages/da_messages.dart';
+export 'package:timeago/src/messages/tr_messages.dart';
 export 'package:timeago/src/timeago.dart';

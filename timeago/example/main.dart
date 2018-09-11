@@ -19,6 +19,7 @@ main() async {
   timeago.setLocaleMessages('it', timeago.ItMessages());
   timeago.setLocaleMessages('fa', timeago.FaMessages());
   timeago.setLocaleMessages('ru', timeago.RuMessages());
+  timeago.setLocaleMessages('tr', timeago.TrMessages());
 
   final loadedTime = new DateTime.now();
 
