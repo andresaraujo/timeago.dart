@@ -1,6 +1,6 @@
+import 'package:timeago/src/messages/lookupmessages.dart';
 
 class PlMessages implements LookupMessages {
-  
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => 'temu';

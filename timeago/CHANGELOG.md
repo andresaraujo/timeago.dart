@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.9
+- Add Polish locale thanks to @bartektartanus
+
 ## 2.0.8
 - Add Turkish thanks to @ferdigokdemir
 - Add Indonesian thanks to @skybur
