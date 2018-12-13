@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.10
+- Add short German locale thanks to @sdolski
+- Export lookupmessages.dart to prevent analyzer warnings
+
 ## 2.0.9
 - Add Polish locale thanks to @bartektartanus
 
