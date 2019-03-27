@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.11
+- Add Thai locale thanks to @thawatchai
+- Add Norwegian Bokmål locale thanks to @danibjor
+- Update example fix main timeago text to update with the selected locale
+
 ## 2.0.10
 - Add short German locale thanks to @sdolski
 - Export lookupmessages.dart to prevent analyzer warnings

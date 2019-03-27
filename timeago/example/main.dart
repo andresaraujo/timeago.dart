@@ -21,13 +21,16 @@ main() async {
   timeago.setLocaleMessages('ru', timeago.RuMessages());
   timeago.setLocaleMessages('tr', timeago.TrMessages());
   timeago.setLocaleMessages('pl', timeago.PlMessages());
+  timeago.setLocaleMessages('th', timeago.ThMessages());
+  timeago.setLocaleMessages('th_short', timeago.ThShortMessages());
+  timeago.setLocaleMessages('nb_NO', timeago.NbNoShortMessages());
 
   final loadedTime = new DateTime.now();
 
   final updateMainContainer = () {
     final now = new DateTime.now();
     final difference = now.difference(loadedTime);
-    mainContainer.text = timeago.format(now.subtract(difference));
+    mainContainer.text = timeago.format(now.subtract(difference), locale: locale);
   };
 
   querySelectorAll(".locale-link").onClick.listen((event) async {
