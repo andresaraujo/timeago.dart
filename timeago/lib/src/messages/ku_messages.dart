@@ -1,6 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
-class EnMessages implements LookupMessages {
+class KuMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => 'لەمەوپێش';
@@ -19,7 +19,7 @@ class EnMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
-class EnShortMessages implements LookupMessages {
+class KuShortMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => '';
