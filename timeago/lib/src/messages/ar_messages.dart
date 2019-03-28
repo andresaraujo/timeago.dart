@@ -19,7 +19,7 @@ class ArMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
-class EnShortMessages implements LookupMessages {
+class ArShortMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => '';
