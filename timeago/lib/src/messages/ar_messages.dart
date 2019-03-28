@@ -1,6 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
-class AnMessages implements LookupMessages {
+class ArMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => 'منذ';
