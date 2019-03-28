@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.12
+- Add Arabic locale thanks to @ammaratef45
+- Add Kurdish locale thanks to @Xoshbin
+
 ## 2.0.11
 - Add Thai locale thanks to @thawatchai
 - Add Norwegian Bokmål locale thanks to @danibjor
