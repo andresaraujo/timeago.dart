@@ -12,8 +12,8 @@ class JaMessages implements LookupMessages {
   String hours(int hours) => '約 $hours 時間';
   String aDay(int hours) => '約 1 日';
   String days(int days) => '約 ${days} 日';
-  String aboutAMonth(int days) => '約 1 月';
-  String months(int months) => '約 ${months} 月';
+  String aboutAMonth(int days) => '約 1 か月';
+  String months(int months) => '約 ${months} か月';
   String aboutAYear(int year) => '約 1 年';
   String years(int years) => '約 ${years} 年';
   String wordSeparator() => ' ';
