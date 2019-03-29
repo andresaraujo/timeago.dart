@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.13
+- Fixes in japanese locale thanks to @mitsuoka
+
 ## 2.0.12
 - Add Arabic locale thanks to @ammaratef45
 - Add Kurdish locale thanks to @Xoshbin
