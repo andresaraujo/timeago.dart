@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.14
+- Add Korean locale thanks to @jaceshim
+
 ## 2.0.13
 - Fixes in japanese locale thanks to @mitsuoka
 

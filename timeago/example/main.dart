@@ -28,6 +28,7 @@ main() async {
   timeago.setLocaleMessages('ku_short', timeago.KuShortMessages());
   timeago.setLocaleMessages('ar', timeago.ArMessages());
   timeago.setLocaleMessages('ar_short', timeago.ArShortMessages());
+  timeago.setLocaleMessages('ko', timeago.KoMessages());
 
   final loadedTime = new DateTime.now();
 
