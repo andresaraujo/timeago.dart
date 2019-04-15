@@ -8,3 +8,4 @@ pubspec.lock
 .packages
 .dart_tool/
 .idea/
+.vscode

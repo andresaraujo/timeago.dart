@@ -6,6 +6,7 @@ A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 
 [![Build Status](https://travis-ci.org/andresaraujo/timeago.dart.svg?branch=master)](https://travis-ci.org/andresaraujo/timeago.dart)
 
+[![support](https://img.shields.io/badge/platform-web%7Cflutter%7Cdart%20vm-ff69b4.svg?style=flat-square)](https://github.com/andresaraujo/timeago.dart)
 ## About v2
 
 - v2 of this library does not depend on package `intl` anymore, It didn't make sense for the small amount
