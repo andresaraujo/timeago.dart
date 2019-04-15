@@ -1,88 +1,248 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:timeago_flutter/timeago_flutter.dart';
 
-void main() => runApp(new MyApp());
+const localeList = [
+  'en',
+  'en_short',
+  'es',
+  'es_short',
+  'de',
+  'fr',
+  'ja',
+  'id',
+  'pt_BR',
+  'pt_BR_short',
+  'zh',
+  'zh_CN',
+  'it',
+  'fa',
+  'ru',
+  'tr',
+  'pl',
+  'th',
+  'th_short',
+  'nb_NO',
+  'nb_NO_short',
+  'ku',
+  'ku_short',
+  'ar',
+  'ar_short',
+  'ko',
+  'en_custom',
+];
+
+class CustomEnglish extends EnMessages {
+  @override
+  String prefixFromNow() => 'in';
+  @override
+  String suffixFromNow() => '';
+  @override
+  String aboutAMinute(_) => 'a minute';
+  @override
+  String aboutAnHour(_) => 'a hour';
+  @override
+  String aboutAMonth(_) => 'a month';
+}
+
+main() async {
+  // Add additional locales
+  localeList.forEach((locale) {
+    switch (locale) {
+      case 'de':
+        setLocaleMessages(locale, DeMessages());
+        break;
+      case 'fr':
+        setLocaleMessages(locale, FrMessages());
+        break;
+      case 'ja':
+        setLocaleMessages(locale, JaMessages());
+        break;
+      case 'id':
+        setLocaleMessages(locale, IdMessages());
+        break;
+      case 'pt_BR':
+        setLocaleMessages(locale, PtBrMessages());
+        break;
+      case 'pt_BR_short':
+        setLocaleMessages(locale, PtBrShortMessages());
+        break;
+      case 'zh':
+        setLocaleMessages(locale, ZhMessages());
+        break;
+      case 'zh_CN':
+        setLocaleMessages(locale, ZhCnMessages());
+        break;
+      case 'it':
+        setLocaleMessages(locale, ItMessages());
+        break;
+      case 'fa':
+        setLocaleMessages(locale, FaMessages());
+        break;
+      case 'ru':
+        setLocaleMessages(locale, RuMessages());
+        break;
+      case 'tr':
+        setLocaleMessages(locale, TrMessages());
+        break;
+      case 'pl':
+        setLocaleMessages(locale, PlMessages());
+        break;
+      case 'th':
+        setLocaleMessages(locale, ThMessages());
+        break;
+      case 'th_short':
+        setLocaleMessages(locale, ThShortMessages());
+        break;
+      case 'nb_NO':
+        setLocaleMessages(locale, NbNoMessages());
+        break;
+        break;
+      case 'nb_NO':
+        setLocaleMessages(locale, NbNoShortMessages());
+        break;
+      case 'ku':
+        setLocaleMessages(locale, KuMessages());
+        break;
+      case 'ku_short':
+        setLocaleMessages(locale, KuShortMessages());
+        break;
+      case 'ar':
+        setLocaleMessages(locale, ArMessages());
+        break;
+      case 'ar_short':
+        setLocaleMessages(locale, ArShortMessages());
+        break;
+      case 'ko':
+        setLocaleMessages(locale, KoMessages());
+        break;
+      case 'en_custom':
+        setLocaleMessages(locale, CustomEnglish());
+        break;
+    }
+  });
+  return runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
-        // counter didn't reset back to zero; the application is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+    return MaterialApp(
+        theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
+        home: MyHomePage(title: 'Flutter Demo Home Page'));
   }
 }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  String _locale = 'en';
+  bool _showFutureDates = false;
+  DateTime _baseDate;
 
-  void _incrementCounter() {
+  @override
+  void initState() {
+    _baseDate = DateTime.now();
+    super.initState();
+  }
+
+  void _chageLocale(String locale) {
     setState(() {
-      _counter++;
+      _locale = locale;
     });
+  }
+
+  void _onFutureChange(bool value) {
+    setState(() {
+      _showFutureDates = value;
+    });
+  }
+
+  List<DropdownMenuItem<String>> _buildLocaleButtons() {
+    return localeList.map((locale) {
+      return DropdownMenuItem(
+        value: locale,
+        child: Text(locale),
+      );
+    }).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            new Text(
-              'You have pushed the button this many times:',
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text('Locale'),
+            trailing: DropdownButton(
+              value: _locale,
+              items: _buildLocaleButtons(),
+              onChanged: _chageLocale,
             ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-            new Timeago(
-              builder: (_, formatted) {
-                return new Text(formatted);
-              },
-              date: new DateTime.now(),
-            )
-          ],
-        ),
+          ),
+          CheckboxListTile(
+            title: Text('Future date'),
+            value: _showFutureDates,
+            onChanged: _onFutureChange,
+          ),
+          GridView.count(
+            shrinkWrap: true,
+            primary: false,
+            crossAxisCount: 2,
+            physics: ScrollPhysics(),
+            children: _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+          ),
+        ],
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  List<Widget> _buildTimeagolist(
+      String locale, DateTime baseDate, bool showFutureDates) {
+    addOrSubstract(DateTime date, bool showFutureDates, Duration duration) {
+      return showFutureDates ? date.add(duration) : date.subtract(duration);
+    }
+
+    List<DateTime> times = [
+      addOrSubstract(baseDate, showFutureDates, Duration(seconds: 5)),
+      addOrSubstract(baseDate, showFutureDates, Duration(seconds: 45)),
+      addOrSubstract(baseDate, showFutureDates, Duration(seconds: 90)),
+      addOrSubstract(baseDate, showFutureDates, Duration(minutes: 45)),
+      addOrSubstract(baseDate, showFutureDates, Duration(minutes: 90)),
+      addOrSubstract(baseDate, showFutureDates, Duration(hours: 24)),
+      addOrSubstract(baseDate, showFutureDates, Duration(hours: 48)),
+      addOrSubstract(baseDate, showFutureDates, Duration(days: 30)),
+      addOrSubstract(baseDate, showFutureDates, Duration(days: 60)),
+      addOrSubstract(baseDate, showFutureDates, Duration(days: 365)),
+      addOrSubstract(baseDate, showFutureDates, Duration(days: 365 * 2)),
+    ];
+
+    return times.map((time) {
+      return Container(
+        margin: EdgeInsets.all(5),
+        color: Colors.blue.shade700,
+        child: Center(
+          child: Timeago(
+            builder: (_, value) => Text(
+                  value,
+                  style: Theme.of(context).textTheme.caption,
+                ),
+            date: time,
+            locale: locale,
+            allowFromNow: true,
+          ),
+        ),
+      );
+    }).toList();
   }
 }

@@ -1,6 +1,9 @@
 name: timeago_flutter_example
 description: A new Flutter application.
 
+environment:
+  sdk: '>=2.0.0-dev <3.0.0'
+
 dependencies:
   timeago_flutter:
     path: ..
