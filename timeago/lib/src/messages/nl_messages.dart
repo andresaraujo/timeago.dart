@@ -5,7 +5,7 @@ class NlMessages implements LookupMessages {
   String prefixFromNow() => 'over';
   String suffixAgo() => 'geleden';
   String suffixFromNow() => '';
-  String lessThanOneMinute(int seconds) => 'een moment geleden';
+  String lessThanOneMinute(int seconds) => 'een moment';
   String aboutAMinute(int minutes) => 'één minuut';
   String minutes(int minutes) => '$minutes minuten';
   String aboutAnHour(int minutes) => 'ongeveer één uur';
