@@ -31,6 +31,7 @@ main() async {
   timeago.setLocaleMessages('ko', timeago.KoMessages());
   timeago.setLocaleMessages('vi', timeago.ViMessages());
   timeago.setLocaleMessages('vi_short', timeago.ViShortMessages());
+  timeago.setLocaleMessages('ta', timeago.TaMessages());
 
   final loadedTime = new DateTime.now();
 

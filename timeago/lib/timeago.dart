@@ -20,5 +20,6 @@ export 'package:timeago/src/messages/ku_messages.dart';
 export 'package:timeago/src/messages/ar_messages.dart';
 export 'package:timeago/src/messages/ko_messages.dart';
 export 'package:timeago/src/messages/vi_messages.dart';
+export 'package:timeago/src/messages/ta_messages.dart';
 export 'package:timeago/src/messages/lookupmessages.dart';
 export 'package:timeago/src/timeago.dart';
