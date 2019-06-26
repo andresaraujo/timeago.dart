@@ -9,13 +9,13 @@ class RuMessages implements LookupMessages {
   String aboutAMinute(int minutes) => 'минуту';
   String minutes(int minutes) => '$minutes ${_convert(minutes, 'minutes')}';
   String aboutAnHour(int minutes) => 'час';
-  String hours(int hours) => '${hours} ${_convert(hours, 'hours')}';
+  String hours(int hours) => '$hours ${_convert(hours, 'hours')}';
   String aDay(int hours) => 'день';
-  String days(int days) => '${days} ${_convert(days, 'days')}';
+  String days(int days) => '$days ${_convert(days, 'days')}';
   String aboutAMonth(int days) => 'месяц';
-  String months(int months) => '${months} ${_convert(months, 'months')}';
+  String months(int months) => '$months ${_convert(months, 'months')}';
   String aboutAYear(int year) => 'год';
-  String years(int years) => '${years} ${_convert(years, 'years')}';
+  String years(int years) => '$years ${_convert(years, 'years')}';
   String wordSeparator() => ' ';
 }
 
