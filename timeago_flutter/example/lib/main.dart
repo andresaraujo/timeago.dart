@@ -25,6 +25,8 @@ const localeList = [
   'th_short',
   'nb_NO',
   'nb_NO_short',
+  'nn_NO',
+  'nn_NO_short',
   'ku',
   'ku_short',
   'ar',
@@ -98,9 +100,14 @@ main() async {
       case 'nb_NO':
         setLocaleMessages(locale, NbNoMessages());
         break;
-        break;
-      case 'nb_NO':
+      case 'nb_NO_short':
         setLocaleMessages(locale, NbNoShortMessages());
+        break;
+      case 'nn_NO':
+        setLocaleMessages(locale, NnNoMessages());
+        break;
+      case 'nn_NO_short':
+        setLocaleMessages(locale, NnNoShortMessages());
         break;
       case 'ku':
         setLocaleMessages(locale, KuMessages());
