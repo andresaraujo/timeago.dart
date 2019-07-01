@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.17
+- Improvements to Russian thanks to  @Goolpe 
+- Add Khmer language thanks to @SuuSoJeat
+- Add Nynorsk language thanks to @arnemolland
+
 ## 2.0.16
 - Add Vietnamese locale thanks to @luantranminh 
 - Fix nl message thanks to @soowa
