@@ -3,6 +3,7 @@ export 'package:timeago/src/messages/en_messages.dart';
 export 'package:timeago/src/messages/es_messages.dart';
 export 'package:timeago/src/messages/fr_messages.dart';
 export 'package:timeago/src/messages/ja_messages.dart';
+export 'package:timeago/src/messages/km_messages.dart';
 export 'package:timeago/src/messages/id_messages.dart';
 export 'package:timeago/src/messages/pt_br_messages.dart';
 export 'package:timeago/src/messages/zh_cn_messages.dart';
