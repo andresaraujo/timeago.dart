@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.17+1
+- Just fix so you can use arabic lang/ @Saifallak
+
 ## 2.0.17
 - Improvements to Russian thanks to  @Goolpe 
 - Add Khmer language thanks to @SuuSoJeat
