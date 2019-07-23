@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.18
+- Improvements to Ku messages thanks to @Xoshbin 
+
 ## 2.0.17
 - Improvements to Russian thanks to  @Goolpe 
 - Add Khmer language thanks to @SuuSoJeat
