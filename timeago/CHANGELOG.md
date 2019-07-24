@@ -1,7 +1,10 @@
 # Changelog
 
-## 2.0.17+1
+## 2.0.19
 - Just fix so you can use arabic lang/ @Saifallak
+
+## 2.0.18
+- Improvements to Ku messages thanks to @Xoshbin 
 
 ## 2.0.17
 - Improvements to Russian thanks to  @Goolpe 
