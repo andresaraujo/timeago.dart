@@ -26,26 +26,34 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
   _lookupMessagesMap[locale] = lookupMessages;
 }
 
-/// Formats provided [date] to a fuzzy time like 'a moment ago'
+/// Formats provided [since] to a fuzzy time like 'a moment ago'
 ///
 /// - If [locale] is passed will look for message for that locale, if you want
 ///   to add or override locales use [setLocaleMessages]. Defaults to 'en'
-/// - If [clock] is passed this will be the point of reference for calculating
+/// - If [until] is passed this will be the point of reference for calculating
 ///   the elapsed time. Defaults to DateTime.now()
 /// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
-String format(DateTime date,
-    {String locale, DateTime clock, bool allowFromNow}) {
-  final _locale = locale ?? 'en';
-  final _allowFromNow = allowFromNow ?? false;
-  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
-  final _clock = clock ?? DateTime.now();
-  var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
+String format(DateTime since, {
+  String locale = 'en',
+  DateTime until,
+  bool allowFromNow = true,
+  String intercept(Duration duration, {DateTime since}),
+}) {
+  final messages = _lookupMessagesMap[locale] ?? EnMessages();
+  final _until = until ?? DateTime.now();
+  final duration = _until.difference(since);
+
+  if (intercept != null) { // Put more params into LookupMessage as well?
+    final intercepted = intercept(duration, since: since);
+    if (intercepted != null) {
+      return intercepted;
+    }
+  }
 
   String prefix, suffix;
 
-  if (_allowFromNow && elapsed < 0) {
-    elapsed = date.isBefore(_clock) ? elapsed : elapsed.abs();
+  if (allowFromNow && duration.isNegative) {
     prefix = messages.prefixFromNow();
     suffix = messages.suffixFromNow();
   } else {
@@ -53,36 +61,36 @@ String format(DateTime date,
     suffix = messages.suffixAgo();
   }
 
-  final num seconds = elapsed / 1000;
-  final num minutes = seconds / 60;
-  final num hours = minutes / 60;
-  final num days = hours / 24;
-  final num months = days / 30;
-  final num years = days / 365;
+  final seconds = duration.inSeconds.abs();
+  final minutes = duration.inMinutes.abs();
+  final hours = duration.inHours.abs();
+  final days = duration.inDays.abs();
+  final months = days ~/ 30; // FIXME: it's not accuracy, should determine by DateTime instead, but good enough for now
+  final years = days ~/ 365; // FIXME: it's not accuracy, should determine by DateTime instead, but good enough for now
 
   String result;
   if (seconds < 45)
-    result = messages.lessThanOneMinute(seconds.round());
+    result = messages.lessThanOneMinute(seconds);
   else if (seconds < 90)
-    result = messages.aboutAMinute(minutes.round());
+    result = messages.aboutAMinute(minutes);
   else if (minutes < 45)
-    result = messages.minutes(minutes.round());
+    result = messages.minutes(minutes);
   else if (minutes < 90)
-    result = messages.aboutAnHour(minutes.round());
+    result = messages.aboutAnHour(minutes);
   else if (hours < 24)
-    result = messages.hours(hours.round());
+    result = messages.hours(hours);
   else if (hours < 48)
-    result = messages.aDay(hours.round());
+    result = messages.aDay(hours);
   else if (days < 30)
-    result = messages.days(days.round());
+    result = messages.days(days);
   else if (days < 60)
-    result = messages.aboutAMonth(days.round());
+    result = messages.aboutAMonth(days);
   else if (days < 365)
-    result = messages.months(months.round());
+    result = messages.months(months);
   else if (years < 2)
-    result = messages.aboutAYear(months.round());
+    result = messages.aboutAYear(months);
   else
-    result = messages.years(years.round());
+    result = messages.years(years);
 
   return [prefix, result, suffix]
       .where((str) => str != null && str.isNotEmpty)
