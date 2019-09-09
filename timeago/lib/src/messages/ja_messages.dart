@@ -5,7 +5,7 @@ class JaMessages implements LookupMessages {
   String prefixFromNow() => '今から';
   String suffixAgo() => '前';
   String suffixFromNow() => '後';
-  String lessThanOneMinute(int seconds) => '1 分未満e';
+  String lessThanOneMinute(int seconds) => '1 分未満';
   String aboutAMinute(int minutes) => '約 1 分';
   String minutes(int minutes) => '$minutes 分';
   String aboutAnHour(int minutes) => '約 1 時間';
