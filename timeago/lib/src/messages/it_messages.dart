@@ -18,3 +18,22 @@ class ItMessages implements LookupMessages {
   String years(int years) => '${years} anni';
   String wordSeparator() => ' ';
 }
+
+class ItShortMessages implements LookupMessages {
+  String prefixAgo() => '';
+  String prefixFromNow() => '';
+  String suffixAgo() => '';
+  String suffixFromNow() => '';
+  String lessThanOneMinute(int seconds) => 'ora';
+  String aboutAMinute(int minutes) => '1 m';
+  String minutes(int minutes) => '$minutes m';
+  String aboutAnHour(int minutes) => '~1 o';
+  String hours(int hours) => '$hours o';
+  String aDay(int hours) => '~1 g';
+  String days(int days) => '$days g';
+  String aboutAMonth(int days) => '~1 m';
+  String months(int months) => '$months m';
+  String aboutAYear(int year) => '~1 a';
+  String years(int years) => '$years a';
+  String wordSeparator() => ' ';
+}
