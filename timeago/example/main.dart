@@ -19,6 +19,7 @@ main() async {
   timeago.setLocaleMessages('zh_CN', timeago.ZhCnMessages());
   timeago.setLocaleMessages('zh', timeago.ZhMessages());
   timeago.setLocaleMessages('it', timeago.ItMessages());
+  timeago.setLocaleMessages('it_short', timeago.ItShortMessages());
   timeago.setLocaleMessages('fa', timeago.FaMessages());
   timeago.setLocaleMessages('ru', timeago.RuMessages());
   timeago.setLocaleMessages('tr', timeago.TrMessages());
@@ -37,6 +38,8 @@ main() async {
   timeago.setLocaleMessages('vi', timeago.ViMessages());
   timeago.setLocaleMessages('vi_short', timeago.ViShortMessages());
   timeago.setLocaleMessages('ta', timeago.TaMessages());
+  timeago.setLocaleMessages('ro', timeago.RoMessages());
+  timeago.setLocaleMessages('ro_short', timeago.RoShortMessages());
 
   final loadedTime = new DateTime.now();
 

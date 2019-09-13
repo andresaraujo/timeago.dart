@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.19
+- Added Romanian support @stefancandrea
+- Added Italian short version  @quantosapplications
+- Improvements to Ja messages @kesoji
+- Improvements to brazilian portuguese  @elder004
+
 ## 2.0.18
 - Improvements to Ku messages thanks to @Xoshbin 
 
