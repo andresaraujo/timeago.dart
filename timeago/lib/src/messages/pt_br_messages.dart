@@ -3,7 +3,7 @@ import 'package:timeago/src/messages/lookupmessages.dart';
 class PtBrMessages implements LookupMessages {
   String prefixAgo() => 'Há';
   String prefixFromNow() => 'em';
-  String suffixAgo() => 'atrás';
+  String suffixAgo() => '';
   String suffixFromNow() => '';
   String lessThanOneMinute(int seconds) => 'poucos segundos';
   String aboutAMinute(int minutes) => 'um minuto';
