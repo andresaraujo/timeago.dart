@@ -33,6 +33,8 @@ const localeList = [
   'ar_short',
   'ko',
   'en_custom',
+  'ro',
+  'ro_short'
 ];
 
 class CustomEnglish extends EnMessages {
@@ -126,6 +128,12 @@ main() async {
         break;
       case 'en_custom':
         setLocaleMessages(locale, CustomEnglish());
+        break;
+      case 'ro':
+        setLocaleMessages(locale, RoMessages());
+        break;
+      case 'ro_short':
+        setLocaleMessages(locale, RoShortMessages());
         break;
     }
   });
