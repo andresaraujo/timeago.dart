@@ -11,7 +11,7 @@ class EsMessages implements LookupMessages {
   String aboutAnHour(int minutes) => 'una hora';
   String hours(int hours) => '$hours horas';
   String aDay(int hours) => 'un día';
-  String days(int days) => '$days dias';
+  String days(int days) => '$days días';
   String aboutAMonth(int days) => 'un mes';
   String months(int months) => '$months meses';
   String aboutAYear(int year) => 'un año';
@@ -29,7 +29,7 @@ class EsShortMessages implements LookupMessages {
   String aboutAnHour(int minutes) => '~1 hr';
   String hours(int hours) => '$hours hr';
   String aDay(int hours) => '~1 día';
-  String days(int days) => '$days dias';
+  String days(int days) => '$days días';
   String aboutAMonth(int days) => '~1 mes';
   String months(int months) => '$months meses';
   String aboutAYear(int year) => '~1 año';
