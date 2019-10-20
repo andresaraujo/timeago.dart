@@ -40,6 +40,8 @@ main() async {
   timeago.setLocaleMessages('ta', timeago.TaMessages());
   timeago.setLocaleMessages('ro', timeago.RoMessages());
   timeago.setLocaleMessages('ro_short', timeago.RoShortMessages());
+  timeago.setLocaleMessages('sv', timeago.SvMessages());
+  timeago.setLocaleMessages('sv_short', timeago.SvShortMessages());
 
   final loadedTime = new DateTime.now();
 

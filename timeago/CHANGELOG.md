@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.21
+- Improvements to Zh messages @kj415j45
+- Adds Sv messages @simoneddeland
+
 ## 2.0.20
 - Improvements to Es messages @anonymousJacker
 
