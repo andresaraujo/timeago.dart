@@ -2,11 +2,11 @@ import 'package:timeago/src/messages/lookupmessages.dart';
 
 class ZhMessages implements LookupMessages {
   String prefixAgo() => '';
-  String prefixFromNow() => '從現在開始';
+  String prefixFromNow() => '';
   String suffixAgo() => '前';
   String suffixFromNow() => '後';
   String lessThanOneMinute(int seconds) => '少於一分鐘';
-  String aboutAMinute(int minutes) => '約1分鐘前';
+  String aboutAMinute(int minutes) => '約1分鐘';
   String minutes(int minutes) => '${minutes} 分';
   String aboutAnHour(int minutes) => '約1小時';
   String hours(int hours) => '約 ${hours} 小時';
