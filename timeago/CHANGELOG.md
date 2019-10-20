@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.20
+- Improvements to Es messages @anonymousJacker
+
 ## 2.0.19
 - Added Romanian support @stefancandrea
 - Added Italian short version  @quantosapplications
