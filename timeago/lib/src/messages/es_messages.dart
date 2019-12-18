@@ -18,6 +18,7 @@ class EsMessages implements LookupMessages {
   String years(int years) => '$years años';
   String wordSeparator() => ' ';
 }
+
 class EsShortMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';

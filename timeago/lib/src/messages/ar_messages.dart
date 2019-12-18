@@ -20,6 +20,7 @@ class ArMessages implements LookupMessages {
 
     return ' منذ $minutes دقائق ';
   }
+
   String aboutAnHour(int minutes) => 'قبل حوالي الساعة';
   String hours(int hours) {
     if (hours == 1) {
@@ -34,6 +35,7 @@ class ArMessages implements LookupMessages {
 
     return ' منذ $hours ساعات ';
   }
+
   String aDay(int hours) => 'قبل يوم';
   String days(int days) {
     if (days == 1) {
@@ -47,6 +49,7 @@ class ArMessages implements LookupMessages {
     }
     return ' منذ $days ايام ';
   }
+
   String aboutAMonth(int days) => 'قبل حوالي شهر';
   String months(int months) {
     if (months == 1) {
@@ -60,6 +63,7 @@ class ArMessages implements LookupMessages {
     }
     return ' منذ $months شهور ';
   }
+
   String aboutAYear(int year) => 'قبل سنة';
   String years(int years) {
     if (years == 1) {
@@ -74,6 +78,7 @@ class ArMessages implements LookupMessages {
 
     return ' منذ $years سنوات ';
   }
+
   String wordSeparator() => ' ';
 }
 

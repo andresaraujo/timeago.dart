@@ -17,4 +17,4 @@ class KoMessages implements LookupMessages {
   String aboutAYear(int year) => '약 1년';
   String years(int years) => '${years}년';
   String wordSeparator() => ' ';
-}  
+}
