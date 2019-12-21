@@ -19,7 +19,7 @@ class DvMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
-class DVShortMessages implements LookupMessages {
+class DvShortMessages implements LookupMessages {
   String prefixAgo() => '';
   String prefixFromNow() => '';
   String suffixAgo() => '';
