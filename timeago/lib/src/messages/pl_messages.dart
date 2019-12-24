@@ -1,21 +1,37 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 class PlMessages implements LookupMessages {
+  @override
   String prefixAgo() => '';
+  @override
   String prefixFromNow() => '';
+  @override
   String suffixAgo() => 'temu';
+  @override
   String suffixFromNow() => 'od tego momentu';
+  @override
   String lessThanOneMinute(int seconds) => 'chwilę';
+  @override
   String aboutAMinute(int minutes) => 'około minutę';
+  @override
   String minutes(int minutes) => _pluralize(minutes, 'minuty', 'minut');
+  @override
   String aboutAnHour(int minutes) => 'około godzinę';
+  @override
   String hours(int hours) => _pluralize(hours, 'godziny', 'godzin');
+  @override
   String aDay(int hours) => 'dzień';
+  @override
   String days(int days) => '$days dni';
+  @override
   String aboutAMonth(int days) => 'około miesiąc';
+  @override
   String months(int months) => _pluralize(months, 'miesiące', 'miesięcy');
+  @override
   String aboutAYear(int year) => 'około rok';
+  @override
   String years(int years) => _pluralize(years, 'lata', 'lat');
+  @override
   String wordSeparator() => ' ';
 
   String _pluralize(int n, String form1, String form2) {

@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:timeago_flutter/timeago_flutter.dart';
 
@@ -249,9 +247,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: Timeago(
             builder: (_, value) => Text(
-                  value,
-                  style: Theme.of(context).textTheme.caption,
-                ),
+              value,
+              style: Theme.of(context).textTheme.caption,
+            ),
             date: time,
             locale: locale,
             allowFromNow: true,

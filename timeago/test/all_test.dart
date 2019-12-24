@@ -21,14 +21,13 @@ void main() {
       expect(result, equals('hace 2 minutos'));
     });
 
-    test('should format with default locale, if locale messages doesnt exist', () async {
+    test('should format with default locale, if locale messages doesnt exist',
+        () async {
       final clock = now.add(Duration(seconds: 1));
 
       var result = timeago.format(now, locale: 'ko', clock: clock);
       expect(result, equals('a moment ago'));
     });
-
-
 
     test('should allow to override a locale', () async {
       var clock = now.add(Duration(seconds: 1));
@@ -69,11 +68,11 @@ void main() {
     });
 
     test('should allow from now dates without clock set', () async {
-
       var result = timeago.format(now.add(Duration(seconds: 1700)));
       expect(result, equals('a moment ago'));
 
-      result = timeago.format(now.add(Duration(seconds: 1700)), allowFromNow: true);
+      result =
+          timeago.format(now.add(Duration(seconds: 1700)), allowFromNow: true);
       expect(result, equals('28 minutes from now'));
     });
   });

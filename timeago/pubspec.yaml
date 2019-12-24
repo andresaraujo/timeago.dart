@@ -1,11 +1,11 @@
 name: timeago
 description: >
   A library useful for creating fuzzy timestamps. (e.g. "15 minutes ago")
-version: 2.0.22
+version: 2.0.23
 homepage: https://github.com/andresaraujo/timeago.dart
 
 environment:
-  sdk: '>=2.0.0-dev <3.0.0'
+  sdk: ">=2.6.0 <3.0.0"
 
 #dependencies:
 
