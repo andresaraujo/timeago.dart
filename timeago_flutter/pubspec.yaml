@@ -1,6 +1,6 @@
 name: timeago_flutter
 description: Timeago Widget for Flutter to create fuzzy timestamps. (e.g. "15 minutes ago").
-version: 0.1.0
+version: 0.1.1
 author:
 homepage:
 
