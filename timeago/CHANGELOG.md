@@ -1,7 +1,8 @@
 # Changelog
 
-## 2.0.23
+## 2.0.24
 - Improvements in package health with pana.
+- Fixes to Kurdish messages.
 
 ## 2.0.22
 - Improvements to Polish messages @Patryk27
