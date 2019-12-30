@@ -6,31 +6,60 @@ class KuMessages implements LookupMessages {
   @override
   String prefixFromNow() => '';
   @override
-  String suffixAgo() => 'لەمەوپێش';
+  String suffixAgo() => '';
   @override
   String suffixFromNow() => 'لە ئێستاوە';
   @override
-  String lessThanOneMinute(int seconds) => 'خولەکێک';
+  String lessThanOneMinute(int seconds) => 'چەند چرکەیەک لەمەوپێش';
   @override
-  String aboutAMinute(int minutes) => 'خولەکێک';
+  String aboutAMinute(int minutes) => 'خولەکێک لەمەوپێش';
   @override
-  String minutes(int minutes) => 'خولەک $minutes';
+  String minutes(int minutes) {
+    if (minutes == 1) {
+      return 'خولەکێک لەمەوپێش';
+    }
+
+    return '$minutes خولەک لەمەوپێش';
+  }
   @override
-  String aboutAnHour(int minutes) => 'نزیکەی کاژێرێک';
+  String aboutAnHour(int minutes) => 'کاژێرێک لەمەوپێش';
   @override
-  String hours(int hours) => 'کاژێر $hours ';
+  String hours(int hours) {
+    if (hours == 1) {
+      return 'کاژێرێک لەمەوپێش';
+    }
+
+    return '$hours کاژێر لەمەوپێش';
+  }
   @override
-  String aDay(int hours) => 'ڕۆژێک';
+  String aDay(int hours) => 'ڕۆژێک لەمەوپێش';
   @override
-  String days(int days) => 'ڕۆژ $days';
+  String days(int days) {
+    if (days == 1) {
+      return 'ڕۆژێک لەمەوپێش';
+    }
+
+    return '$days ڕۆژ لەمەوپێش';
+  }
   @override
-  String aboutAMonth(int days) => 'نزیکەی مانگێک';
+  String aboutAMonth(int days) => 'مانگێک لەمەوپێش';
   @override
-  String months(int months) => 'مانگ $months';
+  String months(int months) {
+    if (months == 1) {
+      return 'مانگێک لەمەوپێش';
+    }
+    return '$months مانگ لەمەوپێش';
+  }
   @override
-  String aboutAYear(int year) => 'نزیکەی ساڵێک';
+  String aboutAYear(int year) => 'ساڵێک لەمەوپێش';
   @override
-  String years(int years) => 'ساڵ $years';
+  String years(int years) {
+    if (years == 1) {
+      return 'ساڵێک لەمەوپێش';
+    }
+
+    return '$years ساڵ لەمەوپێش';
+  }
   @override
   String wordSeparator() => ' ';
 }
