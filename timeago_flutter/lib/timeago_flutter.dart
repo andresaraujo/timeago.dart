@@ -9,20 +9,20 @@ export 'package:timeago/timeago.dart';
 typedef Widget TimeagoBuilder(BuildContext context, String value);
 
 ///
-/// Widget that provides a fuzzy time (eg '15 minues ago') relative to the 
+/// Widget that provides a fuzzy time (eg '15 minues ago') relative to the
 /// provided [date]. Builder function will get executed at a [resfreshRate] (Defaults to 1 minute)
-/// 
+///
 /// Example
-/// 
+///
 /// ```dart
 /// Timeago(
 ///   builder: (_, value) => Text(value),
 ///   date: time,
 /// ),
 /// ```
-/// 
+///
 /// Example with custom refresh rate of 5 minutes
-/// 
+///
 /// ```dart
 /// Timeago(
 ///   builder: (_, value) => Text(value),
@@ -30,9 +30,9 @@ typedef Widget TimeagoBuilder(BuildContext context, String value);
 ///   refreshRate: Duration(minutes: 5)
 /// ),
 /// ```
-/// 
+///
 /// Example to allow future dates. See timeago.dart library for details on future dates
-/// 
+///
 /// ```dart
 /// Timeago(
 ///   builder: (_, value) => Text(value),
@@ -42,7 +42,7 @@ typedef Widget TimeagoBuilder(BuildContext context, String value);
 /// ```
 ///
 /// Example setting the locale. See timeago.dart library for details on locales
-/// 
+///
 /// ```dart
 /// Timeago(
 ///   builder: (_, value) => Text(value),
@@ -50,7 +50,7 @@ typedef Widget TimeagoBuilder(BuildContext context, String value);
 ///   locale: locale,
 /// ),
 /// ```
-/// 
+///
 class Timeago extends StatefulWidget {
   const Timeago({
     Key key,

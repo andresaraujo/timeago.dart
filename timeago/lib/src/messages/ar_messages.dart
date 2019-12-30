@@ -1,12 +1,19 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 class ArMessages implements LookupMessages {
+  @override
   String prefixAgo() => '';
+  @override
   String prefixFromNow() => '';
+  @override
   String suffixAgo() => '';
+  @override
   String suffixFromNow() => 'من الآن';
+  @override
   String lessThanOneMinute(int seconds) => 'قبل ثواني';
+  @override
   String aboutAMinute(int minutes) => 'قبل دقيقة';
+  @override
   String minutes(int minutes) {
     if (minutes == 1) {
       return 'منذ دقيقة';
@@ -20,7 +27,10 @@ class ArMessages implements LookupMessages {
 
     return ' منذ $minutes دقائق ';
   }
+
+  @override
   String aboutAnHour(int minutes) => 'قبل حوالي الساعة';
+  @override
   String hours(int hours) {
     if (hours == 1) {
       return 'منذ ساعة';
@@ -34,7 +44,10 @@ class ArMessages implements LookupMessages {
 
     return ' منذ $hours ساعات ';
   }
+
+  @override
   String aDay(int hours) => 'قبل يوم';
+  @override
   String days(int days) {
     if (days == 1) {
       return 'منذ يوم';
@@ -47,7 +60,10 @@ class ArMessages implements LookupMessages {
     }
     return ' منذ $days ايام ';
   }
+
+  @override
   String aboutAMonth(int days) => 'قبل حوالي شهر';
+  @override
   String months(int months) {
     if (months == 1) {
       return 'منذ شهر';
@@ -60,7 +76,10 @@ class ArMessages implements LookupMessages {
     }
     return ' منذ $months شهور ';
   }
+
+  @override
   String aboutAYear(int year) => 'قبل سنة';
+  @override
   String years(int years) {
     if (years == 1) {
       return 'منذ سنة';
@@ -74,24 +93,42 @@ class ArMessages implements LookupMessages {
 
     return ' منذ $years سنوات ';
   }
+
+  @override
   String wordSeparator() => ' ';
 }
 
 class ArShortMessages implements LookupMessages {
+  @override
   String prefixAgo() => '';
+  @override
   String prefixFromNow() => '';
+  @override
   String suffixAgo() => '';
+  @override
   String suffixFromNow() => '';
+  @override
   String lessThanOneMinute(int seconds) => 'الأن';
+  @override
   String aboutAMinute(int minutes) => 'دقيقة واحدة';
+  @override
   String minutes(int minutes) => '$minutes د';
+  @override
   String aboutAnHour(int minutes) => '~1 س';
+  @override
   String hours(int hours) => '$hours س';
+  @override
   String aDay(int hours) => '~1 ي';
+  @override
   String days(int days) => '$days ي';
+  @override
   String aboutAMonth(int days) => '~1 ش';
+  @override
   String months(int months) => '$months ش';
+  @override
   String aboutAYear(int year) => '~1 س';
+  @override
   String years(int years) => '$years س';
+  @override
   String wordSeparator() => ' ';
 }

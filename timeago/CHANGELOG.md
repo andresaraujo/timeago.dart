@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.23
+- Improvements in package health with pana.
+
 ## 2.0.22
 - Improvements to Polish messages @Patryk27
 - Adds French short messages @woprandi
