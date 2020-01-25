@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.25
+- Added dhivehi support @Dharisd
+
 ## 2.0.24
 - Improvements in package health with pana.
 - Fixes to Kurdish messages.

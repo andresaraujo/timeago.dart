@@ -9,6 +9,8 @@ var locale = 'en';
 
 main() async {
   timeago.setLocaleMessages('de', timeago.DeMessages());
+  timeago.setLocaleMessages('dv', timeago.DvMessages());
+  timeago.setLocaleMessages('dv_short', timeago.DvShortMessages());
   timeago.setLocaleMessages('fr', timeago.FrMessages());
   timeago.setLocaleMessages('fr_short', timeago.FrShortMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
