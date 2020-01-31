@@ -22,7 +22,7 @@ To add the remaining just call `setLocaleMessages`, see example.
 
 ## Usage
 
-The easiest way to use this library via top-level function `timeAgo(date)`:
+The easiest way to use this library via top-level function `format(date)`:
 
 ```dart
 import 'package:timeago/timeago.dart' as timeago;
@@ -40,7 +40,7 @@ main() {
 
 ```dart
 main() {
-    final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
+    final fifteenAgo = DateTime.now().subtract(Duration(minutes: 15));
 
     // Add a new locale messages
     timeago.setLocaleMessages('fr', timeago.FrMessages());
