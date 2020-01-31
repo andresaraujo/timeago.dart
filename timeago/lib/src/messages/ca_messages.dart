@@ -35,7 +35,7 @@ class CaMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
-class EsShortMessages implements LookupMessages {
+class CaShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
