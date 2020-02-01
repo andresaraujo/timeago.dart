@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.26
+- Added Catalan support @comlaterra
+
 ## 2.0.25
 - Added dhivehi support @Dharisd
 
