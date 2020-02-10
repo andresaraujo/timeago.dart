@@ -35,7 +35,7 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
 /// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
 String format(DateTime date,
-    {String locale, DateTime clock, bool allowFromNow}) {
+    {String locale, DateTime clock, bool allowFromNow, int maxSuffix}) {
   final _locale = locale ?? 'en';
   final _allowFromNow = allowFromNow ?? false;
   final messages = _lookupMessagesMap[_locale] ?? EnMessages();
@@ -61,28 +61,44 @@ String format(DateTime date,
   final num years = days / 365;
 
   String result;
-  if (seconds < 45) {
-    result = messages.lessThanOneMinute(seconds.round());
-  } else if (seconds < 90) {
-    result = messages.aboutAMinute(minutes.round());
-  } else if (minutes < 45) {
-    result = messages.minutes(minutes.round());
-  } else if (minutes < 90) {
-    result = messages.aboutAnHour(minutes.round());
-  } else if (hours < 24) {
-    result = messages.hours(hours.round());
-  } else if (hours < 48) {
-    result = messages.aDay(hours.round());
-  } else if (days < 30) {
-    result = messages.days(days.round());
-  } else if (days < 60) {
-    result = messages.aboutAMonth(days.round());
-  } else if (days < 365) {
-    result = messages.months(months.round());
-  } else if (years < 2) {
-    result = messages.aboutAYear(months.round());
+  if (maxSuffix != null) {
+    if (seconds < 60 || maxSuffix == 0) {
+      result = seconds.round().toString() + " seconds";
+    } else if (minutes < 60 || maxSuffix <= 1) {
+      result = messages.minutes(minutes.round());
+    } else if (hours < 24 || maxSuffix <= 2) {
+      result = messages.hours(hours.round());
+    } else if (days < 30 || maxSuffix <= 3) {
+      result = messages.days(days.round());
+    } else if (months < 30 || maxSuffix <= 4) {
+      result = messages.months(months.round());
+    } else {
+      result = messages.years(years.round());
+    }
   } else {
-    result = messages.years(years.round());
+    if (seconds < 45) {
+      result = messages.lessThanOneMinute(seconds.round());
+    } else if (seconds < 90) {
+      result = messages.aboutAMinute(minutes.round());
+    } else if (minutes < 45) {
+      result = messages.minutes(minutes.round());
+    } else if (minutes < 90) {
+      result = messages.aboutAnHour(minutes.round());
+    } else if (hours < 24) {
+      result = messages.hours(hours.round());
+    } else if (hours < 48) {
+      result = messages.aDay(hours.round());
+    } else if (days < 30) {
+      result = messages.days(days.round());
+    } else if (days < 60) {
+      result = messages.aboutAMonth(days.round());
+    } else if (days < 365) {
+      result = messages.months(months.round());
+    } else if (years < 2) {
+      result = messages.aboutAYear(months.round());
+    } else {
+      result = messages.years(years.round());
+    }
   }
 
   return [prefix, result, suffix]

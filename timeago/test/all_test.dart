@@ -13,6 +13,12 @@ void main() {
       var result = timeago.format(now, clock: clock);
       expect(result, equals('a moment ago'));
     });
+    test('should format with default locale w/ suffix', () async {
+      final clock = now.add(Duration(days: 45));
+
+      var result = timeago.format(now, clock: clock, maxSuffix: 3);
+      expect(result, equals('45 days ago'));
+    });
 
     test('should format with locale', () async {
       final clock = now.add(Duration(seconds: 120));
