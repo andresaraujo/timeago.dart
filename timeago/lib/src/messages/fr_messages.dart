@@ -88,7 +88,7 @@ class FrVeryShortMessages implements LookupMessages {
   @override
   String aboutAnHour(int minutes) => '1 heure';
   @override
-  String hours(int hours) => '$hours heure';
+  String hours(int hours) => '$hours heures';
   @override
   String aDay(int hours) => '1 jour';
   @override
