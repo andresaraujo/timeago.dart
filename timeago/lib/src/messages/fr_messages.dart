@@ -69,3 +69,39 @@ class FrShortMessages implements LookupMessages {
   @override
   String wordSeparator() => ' ';
 }
+
+class FrVeryShortMessages implements LookupMessages {
+  @override
+  String prefixAgo() => '';
+  @override
+  String prefixFromNow() => '';
+  @override
+  String suffixAgo() => '';
+  @override
+  String suffixFromNow() => '';
+  @override
+  String lessThanOneMinute(int seconds) => 'maintenant';
+  @override
+  String aboutAMinute(int minutes) => '1 min';
+  @override
+  String minutes(int minutes) => '$minutes min';
+  @override
+  String aboutAnHour(int minutes) => '1 heure';
+  @override
+  String hours(int hours) => '$hours heure';
+  @override
+  String aDay(int hours) => '1 jour';
+  @override
+  String days(int days) => '$days jours';
+  @override
+  String aboutAMonth(int days) => '1 mois';
+  @override
+  String months(int months) => '$months mois';
+  @override
+  String aboutAYear(int year) => '1 an';
+  @override
+  String years(int years) => '$years ans';
+  @override
+  String wordSeparator() => ' ';
+}
+
