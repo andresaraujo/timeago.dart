@@ -2,10 +2,9 @@ import 'package:timeago/src/messages/en_messages.dart';
 import 'package:timeago/src/messages/es_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
-const _default = 'default';
+String _default = 'en';
 
 Map<String, LookupMessages> _lookupMessagesMap = {
-  _default: EnMessages(),
   'en': EnMessages(),
   'en_short': EnShortMessages(),
   'es': EsMessages(),
@@ -21,10 +20,9 @@ Map<String, LookupMessages> _lookupMessagesMap = {
 /// ```
 void setDefaultLocale(String locale) {
   assert(locale != null, '[locale] must not be null');
-  assert(locale != _default, '[locale] must not be $_default');
   assert(_lookupMessagesMap.containsKey(locale),
       '[locale] must be a registered locale');
-  _lookupMessagesMap[_default] = _lookupMessagesMap[locale];
+  _default = locale;
 }
 
 /// Sets a [locale] with the provided [lookupMessages] to be available when
@@ -56,7 +54,7 @@ String format(DateTime date,
     {String locale, DateTime clock, bool allowFromNow}) {
   final _locale = locale ?? _default;
   final _allowFromNow = allowFromNow ?? false;
-  final messages = _lookupMessagesMap[_locale] ?? _lookupMessagesMap[_default];
+  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
