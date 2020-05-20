@@ -2,19 +2,37 @@ import 'package:timeago/src/messages/en_messages.dart';
 import 'package:timeago/src/messages/es_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+const _default = 'default';
+
 Map<String, LookupMessages> _lookupMessagesMap = {
+  _default: EnMessages(),
   'en': EnMessages(),
   'en_short': EnShortMessages(),
   'es': EsMessages(),
   'es_short': EsShortMessages(),
 };
 
+/// Sets the default [locale]. By default it is `en`.
+///
+/// Example
+/// ```
+/// setLocaleMessages('fr', FrMessages());
+/// setDefaultLocale('fr');
+/// ```
+void setDefaultLocale(String locale) {
+  assert(locale != null, '[locale] must not be null');
+  assert(locale != _default, '[locale] must not be $_default');
+  assert(_lookupMessagesMap.containsKey(locale),
+      '[locale] must be a registered locale');
+  _lookupMessagesMap[_default] = _lookupMessagesMap[locale];
+}
+
 /// Sets a [locale] with the provided [lookupMessages] to be available when
 /// using the [format] function.
 ///
 /// Example:
 /// ```dart
-/// setLocaleMessages('fr', FrMessages())
+/// setLocaleMessages('fr', FrMessages());
 /// ```
 ///
 /// If you want to define locale message implement [LookupMessages] interface
@@ -36,9 +54,9 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
 String format(DateTime date,
     {String locale, DateTime clock, bool allowFromNow}) {
-  final _locale = locale ?? 'en';
+  final _locale = locale ?? _default;
   final _allowFromNow = allowFromNow ?? false;
-  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
+  final messages = _lookupMessagesMap[_locale] ?? _lookupMessagesMap[_default];
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
