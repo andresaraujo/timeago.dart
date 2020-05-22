@@ -157,22 +157,23 @@ class _MyHomePageState extends State<MyHomePage> {
     ];
 
     final style = Theme.of(context).textTheme.caption;
-    return times.map((time) {
-      return Container(
-        margin: EdgeInsets.all(5),
-        color: Colors.blue.shade700,
-        child: Center(
-          child: Timeago(
-            builder: (_, value) => Text(
-              value,
-              style: style,
+    return [
+      for (final time in times)
+        Container(
+          margin: EdgeInsets.all(5),
+          color: Colors.blue.shade700,
+          child: Center(
+            child: Timeago(
+              builder: (_, value) => Text(
+                value,
+                style: style,
+              ),
+              date: time,
+              locale: locale,
+              allowFromNow: true,
             ),
-            date: time,
-            locale: locale,
-            allowFromNow: true,
           ),
-        ),
-      );
-    }).toList();
+        )
+    ];
   }
 }
