@@ -58,8 +58,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
-        home: MyHomePage(title: 'Flutter Demo Home Page'));
+      theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
   }
 }
 
@@ -95,12 +96,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   List<DropdownMenuItem<String>> _buildLocaleButtons() {
-    return localeList.map((locale) {
-      return DropdownMenuItem(
-        value: locale,
-        child: Text(locale),
-      );
-    }).toList();
+    return [
+      for (final locale in localeList)
+        DropdownMenuItem(
+          value: locale,
+          child: Text(locale),
+        )
+    ];
   }
 
   @override
@@ -109,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
           ListTile(
             title: Text('Locale'),
@@ -124,12 +126,17 @@ class _MyHomePageState extends State<MyHomePage> {
             value: _showFutureDates,
             onChanged: _onFutureChange,
           ),
-          GridView.count(
-            shrinkWrap: true,
-            primary: false,
-            crossAxisCount: 2,
-            physics: ScrollPhysics(),
-            children: _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+          Expanded(
+            child: SingleChildScrollView(
+              child: GridView.count(
+                shrinkWrap: true,
+                primary: false,
+                crossAxisCount: 2,
+                physics: ScrollPhysics(),
+                children:
+                    _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+              ),
+            ),
           ),
         ],
       ),
