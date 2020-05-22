@@ -142,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return showFutureDates ? date.add(duration) : date.subtract(duration);
     }
 
-    List<DateTime> times = [
+    final List<DateTime> times = [
       addOrSubstract(baseDate, showFutureDates, Duration(seconds: 5)),
       addOrSubstract(baseDate, showFutureDates, Duration(seconds: 45)),
       addOrSubstract(baseDate, showFutureDates, Duration(seconds: 90)),
@@ -162,16 +162,12 @@ class _MyHomePageState extends State<MyHomePage> {
         Container(
           margin: EdgeInsets.all(5),
           color: Colors.blue.shade700,
-          child: Center(
-            child: Timeago(
-              builder: (_, value) => Text(
-                value,
-                style: style,
-              ),
-              date: time,
-              locale: locale,
-              allowFromNow: true,
-            ),
+          alignment: Alignment.center,
+          child: Timeago(
+            builder: (_, value) => Text(value, style: style),
+            date: time,
+            locale: locale,
+            allowFromNow: true,
           ),
         )
     ];
