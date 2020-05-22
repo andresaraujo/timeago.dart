@@ -156,6 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
       addOrSubstract(baseDate, showFutureDates, Duration(days: 365 * 2)),
     ];
 
+    final style = Theme.of(context).textTheme.caption;
     return times.map((time) {
       return Container(
         margin: EdgeInsets.all(5),
@@ -164,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Timeago(
             builder: (_, value) => Text(
               value,
-              style: Theme.of(context).textTheme.caption,
+              style: style,
             ),
             date: time,
             locale: locale,
