@@ -13,6 +13,8 @@ main() async {
   timeago.setLocaleMessages('dv_short', timeago.DvShortMessages());
   timeago.setLocaleMessages('fr', timeago.FrMessages());
   timeago.setLocaleMessages('fr_short', timeago.FrShortMessages());
+  timeago.setLocaleMessages('gr', timeago.GrMessages());
+  timeago.setLocaleMessages('gr_short', timeago.GrShortMessages());
   timeago.setLocaleMessages('ca', timeago.CaMessages());
   timeago.setLocaleMessages('ca_short', timeago.CaShortMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
