@@ -22,6 +22,7 @@ main() async {
   timeago.setLocaleMessages('ja', timeago.JaMessages());
   timeago.setLocaleMessages('km', timeago.KmMessages());
   timeago.setLocaleMessages('km_short', timeago.KmShortMessages());
+  timeago.setLocaleMessages('ko', timeago.KoMessages());
   timeago.setLocaleMessages('id', timeago.IdMessages());
   timeago.setLocaleMessages('pt_BR', timeago.PtBrMessages());
   timeago.setLocaleMessages('pt_BR_short', timeago.PtBrShortMessages());
@@ -46,6 +47,7 @@ main() async {
   timeago.setLocaleMessages('ko', timeago.KoMessages());
   timeago.setLocaleMessages('vi', timeago.ViMessages());
   timeago.setLocaleMessages('vi_short', timeago.ViShortMessages());
+  timeago.setLocaleMessages('tr', timeago.TrMessages());
   timeago.setLocaleMessages('ta', timeago.TaMessages());
   timeago.setLocaleMessages('ro', timeago.RoMessages());
   timeago.setLocaleMessages('ro_short', timeago.RoShortMessages());
