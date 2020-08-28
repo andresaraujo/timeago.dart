@@ -1,12 +1,12 @@
 library timeago_flutter;
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'src/timer_refresh_widget.dart';
 import 'package:timeago/timeago.dart' as timeago;
 export 'package:timeago/timeago.dart';
+export 'src/timer_refresh_widget.dart';
 
-typedef Widget TimeagoBuilder(BuildContext context, String value);
+typedef TimeagoBuilder = Widget Function(BuildContext context, String value);
 
 ///
 /// Widget that provides a fuzzy time (eg '15 minues ago') relative to the
@@ -51,7 +51,7 @@ typedef Widget TimeagoBuilder(BuildContext context, String value);
 /// ),
 /// ```
 ///
-class Timeago extends StatefulWidget {
+class Timeago extends TimerRefreshWidget {
   const Timeago({
     Key key,
     @required this.builder,
@@ -59,45 +59,19 @@ class Timeago extends StatefulWidget {
     this.locale,
     this.allowFromNow,
     this.clock,
-    this.refreshRate,
-  }) : super(key: key);
+    Duration refreshRate = const Duration(minutes: 1),
+  }) : super(key: key, refreshRate: refreshRate);
 
   final TimeagoBuilder builder;
   final DateTime date;
   final DateTime clock;
   final String locale;
   final bool allowFromNow;
-  final Duration refreshRate;
-
-  @override
-  _TimeagoState createState() => _TimeagoState();
-}
-
-class _TimeagoState extends State<Timeago> {
-  Timer _timer;
-
-  @override
-  void initState() {
-    final refreshRate = widget.refreshRate ?? Duration(minutes: 1);
-    _timer = Timer.periodic(refreshRate, (Timer t) {
-      setState(() {});
-    });
-
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _timer?.cancel();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
-    final formatted = timeago.format(widget.date,
-        locale: widget.locale,
-        clock: widget.clock,
-        allowFromNow: widget.allowFromNow);
-    return widget.builder(context, formatted);
+    final formatted = timeago.format(date,
+        locale: locale, clock: clock, allowFromNow: allowFromNow);
+    return builder(context, formatted);
   }
 }
