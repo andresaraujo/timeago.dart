@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.2.0] - Improvements to flutter widget to support auto refresh @kranfix.
+
+## [0.1.0] - Initial release.
 
 * TODO: Describe initial release.
