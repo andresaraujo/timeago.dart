@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Turkish messages
 class TrMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

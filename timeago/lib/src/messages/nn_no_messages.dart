@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Norwegian-Nynorsk-Norway short messgages
 class NnNoShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class NnNoShortMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Norwegian-Nynorsk-Norway messgages
 class NnNoMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

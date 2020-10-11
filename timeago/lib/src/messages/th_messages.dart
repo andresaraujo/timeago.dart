@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Thai messages
 class ThMessages implements LookupMessages {
   @override
   String prefixAgo() => 'เมื่อ';
@@ -35,6 +36,7 @@ class ThMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Thai short messages
 class ThShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

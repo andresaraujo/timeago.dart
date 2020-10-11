@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Swedish messages
 class SvMessages implements LookupMessages {
   @override
   String prefixAgo() => 'för';
@@ -35,6 +36,7 @@ class SvMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Swedish Short messages
 class SvShortMessages implements LookupMessages {
   @override
   String prefixAgo() => 'för ';

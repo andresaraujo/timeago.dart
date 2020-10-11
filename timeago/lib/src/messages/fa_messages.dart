@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Farsi Messages
 class FaMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

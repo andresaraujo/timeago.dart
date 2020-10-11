@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Polish messgages
 class PlMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

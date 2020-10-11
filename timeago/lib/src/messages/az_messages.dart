@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Azeri Messages
 class AzMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class AzMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Azeri short Messages
 class AzShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

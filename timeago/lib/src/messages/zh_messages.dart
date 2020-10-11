@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Chinese messages
 class ZhMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

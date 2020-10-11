@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Japanese messages
 class JaMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
