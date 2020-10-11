@@ -23,7 +23,7 @@ class _TimerRefreshWidgetState extends State<TimerRefreshWidget>
   Widget build(BuildContext context) => widget.build(context);
 }
 
-mixin TimerRefreshStateMixin<T extends TimerRefreshWidget> on State<T> {
+mixin TimerRefreshStateMixin on State<TimerRefreshWidget> {
   Timer _timer;
 
   @override
