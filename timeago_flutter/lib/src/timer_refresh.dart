@@ -18,5 +18,5 @@ class TimerRefresh extends TimerRefreshWidget {
   final TransitionBuilder builder;
 
   @override
-  Widget build(BuildContext context) => builder?.call(context, child) ?? child;
+  Widget build(BuildContext context) => builder.call(context, child);
 }
