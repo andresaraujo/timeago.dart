@@ -7,7 +7,7 @@ environment:
   sdk: ">=2.10.0 <3.0.0"
 
 dependencies:
-  timeago: ^2.0.27
+  timeago: ">=2.0.27 <3.0.0"
   flutter:
     sdk: flutter
 
