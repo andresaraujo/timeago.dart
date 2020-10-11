@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Czech Messages
 class CsMessages implements LookupMessages {
   @override
   String prefixAgo() => 'před';
@@ -14,11 +15,13 @@ class CsMessages implements LookupMessages {
   @override
   String aboutAMinute(int minutes) => 'minutou';
   @override
-  String minutes(int minutes) => _pluralize(minutes, 'minutou', 'minutami', 'minutami');
+  String minutes(int minutes) =>
+      _pluralize(minutes, 'minutou', 'minutami', 'minutami');
   @override
   String aboutAnHour(int minutes) => 'hodinou';
   @override
-  String hours(int hours) => _pluralize(hours, 'hodinou', 'hodinami', 'hodinami');
+  String hours(int hours) =>
+      _pluralize(hours, 'hodinou', 'hodinami', 'hodinami');
   @override
   String aDay(int hours) => 'dnem';
   @override
@@ -26,7 +29,8 @@ class CsMessages implements LookupMessages {
   @override
   String aboutAMonth(int days) => 'měsícem';
   @override
-  String months(int months) => _pluralize(months, 'měsícem', 'měsíci', 'měsíci');
+  String months(int months) =>
+      _pluralize(months, 'měsícem', 'měsíci', 'měsíci');
   @override
   String aboutAYear(int year) => 'rokem';
   @override
@@ -35,6 +39,7 @@ class CsMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Czech short Messages
 class CsShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -73,6 +78,6 @@ class CsShortMessages implements LookupMessages {
 String _pluralize(int n, String form1, String form2, String form3) {
   // Rules as per https://www.gnu.org/software/gettext/manual/html_node/Plural-forms.html
   if (n == 1) return '$n $form1';
-  if (n>=2 && n<=4) return '$n $form2';
+  if (n >= 2 && n <= 4) return '$n $form2';
   return '$n $form3';
 }

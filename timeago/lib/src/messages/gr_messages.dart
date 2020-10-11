@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Greek messages
 class GrMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class GrMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Greek short messages
 class GrShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

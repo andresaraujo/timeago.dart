@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Portuguese-Brazil messages
 class PtBrMessages implements LookupMessages {
   @override
   String prefixAgo() => 'Há';
@@ -35,6 +36,7 @@ class PtBrMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Portuguese-Brazil short messages
 class PtBrShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

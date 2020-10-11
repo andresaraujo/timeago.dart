@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Dutch messages
 class NlMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class NlMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Dutch short messages
 class NlShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

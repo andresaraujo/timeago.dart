@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Tamil messages
 class TaMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Divehi Messages
 class DvMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class DvMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Divehi short Messages
 class DvShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
