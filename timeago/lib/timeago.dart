@@ -27,6 +27,7 @@ export 'package:timeago/src/messages/vi_messages.dart';
 export 'package:timeago/src/messages/ta_messages.dart';
 export 'package:timeago/src/messages/ro_messages.dart';
 export 'package:timeago/src/messages/sv_messages.dart';
+export 'package:timeago/src/messages/hi_messages.dart';
 export 'package:timeago/src/messages/dv_messages.dart';
 export 'package:timeago/src/messages/ca_messages.dart';
 export 'package:timeago/src/messages/ms_my_messages.dart';
