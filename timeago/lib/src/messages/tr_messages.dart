@@ -8,7 +8,7 @@ class TrMessages implements LookupMessages {
   @override
   String suffixAgo() => 'önce';
   @override
-  String suffixFromNow() => 'şimdi';
+  String suffixFromNow() => 'kaldı';
   @override
   String lessThanOneMinute(int seconds) => 'biraz';
   @override

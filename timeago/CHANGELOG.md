@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.27
+- Update tr_messages.dart
+- Add Czech language
+- Update ko_messages.dart 
+- Greek Language Support
+Thanks to: @necatisozer, @BrnoPCmaniak, @HeesungB, @esentis 
+
 ## 2.0.26
 - Added Catalan support @comlaterra
 
