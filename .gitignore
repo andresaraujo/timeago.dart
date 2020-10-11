@@ -1,1 +1,8 @@
 .idea/
+
+# platforms and metadata
+.metadata
+android/
+ios/
+macos/
+web/

@@ -11,3 +11,10 @@ ios/Runner/GeneratedPluginRegistrant.*
 
 .idea/
 .vscode/
+
+# platforms and metadata
+.metadata
+android/
+ios/
+macos/
+web/
