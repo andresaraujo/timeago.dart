@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Malay-Malaysia messages
 class MsMyMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class MsMyMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Malay-Malaysia short messages
 class MsMyShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

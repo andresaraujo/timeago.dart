@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Hindi Messages
 class HiMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class HiMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Hindi short Messages
 class HiShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
