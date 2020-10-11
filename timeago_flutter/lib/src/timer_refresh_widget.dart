@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/widgets.dart';
 
+/// A widget that refresh with a `refreshRate`
 abstract class TimerRefreshWidget extends StatefulWidget {
   const TimerRefreshWidget({
     Key key,
@@ -8,6 +9,7 @@ abstract class TimerRefreshWidget extends StatefulWidget {
   })  : refreshRate = refreshRate ?? const Duration(minutes: 1),
         super(key: key);
 
+  /// [Duration] of the timer to refresh
   final Duration refreshRate;
 
   @override
@@ -23,6 +25,8 @@ class _TimerRefreshWidgetState extends State<TimerRefreshWidget>
   Widget build(BuildContext context) => widget.build(context);
 }
 
+/// The [TimerRefreshStateMixin] allows to handle the [State] of a
+/// [TimerRefreshWidget]
 mixin TimerRefreshStateMixin on State<TimerRefreshWidget> {
   Timer _timer;
 
