@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// French messages
 class FrMessages implements LookupMessages {
   @override
   String prefixAgo() => 'il y a';
@@ -35,6 +36,7 @@ class FrMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// French shott messages
 class FrShortMessages implements LookupMessages {
   @override
   String prefixAgo() => 'il y a';

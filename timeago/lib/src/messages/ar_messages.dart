@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Arabic Messages
 class ArMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -98,6 +99,7 @@ class ArMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Arabic short Messages
 class ArShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

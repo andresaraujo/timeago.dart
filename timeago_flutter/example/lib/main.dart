@@ -1,39 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:timeago_flutter/timeago_flutter.dart';
 
-const localeList = [
-  'en',
-  'en_short',
-  'es',
-  'es_short',
-  'de',
-  'fr',
-  'ja',
-  'id',
-  'pt_BR',
-  'pt_BR_short',
-  'zh',
-  'zh_CN',
-  'it',
-  'fa',
-  'ru',
-  'tr',
-  'pl',
-  'th',
-  'th_short',
-  'nb_NO',
-  'nb_NO_short',
-  'nn_NO',
-  'nn_NO_short',
-  'ku',
-  'ku_short',
-  'ar',
-  'ar_short',
-  'ko',
-  'en_custom',
-  'ro',
-  'ro_short'
-];
+final localesMap = <String, LookupMessages>{
+  'de': DeMessages(),
+  'fr': FrMessages(),
+  'ja': JaMessages(),
+  'id': IdMessages(),
+  'pt_BR': PtBrMessages(),
+  'pt_BR_short': PtBrShortMessages(),
+  'zh': ZhMessages(),
+  'zh_CN': ZhCnMessages(),
+  'it': ItMessages(),
+  'fa': FaMessages(),
+  'ru': RuMessages(),
+  'tr': TrMessages(),
+  'pl': PlMessages(),
+  'th': ThMessages(),
+  'th_short': ThShortMessages(),
+  'nb_NO': NbNoMessages(),
+  'nb_NO_short': NbNoShortMessages(),
+  'nn_NO': NnNoMessages(),
+  'nn_NO_short': NnNoShortMessages(),
+  'ku': KuMessages(),
+  'ku_short': KuShortMessages(),
+  'ar': ArMessages(),
+  'ar_short': ArShortMessages(),
+  'ko': KoMessages(),
+  'en_custom': CustomEnglish(),
+  'ro': RoMessages(),
+  'ro_short': RoShortMessages(),
+};
+
+final localeList = ['en', 'en_short', 'es', 'es_short', ...localesMap.keys];
 
 class CustomEnglish extends EnMessages {
   @override
@@ -50,90 +48,8 @@ class CustomEnglish extends EnMessages {
 
 main() async {
   // Add additional locales
-  localeList.forEach((locale) {
-    switch (locale) {
-      case 'de':
-        setLocaleMessages(locale, DeMessages());
-        break;
-      case 'fr':
-        setLocaleMessages(locale, FrMessages());
-        break;
-      case 'ja':
-        setLocaleMessages(locale, JaMessages());
-        break;
-      case 'id':
-        setLocaleMessages(locale, IdMessages());
-        break;
-      case 'pt_BR':
-        setLocaleMessages(locale, PtBrMessages());
-        break;
-      case 'pt_BR_short':
-        setLocaleMessages(locale, PtBrShortMessages());
-        break;
-      case 'zh':
-        setLocaleMessages(locale, ZhMessages());
-        break;
-      case 'zh_CN':
-        setLocaleMessages(locale, ZhCnMessages());
-        break;
-      case 'it':
-        setLocaleMessages(locale, ItMessages());
-        break;
-      case 'fa':
-        setLocaleMessages(locale, FaMessages());
-        break;
-      case 'ru':
-        setLocaleMessages(locale, RuMessages());
-        break;
-      case 'tr':
-        setLocaleMessages(locale, TrMessages());
-        break;
-      case 'pl':
-        setLocaleMessages(locale, PlMessages());
-        break;
-      case 'th':
-        setLocaleMessages(locale, ThMessages());
-        break;
-      case 'th_short':
-        setLocaleMessages(locale, ThShortMessages());
-        break;
-      case 'nb_NO':
-        setLocaleMessages(locale, NbNoMessages());
-        break;
-      case 'nb_NO_short':
-        setLocaleMessages(locale, NbNoShortMessages());
-        break;
-      case 'nn_NO':
-        setLocaleMessages(locale, NnNoMessages());
-        break;
-      case 'nn_NO_short':
-        setLocaleMessages(locale, NnNoShortMessages());
-        break;
-      case 'ku':
-        setLocaleMessages(locale, KuMessages());
-        break;
-      case 'ku_short':
-        setLocaleMessages(locale, KuShortMessages());
-        break;
-      case 'ar':
-        setLocaleMessages(locale, ArMessages());
-        break;
-      case 'ar_short':
-        setLocaleMessages(locale, ArShortMessages());
-        break;
-      case 'ko':
-        setLocaleMessages(locale, KoMessages());
-        break;
-      case 'en_custom':
-        setLocaleMessages(locale, CustomEnglish());
-        break;
-      case 'ro':
-        setLocaleMessages(locale, RoMessages());
-        break;
-      case 'ro_short':
-        setLocaleMessages(locale, RoShortMessages());
-        break;
-    }
+  localesMap.forEach((locale, lookupMessages) {
+    setLocaleMessages(locale, lookupMessages);
   });
   return runApp(MyApp());
 }
@@ -142,8 +58,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
-        home: MyHomePage(title: 'Flutter Demo Home Page'));
+      theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
   }
 }
 
@@ -179,12 +96,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   List<DropdownMenuItem<String>> _buildLocaleButtons() {
-    return localeList.map((locale) {
-      return DropdownMenuItem(
-        value: locale,
-        child: Text(locale),
-      );
-    }).toList();
+    return [
+      for (final locale in localeList)
+        DropdownMenuItem(
+          value: locale,
+          child: Text(locale),
+        )
+    ];
   }
 
   @override
@@ -193,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
           ListTile(
             title: Text('Locale'),
@@ -208,12 +126,17 @@ class _MyHomePageState extends State<MyHomePage> {
             value: _showFutureDates,
             onChanged: _onFutureChange,
           ),
-          GridView.count(
-            shrinkWrap: true,
-            primary: false,
-            crossAxisCount: 2,
-            physics: ScrollPhysics(),
-            children: _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+          Expanded(
+            child: SingleChildScrollView(
+              child: GridView.count(
+                shrinkWrap: true,
+                primary: false,
+                crossAxisCount: 2,
+                physics: ScrollPhysics(),
+                children:
+                    _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+              ),
+            ),
           ),
         ],
       ),
@@ -226,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return showFutureDates ? date.add(duration) : date.subtract(duration);
     }
 
-    List<DateTime> times = [
+    final List<DateTime> times = [
       addOrSubstract(baseDate, showFutureDates, Duration(seconds: 5)),
       addOrSubstract(baseDate, showFutureDates, Duration(seconds: 45)),
       addOrSubstract(baseDate, showFutureDates, Duration(seconds: 90)),
@@ -240,22 +163,20 @@ class _MyHomePageState extends State<MyHomePage> {
       addOrSubstract(baseDate, showFutureDates, Duration(days: 365 * 2)),
     ];
 
-    return times.map((time) {
-      return Container(
-        margin: EdgeInsets.all(5),
-        color: Colors.blue.shade700,
-        child: Center(
+    final style = Theme.of(context).textTheme.caption;
+    return [
+      for (final time in times)
+        Container(
+          margin: EdgeInsets.all(5),
+          color: Colors.blue.shade700,
+          alignment: Alignment.center,
           child: Timeago(
-            builder: (_, value) => Text(
-              value,
-              style: Theme.of(context).textTheme.caption,
-            ),
+            builder: (_, value) => Text(value, style: style),
             date: time,
             locale: locale,
             allowFromNow: true,
           ),
-        ),
-      );
-    }).toList();
+        )
+    ];
   }
 }

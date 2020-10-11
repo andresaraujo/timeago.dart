@@ -1,8 +1,17 @@
 # timeago_flutter_example
 
-A new Flutter application.
+Example for timeago_flutter package
 
-## Getting Started
+## Running
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+If necessary:
+
+```bash
+flutter create .
+```
+
+Run the following command:
+
+```bash
+flutter run
+```

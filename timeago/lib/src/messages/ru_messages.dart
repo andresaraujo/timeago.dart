@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Russian messages
 class RuMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

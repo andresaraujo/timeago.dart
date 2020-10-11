@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Romanian messages
 class RoMessages implements LookupMessages {
   @override
   String prefixAgo() => 'acum';
@@ -35,6 +36,7 @@ class RoMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Romanian short messages
 class RoShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

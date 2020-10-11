@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Norwegian-Bokm-Norway short messages
 class NbNoShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -35,6 +36,7 @@ class NbNoShortMessages implements LookupMessages {
   String wordSeparator() => ' ';
 }
 
+/// Norwegian-Bokm-Norway messages
 class NbNoMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Kurdish messages
 class KuMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -21,6 +22,7 @@ class KuMessages implements LookupMessages {
 
     return '$minutes خولەک لەمەوپێش';
   }
+
   @override
   String aboutAnHour(int minutes) => 'کاژێرێک لەمەوپێش';
   @override
@@ -31,6 +33,7 @@ class KuMessages implements LookupMessages {
 
     return '$hours کاژێر لەمەوپێش';
   }
+
   @override
   String aDay(int hours) => 'ڕۆژێک لەمەوپێش';
   @override
@@ -41,6 +44,7 @@ class KuMessages implements LookupMessages {
 
     return '$days ڕۆژ لەمەوپێش';
   }
+
   @override
   String aboutAMonth(int days) => 'مانگێک لەمەوپێش';
   @override
@@ -50,6 +54,7 @@ class KuMessages implements LookupMessages {
     }
     return '$months مانگ لەمەوپێش';
   }
+
   @override
   String aboutAYear(int year) => 'ساڵێک لەمەوپێش';
   @override
@@ -60,10 +65,12 @@ class KuMessages implements LookupMessages {
 
     return '$years ساڵ لەمەوپێش';
   }
+
   @override
   String wordSeparator() => ' ';
 }
 
+/// Kurdish short messages
 class KuShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';

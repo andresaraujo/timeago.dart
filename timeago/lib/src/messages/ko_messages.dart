@@ -1,5 +1,6 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
+/// Korean messages
 class KoMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
@@ -8,7 +9,7 @@ class KoMessages implements LookupMessages {
   @override
   String suffixAgo() => '전';
   @override
-  String suffixFromNow() => '방금';
+  String suffixFromNow() => '전';
   @override
   String lessThanOneMinute(int seconds) => '방금';
   @override

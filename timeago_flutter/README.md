@@ -1,9 +1,10 @@
 # timeago_flutter
 
-A new Flutter package.
+A collection of widgets to work with [timeago](https://pub.dev/packages/timeago)
+package to create fuzzy timestamps. (e.g. "15 minutes ago").
 
-## Getting Started
+## Widgets
 
-For help getting started with Flutter, view our online [documentation](https://flutter.io/).
-
-For help on editing package code, view the [documentation](https://flutter.io/developing-packages/).
+- Timeago
+- TimerRefresh
+- TimerRefreshWidget
