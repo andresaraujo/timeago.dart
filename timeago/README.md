@@ -7,18 +7,18 @@ A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 [![Build Status](https://img.shields.io/github/workflow/status/andresaraujo/timeago.dart/Build?color=orange&label=actions&logo=github&logoColor=orange&style=for-the-badge)](https://github.com/andresaraujo/timeago.dart/actions)
 
 [![support](https://img.shields.io/badge/platform-web%7Cflutter%7Cdart%20vm-ff69b4.svg?style=flat-square)](https://github.com/andresaraujo/timeago.dart)
+
 ## About v2
 
 - v2 of this library does not depend on package `intl` anymore, It didn't make sense for the small amount
-of text and now we can use the same code for browser, Flutter and server.
+  of text and now we can use the same code for browser, Flutter and server.
 
 - API is now a lot simpler, no need to create instance just use the `format` method.
 
 - Allows to add and override locales messages with `setLocaleMessages`
 
 - All v1 locale messages are available to use, currently library only loads by default `en`, `en_short`, `es` and `es_short`.
-To add the remaining just call `setLocaleMessages`, see example.
-
+  To add the remaining just call `setLocaleMessages`, see example.
 
 ## Usage
 
@@ -53,10 +53,9 @@ main() {
 }
 ```
 
-
 ### Live Demo
-[Here](http://andresaraujo.github.io/timeago.dart/)
 
+[Here](http://andresaraujo.github.io/timeago.dart/)
 
 ## Features and bugs
 
