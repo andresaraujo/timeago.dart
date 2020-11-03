@@ -41,7 +41,7 @@ class HeShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
-  String prefixFromNow() => '';
+  String prefixFromNow() => 'בעוד';
   @override
   String suffixAgo() => '';
   @override
@@ -49,7 +49,7 @@ class HeShortMessages implements LookupMessages {
   @override
   String lessThanOneMinute(int seconds) => 'כעת';
   @override
-  String aboutAMinute(int minutes) => '1 דקה';
+  String aboutAMinute(int minutes) => 'דקה';
   @override
   String minutes(int minutes) => '$minutes דקות';
   @override
