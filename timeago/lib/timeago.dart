@@ -30,6 +30,7 @@ export 'package:timeago/src/messages/sv_messages.dart';
 export 'package:timeago/src/messages/hi_messages.dart';
 export 'package:timeago/src/messages/dv_messages.dart';
 export 'package:timeago/src/messages/ca_messages.dart';
+export 'package:timeago/src/messages/he_messages.dart';
 export 'package:timeago/src/messages/ms_my_messages.dart';
 export 'package:timeago/src/messages/cs_messages.dart';
 export 'package:timeago/src/messages/lookupmessages.dart';
