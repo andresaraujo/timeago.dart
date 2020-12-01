@@ -48,9 +48,9 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
 /// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
 String format(DateTime date,
-    {String? locale, DateTime? clock, bool? allowFromNow}) {
+    {String? locale, DateTime? clock, bool allowFromNow = false}) {
   final _locale = locale ?? _default;
-  final _allowFromNow = allowFromNow ?? false;
+  final _allowFromNow = allowFromNow;
   final messages = _lookupMessagesMap[_locale] ?? EnMessages();
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
