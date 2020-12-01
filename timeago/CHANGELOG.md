@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.29
+
+- Adding Hebrew support @iscriptology 
+- Fix typo in Vietnamese @bachvtuan 
+
 ## 2.0.28
 
 - Adding Hindi support. @bipin001, @kranfix, @Google
