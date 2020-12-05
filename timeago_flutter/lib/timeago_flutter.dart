@@ -10,7 +10,7 @@ typedef TimeagoBuilder = Widget Function(BuildContext context, String value);
 
 ///
 /// Widget that provides a fuzzy time (eg '15 minues ago') relative to the
-/// provided [date]. Builder function will get executed at a [resfreshRate] (Defaults to 1 minute)
+/// provided [date]. Builder function will get executed at a [refreshRate] (Defaults to 1 minute)
 ///
 /// Example
 ///
