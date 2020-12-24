@@ -9,7 +9,7 @@ class KoMessages implements LookupMessages {
   @override
   String suffixAgo() => '전';
   @override
-  String suffixFromNow() => '전';
+  String suffixFromNow() => '후';
   @override
   String lessThanOneMinute(int seconds) => '방금';
   @override
