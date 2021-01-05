@@ -11,7 +11,7 @@ class ViMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'nữa';
   @override
-  String lessThanOneMinute(int seconds) => 'một thoáng';
+  String lessThanOneMinute(int seconds) => 'một tháng';
   @override
   String aboutAMinute(int minutes) => 'khoảng một phút';
   @override

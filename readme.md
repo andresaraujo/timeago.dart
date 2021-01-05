@@ -6,4 +6,4 @@ A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 
 [![Build Status](https://img.shields.io/github/workflow/status/andresaraujo/timeago.dart/Build?color=orange&label=actions&logo=github&logoColor=orange&style=for-the-badge)](https://github.com/andresaraujo/timeago.dart/actions)
 
-See library [readme here](timeago/readme.md)
+See library [readme here](timeago/README.md)
