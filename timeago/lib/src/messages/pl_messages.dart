@@ -13,11 +13,11 @@ class PlMessages implements LookupMessages {
   @override
   String lessThanOneMinute(int seconds) => 'chwilę';
   @override
-  String aboutAMinute(int minutes) => 'około minutę';
+  String aboutAMinute(int minutes) => 'około minuty';
   @override
   String minutes(int minutes) => _pluralize(minutes, 'minuty', 'minut');
   @override
-  String aboutAnHour(int minutes) => 'około godzinę';
+  String aboutAnHour(int minutes) => 'około godziny';
   @override
   String hours(int hours) => _pluralize(hours, 'godziny', 'godzin');
   @override
@@ -25,11 +25,11 @@ class PlMessages implements LookupMessages {
   @override
   String days(int days) => '$days dni';
   @override
-  String aboutAMonth(int days) => 'około miesiąc';
+  String aboutAMonth(int days) => 'około miesiąca';
   @override
   String months(int months) => _pluralize(months, 'miesiące', 'miesięcy');
   @override
-  String aboutAYear(int year) => 'około rok';
+  String aboutAYear(int year) => 'około roku';
   @override
   String years(int years) => _pluralize(years, 'lata', 'lat');
   @override
