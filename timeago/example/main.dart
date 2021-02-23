@@ -21,6 +21,8 @@ main() async {
   timeago.setLocaleMessages('ca_short', timeago.CaShortMessages());
   timeago.setLocaleMessages('cs', timeago.CsMessages());
   timeago.setLocaleMessages('cs_short', timeago.CsShortMessages());
+  timeago.setLocaleMessages('he', timeago.HeMessages());
+  timeago.setLocaleMessages('he_short', timeago.HeShortMessages());
   timeago.setLocaleMessages('hi', timeago.HiMessages());
   timeago.setLocaleMessages('hi_short', timeago.HiShortMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
@@ -35,11 +37,12 @@ main() async {
   timeago.setLocaleMessages('it', timeago.ItMessages());
   timeago.setLocaleMessages('it_short', timeago.ItShortMessages());
   timeago.setLocaleMessages('fa', timeago.FaMessages());
-  timeago.setLocaleMessages('ru', timeago.RuMessages());
   timeago.setLocaleMessages('tr', timeago.TrMessages());
   timeago.setLocaleMessages('pl', timeago.PlMessages());
   timeago.setLocaleMessages('th', timeago.ThMessages());
   timeago.setLocaleMessages('th_short', timeago.ThShortMessages());
+  timeago.setLocaleMessages('mn', timeago.MnMessages());
+  timeago.setLocaleMessages('mn_short', timeago.MnShortMessages());
   timeago.setLocaleMessages('ms_MY', timeago.MsMyMessages());
   timeago.setLocaleMessages('ms_MY_short', timeago.MsMyShortMessages());
   timeago.setLocaleMessages('nb_NO', timeago.NbNoMessages());
@@ -57,12 +60,10 @@ main() async {
   timeago.setLocaleMessages('ta', timeago.TaMessages());
   timeago.setLocaleMessages('ro', timeago.RoMessages());
   timeago.setLocaleMessages('ro_short', timeago.RoShortMessages());
+  timeago.setLocaleMessages('ru', timeago.RuMessages());
+  timeago.setLocaleMessages('ru_short', timeago.RuShortMessages());
   timeago.setLocaleMessages('sv', timeago.SvMessages());
   timeago.setLocaleMessages('sv_short', timeago.SvShortMessages());
-  timeago.setLocaleMessages('he', timeago.HeMessages());
-  timeago.setLocaleMessages('he_short', timeago.HeShortMessages());
-  timeago.setLocaleMessages('mn', timeago.MnMessages());
-  timeago.setLocaleMessages('mn_short', timeago.MnShortMessages());
 
   final loadedTime = new DateTime.now();
 

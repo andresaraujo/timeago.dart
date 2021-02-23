@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.30
+
+- Fixes in `ko` locale @zirho 
+- Fixes typos in docs @mchudy
+- Add in `ru` short messages and updates @Goolpe
+- Fixes in `pl` messages @Dorian Oszczęda
+- Fixes in `vi` locale @duynp117
+- Adds Mongolian (`mn`) messages @Bat-Orshikh
+
 ## 2.0.29
 
 - Adding Hebrew support @iscriptology 
