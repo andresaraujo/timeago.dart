@@ -6,16 +6,17 @@ jobs:
   build_dart_packages:
     runs-on: ubuntu-latest
 
-    container:
-      image: google/dart:${{ matrix.version }}
-
     strategy:
       matrix:
         package: ["timeago"]
-        version: ["latest"]
+        sdk: ["dev"]
 
     steps:
       - uses: actions/checkout@v2
+
+      - uses: dart-lang/setup-dart@v0.1
+        with:
+          channel: ${{ matrix.sdk }}
 
       - name: Install dependencies
         working-directory: ${{ matrix.package }}

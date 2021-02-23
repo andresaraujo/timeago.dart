@@ -54,7 +54,7 @@ void main() {
 
       // use 'en_short'
       var result = timeago.format(now, locale: 'en_short', clock: clock);
-      expect(result, equals('3 min'));
+      expect(result, equals('3m'));
     });
 
     test('should allow from now dates', () async {

@@ -1,8 +1,13 @@
 # Changelog
 
+## 3.0.0
+- Update GH action to use dev sdk
+- Update english short messages to be consistent with other libraries
+- Remove null asserts and upgrade to null safety
+
 ## 2.0.30
 
-- Fixes in `ko` locale @zirho 
+- Fixes in `ko` locale @zirho
 - Fixes typos in docs @mchudy
 - Add in `ru` short messages and updates @Goolpe
 - Fixes in `pl` messages @Dorian Oszczęda
