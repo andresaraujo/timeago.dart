@@ -87,3 +87,38 @@ String _convert(int number, String type) {
       return '';
   }
 }
+
+class UkShortMessages implements LookupMessages {
+  @override
+  String prefixAgo() => '';
+  @override
+  String prefixFromNow() => '';
+  @override
+  String suffixAgo() => '';
+  @override
+  String suffixFromNow() => '';
+  @override
+  String lessThanOneMinute(int seconds) => 'тільки що';
+  @override
+  String aboutAMinute(int minutes) => '~1 хв.';
+  @override
+  String minutes(int minutes) => '$minutes хв.';
+  @override
+  String aboutAnHour(int minutes) => '~1 год.';
+  @override
+  String hours(int hours) => '$hours год.';
+  @override
+  String aDay(int hours) => '~1 д.';
+  @override
+  String days(int days) => '$days д.';
+  @override
+  String aboutAMonth(int days) => '~1 міс.';
+  @override
+  String months(int months) => '$months міс.';
+  @override
+  String aboutAYear(int year) => '~1 р.';
+  @override
+  String years(int years) => '$years р.';
+  @override
+  String wordSeparator() => ' ';
+}

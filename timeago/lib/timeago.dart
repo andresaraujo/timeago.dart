@@ -34,5 +34,6 @@ export 'package:timeago/src/messages/ca_messages.dart';
 export 'package:timeago/src/messages/he_messages.dart';
 export 'package:timeago/src/messages/ms_my_messages.dart';
 export 'package:timeago/src/messages/cs_messages.dart';
+export 'package:timeago/src/messages/uk_messages.dart';
 export 'package:timeago/src/messages/lookupmessages.dart';
 export 'package:timeago/src/timeago.dart';
