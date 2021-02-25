@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.1
+- Add `uk` locale @alexnikitchuk
+
 ## 3.0.0
 - Update GH action to use dev sdk
 - Update english short messages to be consistent with other libraries
