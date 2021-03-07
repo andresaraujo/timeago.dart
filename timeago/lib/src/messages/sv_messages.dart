@@ -39,11 +39,11 @@ class SvMessages implements LookupMessages {
 /// Swedish Short messages
 class SvShortMessages implements LookupMessages {
   @override
-  String prefixAgo() => 'för ';
+  String prefixAgo() => '';
   @override
-  String prefixFromNow() => 'om';
+  String prefixFromNow() => '';
   @override
-  String suffixAgo() => 'sedan';
+  String suffixAgo() => '';
   @override
   String suffixFromNow() => '';
   @override
@@ -61,9 +61,9 @@ class SvShortMessages implements LookupMessages {
   @override
   String days(int days) => '$days d';
   @override
-  String aboutAMonth(int days) => '~1 må';
+  String aboutAMonth(int days) => '~1 mån';
   @override
-  String months(int months) => '$months må';
+  String months(int months) => '$months mån';
   @override
   String aboutAYear(int year) => '~1 år';
   @override
