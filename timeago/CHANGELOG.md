@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.2
+- Update  `sv` short messages @Kal-Elx
+
 ## 3.0.1
 - Add `uk` locale @alexnikitchuk
 
