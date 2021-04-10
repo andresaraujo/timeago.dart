@@ -11,7 +11,7 @@ class JaMessages implements LookupMessages {
   @override
   String suffixFromNow() => '後';
   @override
-  String lessThanOneMinute(int seconds) => '1分未満';
+  String lessThanOneMinute(int seconds) => '${seconds}秒';
   @override
   String aboutAMinute(int minutes) => '約1分';
   @override
@@ -19,19 +19,19 @@ class JaMessages implements LookupMessages {
   @override
   String aboutAnHour(int minutes) => '約1時間';
   @override
-  String hours(int hours) => '約${hours}時間';
+  String hours(int hours) => '${hours}時間';
   @override
-  String aDay(int hours) => '約1日';
+  String aDay(int hours) => '1日';
   @override
-  String days(int days) => '約${days}日';
+  String days(int days) => '${days}日';
   @override
   String aboutAMonth(int days) => '約1か月';
   @override
-  String months(int months) => '約${months}か月';
+  String months(int months) => '${months}か月';
   @override
   String aboutAYear(int year) => '約1年';
   @override
-  String years(int years) => '約${years}年';
+  String years(int years) => '${years}年';
   @override
   String wordSeparator() => '';
 }
