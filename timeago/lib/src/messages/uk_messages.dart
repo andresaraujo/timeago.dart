@@ -63,7 +63,7 @@ String _convert(int number, String type) {
       case 'hours':
         return 'години';
       case 'days':
-        return 'дня';
+        return 'дні';
       case 'months':
         return 'місяця';
       case 'years':
