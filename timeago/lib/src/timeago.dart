@@ -51,7 +51,7 @@ Map<String, LookupMessages> _lookupMessagesMap = {
   'en_short': EnShortMessages(),
   'es': EsMessages(),
   'es_short': EsShortMessages(),
-  'fa': FaMessages(),
+  'fr': FrMessages(),
   'el': GrMessages(),
   'he': HeMessages(),
   'hi': HiMessages(),
