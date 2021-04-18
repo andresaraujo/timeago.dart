@@ -1,14 +1,84 @@
+import 'package:timeago/src/messages/de_messages.dart';
 import 'package:timeago/src/messages/en_messages.dart';
+import 'package:timeago/src/messages/az_messages.dart';
 import 'package:timeago/src/messages/es_messages.dart';
+import 'package:timeago/src/messages/fr_messages.dart';
+import 'package:timeago/src/messages/gr_messages.dart';
+import 'package:timeago/src/messages/ja_messages.dart';
+import 'package:timeago/src/messages/km_messages.dart';
+import 'package:timeago/src/messages/id_messages.dart';
+import 'package:timeago/src/messages/pt_br_messages.dart';
+import 'package:timeago/src/messages/zh_cn_messages.dart';
+import 'package:timeago/src/messages/zh_messages.dart';
+import 'package:timeago/src/messages/it_messages.dart';
+import 'package:timeago/src/messages/fa_messages.dart';
+import 'package:timeago/src/messages/ru_messages.dart';
+import 'package:timeago/src/messages/nl_messages.dart';
+import 'package:timeago/src/messages/da_messages.dart';
+import 'package:timeago/src/messages/tr_messages.dart';
+import 'package:timeago/src/messages/pl_messages.dart';
+import 'package:timeago/src/messages/th_messages.dart';
+import 'package:timeago/src/messages/mn_messages.dart';
+import 'package:timeago/src/messages/nb_no_messages.dart';
+import 'package:timeago/src/messages/nn_no_messages.dart';
+import 'package:timeago/src/messages/ku_messages.dart';
+import 'package:timeago/src/messages/ar_messages.dart';
+import 'package:timeago/src/messages/ko_messages.dart';
+import 'package:timeago/src/messages/vi_messages.dart';
+import 'package:timeago/src/messages/ta_messages.dart';
+import 'package:timeago/src/messages/ro_messages.dart';
+import 'package:timeago/src/messages/sv_messages.dart';
+import 'package:timeago/src/messages/hi_messages.dart';
+import 'package:timeago/src/messages/dv_messages.dart';
+import 'package:timeago/src/messages/ca_messages.dart';
+import 'package:timeago/src/messages/he_messages.dart';
+import 'package:timeago/src/messages/ms_my_messages.dart';
+import 'package:timeago/src/messages/cs_messages.dart';
+import 'package:timeago/src/messages/uk_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 String _default = 'en';
 
 Map<String, LookupMessages> _lookupMessagesMap = {
+  'ar': ArMessages(),
+  'az': AzMessages(),
+  'ca': CaMessages(),
+  'cs': CsMessages(),
+  'da': DaMessages(),
+  'de': DeMessages(),
+  'dv': DvMessages(),
   'en': EnMessages(),
   'en_short': EnShortMessages(),
   'es': EsMessages(),
   'es_short': EsShortMessages(),
+  'fa': FaMessages(),
+  'el': GrMessages(),
+  'he': HeMessages(),
+  'hi': HiMessages(),
+  'id': IdMessages(),
+  'it': ItMessages(),
+  'ja': JaMessages(),
+  'km': KmMessages(),
+  'ko': KoMessages(),
+  'ku': KuMessages(),
+  'mn': MnMessages(),
+  'ms': MsMyMessages(),
+  'nb': NbNoShortMessages(),
+  'nl': NlMessages(),
+  'nn': NnNoShortMessages(),
+  'pl': PlMessages(),
+  'pt-br': PtBrMessages(),
+  'ro': RoMessages(),
+  'ru': RuMessages(),
+  'sv': SvMessages(),
+  'ta': TaMessages(),
+  'th': ThMessages(),
+  'tr': TrMessages(),
+  'uk': UkMessages(),
+  'vi': ViMessages(),
+  'zh': ZhCnMessages(),
+  'zh-cn': ZhCnMessages(),
+  'zh-tw': ZhMessages(),
 };
 
 /// Sets the default [locale]. By default it is `en`.
