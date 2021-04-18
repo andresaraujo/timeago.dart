@@ -26,7 +26,7 @@ void main() {
       final clock = now.add(Duration(seconds: 1));
 
       var result = timeago.format(now, locale: 'ko', clock: clock);
-      expect(result, equals('a moment ago'));
+      expect(result, equals('방금 전'));
     });
 
     test('should allow to override a locale', () async {
