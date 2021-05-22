@@ -3,7 +3,7 @@ import 'package:timeago/src/messages/lookupmessages.dart';
 /// Portuguese-Brazil messages
 class PtBrMessages implements LookupMessages {
   @override
-  String prefixAgo() => 'Há';
+  String prefixAgo() => 'há';
   @override
   String prefixFromNow() => 'em';
   @override
