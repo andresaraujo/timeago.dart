@@ -19,7 +19,7 @@ class NlMessages implements LookupMessages {
   @override
   String aboutAnHour(int minutes) => 'ongeveer één uur';
   @override
-  String hours(int hours) => '$hours uren';
+  String hours(int hours) => '$hours uur';
   @override
   String aDay(int hours) => 'één dag';
   @override
