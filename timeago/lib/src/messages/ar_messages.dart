@@ -17,7 +17,7 @@ class ArMessages implements LookupMessages {
       return 'ثانية واحدة';
     } else if (seconds == 2) {
       return 'ثانيتين';
-    } else if (days > 2 && days < 11) {
+    } else if (seconds > 2 && seconds < 11) {
       return '$seconds ثواني';
     } else {
       return '$seconds ثانية';
