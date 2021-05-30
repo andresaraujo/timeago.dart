@@ -5,11 +5,11 @@ class ArMessages implements LookupMessages {
   @override
   String prefixAgo() => 'منذ';
   @override
-  String prefixFromNow() => '';
+  String prefixFromNow() => 'بعد';
   @override
   String suffixAgo() => '';
   @override
-  String suffixFromNow() => 'من الآن';
+  String suffixFromNow() => '';
 
   @override
   String lessThanOneMinute(int seconds) {
