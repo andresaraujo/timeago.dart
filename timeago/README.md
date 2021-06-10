@@ -6,19 +6,6 @@ A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
 
 [![Build Status](https://img.shields.io/github/workflow/status/andresaraujo/timeago.dart/Build?color=orange&label=actions&logo=github&logoColor=orange&style=for-the-badge)](https://github.com/andresaraujo/timeago.dart/actions)
 
-[![support](https://img.shields.io/badge/platform-web%7Cflutter%7Cdart%20vm-ff69b4.svg?style=flat-square)](https://github.com/andresaraujo/timeago.dart)
-
-## About v2
-
-- v2 of this library does not depend on package `intl` anymore, It didn't make sense for the small amount
-  of text and now we can use the same code for browser, Flutter and server.
-
-- API is now a lot simpler, no need to create instance just use the `format` method.
-
-- Allows to add and override locales messages with `setLocaleMessages`
-
-- All v1 locale messages are available to use, currently library only loads by default `en`, `en_short`, `es` and `es_short`.
-  To add the remaining just call `setLocaleMessages`, see example.
 
 ## Usage
 
@@ -36,7 +23,12 @@ main() {
 }
 ```
 
-### Adding new locales
+##### IMPORTANT
+You need to add the locales you are going to use in your app otherwise you will get the default english messages.
+
+Currently, it has only **english** preloaded and **spanish**. But the library provides messages for several locales, see [locale messages](lib/source/messages).
+
+### Adding locales
 
 ```dart
 main() {
@@ -45,13 +37,16 @@ main() {
     // Add a new locale messages
     timeago.setLocaleMessages('fr', timeago.FrMessages());
 
-    // Override a locale message
-    timeago.setLocaleMessages('en', CustomMessages());
+    // You can override locale messages, with you own like this
+    // where [MyCustomMessages] is a class that extends LookupMessages
+    timeago.setLocaleMessages('en', MyCustomMessages());
 
     print(timeago.format(fifteenAgo)); // 15 min ago
     print(timeago.format(fifteenAgo, locale: 'fr')); // environ 15 minutes
 }
 ```
+
+For a complete example of adding all provided locales see [example](example/main.dart)
 
 ### Live Demo
 

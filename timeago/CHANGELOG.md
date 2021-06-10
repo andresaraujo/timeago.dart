@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.1.0
+- Add warning when using a locale that has not been added.
+  ```dart
+  timeago.format(parsedDate, locale: 'ru');
+  
+  // Locale [ru] has not been added, using [en] as fallback. To add a locale use [setLocaleMessages]
+  ```
+- Add missing locales to web example
+- Add urdu messages @ibnshamas
+- Fix uk messages @alexnikitchuk
+- Fix pt_BR messages @araruna
+- Fix ar messages @yousef.su
+- Fix nl messages @vincentderidder
+
 ## 3.0.2
 - Update  `sv` short messages @Kal-Elx
 
