@@ -77,7 +77,7 @@ String acmoConvertToUrduNumbers(int input) {
   const urdu = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
 
   var result = input.toString();
-  for (int i = 0; i < english.length; i++) {
+  for (var i = 0; i < english.length; i++) {
     result = result.replaceAll(english[i], urdu[i]);
   }
 
