@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -75,7 +75,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String _locale = 'en';
   bool _showFutureDates = false;
-  DateTime _baseDate;
+  late DateTime _baseDate;
 
   @override
   void initState() {
@@ -83,13 +83,19 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
-  void _chageLocale(String locale) {
+  void _chageLocale(String? locale) {
+    if (locale == null) {
+      return;
+    }
     setState(() {
       _locale = locale;
     });
   }
 
-  void _onFutureChange(bool value) {
+  void _onFutureChange(bool? value) {
+    if (value == null) {
+      return;
+    }
     setState(() {
       _showFutureDates = value;
     });

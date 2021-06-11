@@ -53,19 +53,19 @@ typedef TimeagoBuilder = Widget Function(BuildContext context, String value);
 ///
 class Timeago extends TimerRefreshWidget {
   const Timeago({
-    Key key,
-    @required this.builder,
-    @required this.date,
+    Key? key,
+    required this.builder,
+    required this.date,
     this.locale,
-    this.allowFromNow,
+    this.allowFromNow = false,
     this.clock,
     Duration refreshRate = const Duration(minutes: 1),
   }) : super(key: key, refreshRate: refreshRate);
 
   final TimeagoBuilder builder;
   final DateTime date;
-  final DateTime clock;
-  final String locale;
+  final DateTime? clock;
+  final String? locale;
   final bool allowFromNow;
 
   @override

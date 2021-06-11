@@ -4,7 +4,7 @@ description: A Flutter example for timeago_flutter package on the top of timeago
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.8.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   timeago_flutter:
@@ -19,3 +19,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+publish_to: none
