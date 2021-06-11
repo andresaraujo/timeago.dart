@@ -39,11 +39,11 @@ class CustomEnglish extends EnMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String aboutAMinute(_) => 'a minute';
+  String aboutAMinute(minutes) => 'a minute';
   @override
-  String aboutAnHour(_) => 'a hour';
+  String aboutAnHour(minutes) => 'a hour';
   @override
-  String aboutAMonth(_) => 'a month';
+  String aboutAMonth(days) => 'a month';
 }
 
 main() async {
@@ -54,18 +54,19 @@ main() async {
   return runApp(MyApp());
 }
 
+// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -120,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: <Widget>[
           ListTile(
-            title: Text('Locale'),
+            title: const Text('Locale'),
             trailing: DropdownButton(
               value: _locale,
               items: _buildLocaleButtons(),
@@ -128,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           CheckboxListTile(
-            title: Text('Future date'),
+            title: const Text('Future date'),
             value: _showFutureDates,
             onChanged: _onFutureChange,
           ),
@@ -138,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 shrinkWrap: true,
                 primary: false,
                 crossAxisCount: 2,
-                physics: ScrollPhysics(),
+                physics: const ScrollPhysics(),
                 children:
                     _buildTimeagolist(_locale, _baseDate, _showFutureDates),
               ),
@@ -156,24 +157,24 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     final List<DateTime> times = [
-      addOrSubstract(baseDate, showFutureDates, Duration(seconds: 5)),
-      addOrSubstract(baseDate, showFutureDates, Duration(seconds: 45)),
-      addOrSubstract(baseDate, showFutureDates, Duration(seconds: 90)),
-      addOrSubstract(baseDate, showFutureDates, Duration(minutes: 45)),
-      addOrSubstract(baseDate, showFutureDates, Duration(minutes: 90)),
-      addOrSubstract(baseDate, showFutureDates, Duration(hours: 24)),
-      addOrSubstract(baseDate, showFutureDates, Duration(hours: 48)),
-      addOrSubstract(baseDate, showFutureDates, Duration(days: 30)),
-      addOrSubstract(baseDate, showFutureDates, Duration(days: 60)),
-      addOrSubstract(baseDate, showFutureDates, Duration(days: 365)),
-      addOrSubstract(baseDate, showFutureDates, Duration(days: 365 * 2)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(seconds: 5)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(seconds: 45)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(seconds: 90)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(minutes: 45)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(minutes: 90)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(hours: 24)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(hours: 48)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(days: 30)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(days: 60)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(days: 365)),
+      addOrSubstract(baseDate, showFutureDates, const Duration(days: 365 * 2)),
     ];
 
     final style = Theme.of(context).textTheme.caption;
     return [
       for (final time in times)
         Container(
-          margin: EdgeInsets.all(5),
+          margin: const EdgeInsets.all(5),
           color: Colors.blue.shade700,
           alignment: Alignment.center,
           child: Timeago(
