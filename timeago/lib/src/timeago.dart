@@ -56,7 +56,7 @@ String format(DateTime date,
   final _allowFromNow = allowFromNow;
   final messages = _lookupMessagesMap[_locale] ?? EnMessages();
   final _clock = clock ?? DateTime.now();
-  var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
+  var elapsed = (_clock.millisecondsSinceEpoch + _clock.timeZoneOffset.inMilliseconds) - (date.millisecondsSinceEpoch + date.timeZoneOffset.inMilliseconds);
 
   String prefix, suffix;
 
