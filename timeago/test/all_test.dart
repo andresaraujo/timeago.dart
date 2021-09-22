@@ -214,7 +214,7 @@ void main() {
 
 class CustomEnglishMessages extends timeago.EnMessages {
   @override
-  String lessThanOneMinute(int seconds) {
+  String lessThanOneMinute(int seconds, timeago.AgoOrFromNow _) {
     return seconds > 1 ? '$seconds seconds' : '1 second';
   }
 }

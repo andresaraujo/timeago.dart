@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/en_messages.dart';
 import 'package:timeago/src/messages/es_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
@@ -58,13 +59,16 @@ String format(DateTime date,
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
+  AgoOrFromNow agoOrFromNow;
   String prefix, suffix;
 
   if (_allowFromNow && elapsed < 0) {
     elapsed = date.isBefore(_clock) ? elapsed : elapsed.abs();
+    agoOrFromNow = AgoOrFromNow.fromNow;
     prefix = messages.prefixFromNow();
     suffix = messages.suffixFromNow();
   } else {
+    agoOrFromNow = AgoOrFromNow.ago;
     prefix = messages.prefixAgo();
     suffix = messages.suffixAgo();
   }
@@ -78,27 +82,27 @@ String format(DateTime date,
 
   String result;
   if (seconds < 45) {
-    result = messages.lessThanOneMinute(seconds.round());
+    result = messages.lessThanOneMinute(seconds.round(), agoOrFromNow);
   } else if (seconds < 90) {
-    result = messages.aboutAMinute(minutes.round());
+    result = messages.aboutAMinute(minutes.round(), agoOrFromNow);
   } else if (minutes < 45) {
-    result = messages.minutes(minutes.round());
+    result = messages.minutes(minutes.round(), agoOrFromNow);
   } else if (minutes < 90) {
-    result = messages.aboutAnHour(minutes.round());
+    result = messages.aboutAnHour(minutes.round(), agoOrFromNow);
   } else if (hours < 24) {
-    result = messages.hours(hours.round());
+    result = messages.hours(hours.round(), agoOrFromNow);
   } else if (hours < 48) {
-    result = messages.aDay(hours.round());
+    result = messages.aDay(hours.round(), agoOrFromNow);
   } else if (days < 30) {
-    result = messages.days(days.round());
+    result = messages.days(days.round(), agoOrFromNow);
   } else if (days < 60) {
-    result = messages.aboutAMonth(days.round());
+    result = messages.aboutAMonth(days.round(), agoOrFromNow);
   } else if (days < 365) {
-    result = messages.months(months.round());
+    result = messages.months(months.round(), agoOrFromNow);
   } else if (years < 2) {
-    result = messages.aboutAYear(months.round());
+    result = messages.aboutAYear(months.round(), agoOrFromNow);
   } else {
-    result = messages.years(years.round());
+    result = messages.years(years.round(), agoOrFromNow);
   }
 
   return [prefix, result, suffix]

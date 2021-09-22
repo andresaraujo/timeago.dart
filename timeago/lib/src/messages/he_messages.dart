@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Hebrew Messages
@@ -11,27 +12,27 @@ class HeMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'כמה רגעים';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'כמה רגעים';
   @override
-  String aboutAMinute(int minutes) => 'דקה';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'דקה';
   @override
-  String minutes(int minutes) => '$minutes דקות';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes דקות';
   @override
-  String aboutAnHour(int minutes) => 'כשעה';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'כשעה';
   @override
-  String hours(int hours) => '$hours שעות';
+  String hours(int hours, AgoOrFromNow _) => '$hours שעות';
   @override
-  String aDay(int hours) => 'יום';
+  String aDay(int hours, AgoOrFromNow _) => 'יום';
   @override
-  String days(int days) => '$days ימים';
+  String days(int days, AgoOrFromNow _) => '$days ימים';
   @override
-  String aboutAMonth(int days) => 'כחודש';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'כחודש';
   @override
-  String months(int months) => '$months חודשים';
+  String months(int months, AgoOrFromNow _) => '$months חודשים';
   @override
-  String aboutAYear(int year) => 'כשנה';
+  String aboutAYear(int year, AgoOrFromNow _) => 'כשנה';
   @override
-  String years(int years) => '$years שנים';
+  String years(int years, AgoOrFromNow _) => '$years שנים';
   @override
   String wordSeparator() => ' ';
 }
@@ -47,27 +48,27 @@ class HeShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'כעת';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'כעת';
   @override
-  String aboutAMinute(int minutes) => 'דקה';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'דקה';
   @override
-  String minutes(int minutes) => '$minutes דקות';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes דקות';
   @override
-  String aboutAnHour(int minutes) => 'כשעה';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'כשעה';
   @override
-  String hours(int hours) => '$hours שעות';
+  String hours(int hours, AgoOrFromNow _) => '$hours שעות';
   @override
-  String aDay(int hours) => 'יום';
+  String aDay(int hours, AgoOrFromNow _) => 'יום';
   @override
-  String days(int days) => '$days ימים';
+  String days(int days, AgoOrFromNow _) => '$days ימים';
   @override
-  String aboutAMonth(int days) => 'כחודש';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'כחודש';
   @override
-  String months(int months) => '$months חודשים';
+  String months(int months, AgoOrFromNow _) => '$months חודשים';
   @override
-  String aboutAYear(int year) => 'כשנה';
+  String aboutAYear(int year, AgoOrFromNow _) => 'כשנה';
   @override
-  String years(int years) => '$years שנים';
+  String years(int years, AgoOrFromNow _) => '$years שנים';
   @override
   String wordSeparator() => ' ';
 }

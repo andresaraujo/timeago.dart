@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Urdu Messages
@@ -11,27 +12,27 @@ class UrMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'اب سے';
   @override
-  String lessThanOneMinute(int seconds) => 'ایک لمحہ';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'ایک لمحہ';
   @override
-  String aboutAMinute(int minutes) => 'ایک منٹ';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'ایک منٹ';
   @override
-  String minutes(int minutes) => '${acmoConvertToUrduNumbers(minutes)} منٹ';
+  String minutes(int minutes, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(minutes)} منٹ';
   @override
-  String aboutAnHour(int minutes) => 'ایک گھنٹہ';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'ایک گھنٹہ';
   @override
-  String hours(int hours) => '${acmoConvertToUrduNumbers(hours)} گھنٹے';
+  String hours(int hours, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(hours)} گھنٹے';
   @override
-  String aDay(int hours) => 'ایک دن';
+  String aDay(int hours, AgoOrFromNow _) => 'ایک دن';
   @override
-  String days(int days) => '${acmoConvertToUrduNumbers(days)} دن';
+  String days(int days, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(days)} دن';
   @override
-  String aboutAMonth(int days) => 'ایک مہینہ';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'ایک مہینہ';
   @override
-  String months(int months) => '${acmoConvertToUrduNumbers(months)} مہینہ';
+  String months(int months, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(months)} مہینہ';
   @override
-  String aboutAYear(int year) => 'ایک سال';
+  String aboutAYear(int year, AgoOrFromNow _) => 'ایک سال';
   @override
-  String years(int years) => '${acmoConvertToUrduNumbers(years)} برس';
+  String years(int years, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(years)} برس';
   @override
   String wordSeparator() => ' ';
 }
@@ -47,27 +48,27 @@ class ShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'ابھی';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'ابھی';
   @override
-  String aboutAMinute(int minutes) => '١ م';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '١ م';
   @override
-  String minutes(int minutes) => '${acmoConvertToUrduNumbers(minutes)} منٹ';
+  String minutes(int minutes, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(minutes)} منٹ';
   @override
-  String aboutAnHour(int minutes) => '~١ گھ';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~١ گھ';
   @override
-  String hours(int hours) => '${acmoConvertToUrduNumbers(hours)} گھ';
+  String hours(int hours, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(hours)} گھ';
   @override
-  String aDay(int hours) => '~١ د';
+  String aDay(int hours, AgoOrFromNow _) => '~١ د';
   @override
-  String days(int days) => '${acmoConvertToUrduNumbers(days)} د';
+  String days(int days, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(days)} د';
   @override
-  String aboutAMonth(int days) => '~١ ماہ';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~١ ماہ';
   @override
-  String months(int months) => '${acmoConvertToUrduNumbers(months)} ماہ';
+  String months(int months, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(months)} ماہ';
   @override
-  String aboutAYear(int year) => '~١ س';
+  String aboutAYear(int year, AgoOrFromNow _) => '~١ س';
   @override
-  String years(int years) => '${acmoConvertToUrduNumbers(years)} س';
+  String years(int years, AgoOrFromNow _) => '${acmoConvertToUrduNumbers(years)} س';
   @override
   String wordSeparator() => ' ';
 }

@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Divehi Messages
@@ -11,27 +12,27 @@ class DvMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'ފަހުން';
   @override
-  String lessThanOneMinute(int seconds) => 'ހިނދުކޮޅެއް';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'ހިނދުކޮޅެއް';
   @override
-  String aboutAMinute(int minutes) => 'މިނެޓެއް ހާއިރު';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'މިނެޓެއް ހާއިރު';
   @override
-  String minutes(int minutes) => '$minutes މިނެޓު';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes މިނެޓު';
   @override
-  String aboutAnHour(int minutes) => 'ގަޑިއިރެއް ހާއިރު';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'ގަޑިއިރެއް ހާއިރު';
   @override
-  String hours(int hours) => '$hours ގަޑިއިރު';
+  String hours(int hours, AgoOrFromNow _) => '$hours ގަޑިއިރު';
   @override
-  String aDay(int hours) => 'އެއް ދުވަސް';
+  String aDay(int hours, AgoOrFromNow _) => 'އެއް ދުވަސް';
   @override
-  String days(int days) => '$days ދުވަސް';
+  String days(int days, AgoOrFromNow _) => '$days ދުވަސް';
   @override
-  String aboutAMonth(int days) => 'މަހެއް ހާ ދުވަސް';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'މަހެއް ހާ ދުވަސް';
   @override
-  String months(int months) => '$months މަސް';
+  String months(int months, AgoOrFromNow _) => '$months މަސް';
   @override
-  String aboutAYear(int year) => 'އަހަރެއް ހާ ދުވަސް';
+  String aboutAYear(int year, AgoOrFromNow _) => 'އަހަރެއް ހާ ދުވަސް';
   @override
-  String years(int years) => '$years އަހަރު';
+  String years(int years, AgoOrFromNow _) => '$years އަހަރު';
   @override
   String wordSeparator() => ' ';
 }
@@ -47,28 +48,28 @@ class DvShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'މިހާރު';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'މިހާރު';
   @override
-  String aboutAMinute(int minutes) => '1 މިނެޓް';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '1 މިނެޓް';
   @override
-  String minutes(int minutes) => '$minutes މިނެޓް';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes މިނެޓް';
   @override
-  String aboutAnHour(int minutes) => '~1 ގ';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~1 ގ';
   @override
   @override
-  String hours(int hours) => '$hours ގ';
+  String hours(int hours, AgoOrFromNow _) => '$hours ގ';
   @override
-  String aDay(int hours) => '~1 ދުވަސް';
+  String aDay(int hours, AgoOrFromNow _) => '~1 ދުވަސް';
   @override
-  String days(int days) => '$days ދުވަސް';
+  String days(int days, AgoOrFromNow _) => '$days ދުވަސް';
   @override
-  String aboutAMonth(int days) => '~1 މަސް';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~1 މަސް';
   @override
-  String months(int months) => '$months މަސް';
+  String months(int months, AgoOrFromNow _) => '$months މަސް';
   @override
-  String aboutAYear(int year) => '~1 އަހަރު';
+  String aboutAYear(int year, AgoOrFromNow _) => '~1 އަހަރު';
   @override
-  String years(int years) => '$years އަހަރު';
+  String years(int years, AgoOrFromNow _) => '$years އަހަރު';
   @override
   String wordSeparator() => ' ';
 }

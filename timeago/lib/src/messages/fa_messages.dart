@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Farsi Messages
@@ -11,27 +12,27 @@ class FaMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'بعد';
   @override
-  String lessThanOneMinute(int seconds) => 'چند لحظه';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'چند لحظه';
   @override
-  String aboutAMinute(int minutes) => 'یک دقیقه';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'یک دقیقه';
   @override
-  String minutes(int minutes) => '${minutes} دقیقه';
+  String minutes(int minutes, AgoOrFromNow _) => '${minutes} دقیقه';
   @override
-  String aboutAnHour(int minutes) => '~یک ساعت';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~یک ساعت';
   @override
-  String hours(int hours) => '${hours} ساعت';
+  String hours(int hours, AgoOrFromNow _) => '${hours} ساعت';
   @override
-  String aDay(int hours) => '~یک روز';
+  String aDay(int hours, AgoOrFromNow _) => '~یک روز';
   @override
-  String days(int days) => '${days} روز';
+  String days(int days, AgoOrFromNow _) => '${days} روز';
   @override
-  String aboutAMonth(int days) => '~یک ماه';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~یک ماه';
   @override
-  String months(int months) => '${months} ماه';
+  String months(int months, AgoOrFromNow _) => '${months} ماه';
   @override
-  String aboutAYear(int year) => '~یک سال';
+  String aboutAYear(int year, AgoOrFromNow _) => '~یک سال';
   @override
-  String years(int years) => '${years} سال';
+  String years(int years, AgoOrFromNow _) => '${years} سال';
   @override
   String wordSeparator() => ' ';
 }

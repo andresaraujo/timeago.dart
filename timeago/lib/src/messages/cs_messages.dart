@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Czech Messages
@@ -11,30 +12,30 @@ class CsMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'od teď';
   @override
-  String lessThanOneMinute(int seconds) => 'chvílí';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'chvílí';
   @override
-  String aboutAMinute(int minutes) => 'minutou';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'minutou';
   @override
-  String minutes(int minutes) =>
+  String minutes(int minutes, AgoOrFromNow _) =>
       _pluralize(minutes, 'minutou', 'minutami', 'minutami');
   @override
-  String aboutAnHour(int minutes) => 'hodinou';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'hodinou';
   @override
-  String hours(int hours) =>
+  String hours(int hours, AgoOrFromNow _) =>
       _pluralize(hours, 'hodinou', 'hodinami', 'hodinami');
   @override
-  String aDay(int hours) => 'dnem';
+  String aDay(int hours, AgoOrFromNow _) => 'dnem';
   @override
-  String days(int days) => _pluralize(days, 'dnem', 'dny', 'dny');
+  String days(int days, AgoOrFromNow _) => _pluralize(days, 'dnem', 'dny', 'dny');
   @override
-  String aboutAMonth(int days) => 'měsícem';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'měsícem';
   @override
-  String months(int months) =>
+  String months(int months, AgoOrFromNow _) =>
       _pluralize(months, 'měsícem', 'měsíci', 'měsíci');
   @override
-  String aboutAYear(int year) => 'rokem';
+  String aboutAYear(int year, AgoOrFromNow _) => 'rokem';
   @override
-  String years(int years) => _pluralize(years, 'rokem', 'roky', 'roky');
+  String years(int years, AgoOrFromNow _) => _pluralize(years, 'rokem', 'roky', 'roky');
   @override
   String wordSeparator() => ' ';
 }
@@ -50,27 +51,27 @@ class CsShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'teď';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'teď';
   @override
-  String aboutAMinute(int minutes) => '1 min';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '1 min';
   @override
-  String minutes(int minutes) => '$minutes min';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes min';
   @override
-  String aboutAnHour(int minutes) => '~1 hod';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~1 hod';
   @override
-  String hours(int hours) => '$hours hod';
+  String hours(int hours, AgoOrFromNow _) => '$hours hod';
   @override
-  String aDay(int hours) => '~1 den';
+  String aDay(int hours, AgoOrFromNow _) => '~1 den';
   @override
-  String days(int days) => _pluralize(days, 'den', 'dny', 'dní');
+  String days(int days, AgoOrFromNow _) => _pluralize(days, 'den', 'dny', 'dní');
   @override
-  String aboutAMonth(int days) => '~1 měsíc';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~1 měsíc';
   @override
-  String months(int months) => _pluralize(months, 'měsíc', 'měsíce', 'měsíců');
+  String months(int months, AgoOrFromNow _) => _pluralize(months, 'měsíc', 'měsíce', 'měsíců');
   @override
-  String aboutAYear(int year) => '~1 rok';
+  String aboutAYear(int year, AgoOrFromNow _) => '~1 rok';
   @override
-  String years(int years) => _pluralize(years, 'rok', 'roky', 'roků');
+  String years(int years, AgoOrFromNow _) => _pluralize(years, 'rok', 'roky', 'roků');
   @override
   String wordSeparator() => ' ';
 }

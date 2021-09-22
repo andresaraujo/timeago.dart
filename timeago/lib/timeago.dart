@@ -1,3 +1,4 @@
+export 'package:timeago/src/ago_or_from_now.dart';
 export 'package:timeago/src/messages/ar_messages.dart';
 export 'package:timeago/src/messages/az_messages.dart';
 export 'package:timeago/src/messages/ca_messages.dart';
@@ -7,6 +8,7 @@ export 'package:timeago/src/messages/de_messages.dart';
 export 'package:timeago/src/messages/dv_messages.dart';
 export 'package:timeago/src/messages/en_messages.dart';
 export 'package:timeago/src/messages/es_messages.dart';
+export 'package:timeago/src/messages/et_messages.dart';
 export 'package:timeago/src/messages/fa_messages.dart';
 export 'package:timeago/src/messages/fr_messages.dart';
 export 'package:timeago/src/messages/gr_messages.dart';

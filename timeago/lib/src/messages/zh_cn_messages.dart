@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Chinese-China messages
@@ -11,27 +12,27 @@ class ZhCnMessages implements LookupMessages {
   @override
   String suffixFromNow() => '后';
   @override
-  String lessThanOneMinute(int seconds) => '少于一分钟';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => '少于一分钟';
   @override
-  String aboutAMinute(int minutes) => '约1分钟';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '约1分钟';
   @override
-  String minutes(int minutes) => '${minutes} 分';
+  String minutes(int minutes, AgoOrFromNow _) => '${minutes} 分';
   @override
-  String aboutAnHour(int minutes) => '约1小时';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '约1小时';
   @override
-  String hours(int hours) => '约 ${hours} 小时';
+  String hours(int hours, AgoOrFromNow _) => '约 ${hours} 小时';
   @override
-  String aDay(int hours) => '约1天';
+  String aDay(int hours, AgoOrFromNow _) => '约1天';
   @override
-  String days(int days) => '约 ${days} 日';
+  String days(int days, AgoOrFromNow _) => '约 ${days} 日';
   @override
-  String aboutAMonth(int days) => '约1个月';
+  String aboutAMonth(int days, AgoOrFromNow _) => '约1个月';
   @override
-  String months(int months) => '约 ${months} 月';
+  String months(int months, AgoOrFromNow _) => '约 ${months} 月';
   @override
-  String aboutAYear(int year) => '约1年';
+  String aboutAYear(int year, AgoOrFromNow _) => '约1年';
   @override
-  String years(int years) => '约 ${years} 年';
+  String years(int years, AgoOrFromNow _) => '约 ${years} 年';
   @override
   String wordSeparator() => ' ';
 }

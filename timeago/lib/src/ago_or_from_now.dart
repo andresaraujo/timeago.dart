@@ -1,0 +1,1 @@
+enum AgoOrFromNow { ago, fromNow }

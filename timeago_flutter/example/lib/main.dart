@@ -3,6 +3,8 @@ import 'package:timeago_flutter/timeago_flutter.dart';
 
 final localesMap = <String, LookupMessages>{
   'de': DeMessages(),
+  'et': EtMessages(),
+  'et_short': EtShortMessages(),
   'fr': FrMessages(),
   'ja': JaMessages(),
   'id': IdMessages(),
@@ -39,11 +41,11 @@ class CustomEnglish extends EnMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String aboutAMinute(minutes) => 'a minute';
+  String aboutAMinute(minutes, AgoOrFromNow _) => 'a minute';
   @override
-  String aboutAnHour(minutes) => 'a hour';
+  String aboutAnHour(minutes, AgoOrFromNow _) => 'an hour';
   @override
-  String aboutAMonth(days) => 'a month';
+  String aboutAMonth(days, AgoOrFromNow _) => 'a month';
 }
 
 main() async {

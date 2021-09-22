@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Polish messgages
@@ -11,27 +12,27 @@ class PlMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'od tego momentu';
   @override
-  String lessThanOneMinute(int seconds) => 'chwilę';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'chwilę';
   @override
-  String aboutAMinute(int minutes) => 'około minuty';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'około minuty';
   @override
-  String minutes(int minutes) => _pluralize(minutes, 'minuty', 'minut');
+  String minutes(int minutes, AgoOrFromNow _) => _pluralize(minutes, 'minuty', 'minut');
   @override
-  String aboutAnHour(int minutes) => 'około godziny';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'około godziny';
   @override
-  String hours(int hours) => _pluralize(hours, 'godziny', 'godzin');
+  String hours(int hours, AgoOrFromNow _) => _pluralize(hours, 'godziny', 'godzin');
   @override
-  String aDay(int hours) => 'dzień';
+  String aDay(int hours, AgoOrFromNow _) => 'dzień';
   @override
-  String days(int days) => '$days dni';
+  String days(int days, AgoOrFromNow _) => '$days dni';
   @override
-  String aboutAMonth(int days) => 'około miesiąca';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'około miesiąca';
   @override
-  String months(int months) => _pluralize(months, 'miesiące', 'miesięcy');
+  String months(int months, AgoOrFromNow _) => _pluralize(months, 'miesiące', 'miesięcy');
   @override
-  String aboutAYear(int year) => 'około roku';
+  String aboutAYear(int year, AgoOrFromNow _) => 'około roku';
   @override
-  String years(int years) => _pluralize(years, 'lata', 'lat');
+  String years(int years, AgoOrFromNow _) => _pluralize(years, 'lata', 'lat');
   @override
   String wordSeparator() => ' ';
 

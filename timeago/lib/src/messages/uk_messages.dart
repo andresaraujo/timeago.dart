@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Ukrainian messages
@@ -11,27 +12,27 @@ class UkMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'хвилину';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'хвилину';
   @override
-  String aboutAMinute(int minutes) => 'хвилину';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'хвилину';
   @override
-  String minutes(int minutes) => '$minutes ${_convert(minutes, 'minutes')}';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes ${_convert(minutes, 'minutes')}';
   @override
-  String aboutAnHour(int minutes) => 'годину';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'годину';
   @override
-  String hours(int hours) => '$hours ${_convert(hours, 'hours')}';
+  String hours(int hours, AgoOrFromNow _) => '$hours ${_convert(hours, 'hours')}';
   @override
-  String aDay(int hours) => 'день';
+  String aDay(int hours, AgoOrFromNow _) => 'день';
   @override
-  String days(int days) => '$days ${_convert(days, 'days')}';
+  String days(int days, AgoOrFromNow _) => '$days ${_convert(days, 'days')}';
   @override
-  String aboutAMonth(int days) => 'місяць';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'місяць';
   @override
-  String months(int months) => '$months ${_convert(months, 'months')}';
+  String months(int months, AgoOrFromNow _) => '$months ${_convert(months, 'months')}';
   @override
-  String aboutAYear(int year) => 'рік';
+  String aboutAYear(int year, AgoOrFromNow _) => 'рік';
   @override
-  String years(int years) => '$years ${_convert(years, 'years')}';
+  String years(int years, AgoOrFromNow _) => '$years ${_convert(years, 'years')}';
   @override
   String wordSeparator() => ' ';
 }
@@ -98,27 +99,27 @@ class UkShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'тільки що';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'тільки що';
   @override
-  String aboutAMinute(int minutes) => '~1 хв.';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '~1 хв.';
   @override
-  String minutes(int minutes) => '$minutes хв.';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes хв.';
   @override
-  String aboutAnHour(int minutes) => '~1 год.';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~1 год.';
   @override
-  String hours(int hours) => '$hours год.';
+  String hours(int hours, AgoOrFromNow _) => '$hours год.';
   @override
-  String aDay(int hours) => '~1 д.';
+  String aDay(int hours, AgoOrFromNow _) => '~1 д.';
   @override
-  String days(int days) => '$days д.';
+  String days(int days, AgoOrFromNow _) => '$days д.';
   @override
-  String aboutAMonth(int days) => '~1 міс.';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~1 міс.';
   @override
-  String months(int months) => '$months міс.';
+  String months(int months, AgoOrFromNow _) => '$months міс.';
   @override
-  String aboutAYear(int year) => '~1 р.';
+  String aboutAYear(int year, AgoOrFromNow _) => '~1 р.';
   @override
-  String years(int years) => '$years р.';
+  String years(int years, AgoOrFromNow _) => '$years р.';
   @override
   String wordSeparator() => ' ';
 }

@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Catalan Messages
@@ -11,27 +12,27 @@ class CaMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'un moment';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'un moment';
   @override
-  String aboutAMinute(int minutes) => 'un minut';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'un minut';
   @override
-  String minutes(int minutes) => '$minutes minuts';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes minuts';
   @override
-  String aboutAnHour(int minutes) => 'una hora';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'una hora';
   @override
-  String hours(int hours) => '$hours hores';
+  String hours(int hours, AgoOrFromNow _) => '$hours hores';
   @override
-  String aDay(int hours) => 'un dia';
+  String aDay(int hours, AgoOrFromNow _) => 'un dia';
   @override
-  String days(int days) => '$days dies';
+  String days(int days, AgoOrFromNow _) => '$days dies';
   @override
-  String aboutAMonth(int days) => 'un mes';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'un mes';
   @override
-  String months(int months) => '$months mesos';
+  String months(int months, AgoOrFromNow _) => '$months mesos';
   @override
-  String aboutAYear(int year) => 'un any';
+  String aboutAYear(int year, AgoOrFromNow _) => 'un any';
   @override
-  String years(int years) => '$years anys';
+  String years(int years, AgoOrFromNow _) => '$years anys';
   @override
   String wordSeparator() => ' ';
 }
@@ -47,27 +48,27 @@ class CaShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'ara';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'ara';
   @override
-  String aboutAMinute(int minutes) => '1 min';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '1 min';
   @override
-  String minutes(int minutes) => '$minutes min';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes min';
   @override
-  String aboutAnHour(int minutes) => '~1 hr';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~1 hr';
   @override
-  String hours(int hours) => '$hours hr';
+  String hours(int hours, AgoOrFromNow _) => '$hours hr';
   @override
-  String aDay(int hours) => '~1 dia';
+  String aDay(int hours, AgoOrFromNow _) => '~1 dia';
   @override
-  String days(int days) => '$days dies';
+  String days(int days, AgoOrFromNow _) => '$days dies';
   @override
-  String aboutAMonth(int days) => '~1 mes';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~1 mes';
   @override
-  String months(int months) => '$months mesos';
+  String months(int months, AgoOrFromNow _) => '$months mesos';
   @override
-  String aboutAYear(int year) => '~1 any';
+  String aboutAYear(int year, AgoOrFromNow _) => '~1 any';
   @override
-  String years(int years) => '$years anys';
+  String years(int years, AgoOrFromNow _) => '$years anys';
   @override
   String wordSeparator() => ' ';
 }

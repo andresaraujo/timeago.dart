@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Kurdish messages
@@ -11,11 +12,11 @@ class KuMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'لە ئێستاوە';
   @override
-  String lessThanOneMinute(int seconds) => 'چەند چرکەیەک لەمەوپێش';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'چەند چرکەیەک لەمەوپێش';
   @override
-  String aboutAMinute(int minutes) => 'خولەکێک لەمەوپێش';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'خولەکێک لەمەوپێش';
   @override
-  String minutes(int minutes) {
+  String minutes(int minutes, AgoOrFromNow _) {
     if (minutes == 1) {
       return 'خولەکێک لەمەوپێش';
     }
@@ -24,9 +25,9 @@ class KuMessages implements LookupMessages {
   }
 
   @override
-  String aboutAnHour(int minutes) => 'کاژێرێک لەمەوپێش';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'کاژێرێک لەمەوپێش';
   @override
-  String hours(int hours) {
+  String hours(int hours, AgoOrFromNow _) {
     if (hours == 1) {
       return 'کاژێرێک لەمەوپێش';
     }
@@ -35,9 +36,9 @@ class KuMessages implements LookupMessages {
   }
 
   @override
-  String aDay(int hours) => 'ڕۆژێک لەمەوپێش';
+  String aDay(int hours, AgoOrFromNow _) => 'ڕۆژێک لەمەوپێش';
   @override
-  String days(int days) {
+  String days(int days, AgoOrFromNow _) {
     if (days == 1) {
       return 'ڕۆژێک لەمەوپێش';
     }
@@ -46,9 +47,9 @@ class KuMessages implements LookupMessages {
   }
 
   @override
-  String aboutAMonth(int days) => 'مانگێک لەمەوپێش';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'مانگێک لەمەوپێش';
   @override
-  String months(int months) {
+  String months(int months, AgoOrFromNow _) {
     if (months == 1) {
       return 'مانگێک لەمەوپێش';
     }
@@ -56,9 +57,9 @@ class KuMessages implements LookupMessages {
   }
 
   @override
-  String aboutAYear(int year) => 'ساڵێک لەمەوپێش';
+  String aboutAYear(int year, AgoOrFromNow _) => 'ساڵێک لەمەوپێش';
   @override
-  String years(int years) {
+  String years(int years, AgoOrFromNow _) {
     if (years == 1) {
       return 'ساڵێک لەمەوپێش';
     }
@@ -81,27 +82,27 @@ class KuShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'ئێستا';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => 'ئێستا';
   @override
-  String aboutAMinute(int minutes) => '1 خولەک';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '1 خولەک';
   @override
-  String minutes(int minutes) => 'خولەک $minutes';
+  String minutes(int minutes, AgoOrFromNow _) => 'خولەک $minutes';
   @override
-  String aboutAnHour(int minutes) => 'کاژێر ~1';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'کاژێر ~1';
   @override
-  String hours(int hours) => 'کاژێر $hours';
+  String hours(int hours, AgoOrFromNow _) => 'کاژێر $hours';
   @override
-  String aDay(int hours) => '~1 ڕۆژ';
+  String aDay(int hours, AgoOrFromNow _) => '~1 ڕۆژ';
   @override
-  String days(int days) => 'رۆژ $days';
+  String days(int days, AgoOrFromNow _) => 'رۆژ $days';
   @override
-  String aboutAMonth(int days) => '~1 مانگ';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~1 مانگ';
   @override
-  String months(int months) => 'مانگ $months';
+  String months(int months, AgoOrFromNow _) => 'مانگ $months';
   @override
-  String aboutAYear(int year) => '~1 ساڵ';
+  String aboutAYear(int year, AgoOrFromNow _) => '~1 ساڵ';
   @override
-  String years(int years) => 'ساڵ $years ';
+  String years(int years, AgoOrFromNow _) => 'ساڵ $years ';
   @override
   String wordSeparator() => ' ';
 }

@@ -1,3 +1,4 @@
+import 'package:timeago/src/ago_or_from_now.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Arabic Messages
@@ -12,7 +13,7 @@ class ArMessages implements LookupMessages {
   String suffixFromNow() => '';
 
   @override
-  String lessThanOneMinute(int seconds) {
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) {
     if (seconds == 1) {
       return 'ثانية واحدة';
     } else if (seconds == 2) {
@@ -24,9 +25,9 @@ class ArMessages implements LookupMessages {
     }
   }
   @override
-  String aboutAMinute(int minutes) => 'حوالي دقيقة';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => 'حوالي دقيقة';
   @override
-  String minutes(int minutes) {
+  String minutes(int minutes, AgoOrFromNow _) {
     if (minutes == 1) {
       return 'دقيقة واحدة';
     } else if (minutes == 2) {
@@ -39,9 +40,9 @@ class ArMessages implements LookupMessages {
   }
 
   @override
-  String aboutAnHour(int minutes) => 'حوالي الساعة';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => 'حوالي الساعة';
   @override
-  String hours(int hours) {
+  String hours(int hours, AgoOrFromNow _) {
     if (hours == 1) {
       return 'ساعة';
     } else if (hours == 2) {
@@ -54,9 +55,9 @@ class ArMessages implements LookupMessages {
   }
 
   @override
-  String aDay(int hours) => 'يوم';
+  String aDay(int hours, AgoOrFromNow _) => 'يوم';
   @override
-  String days(int days) {
+  String days(int days, AgoOrFromNow _) {
     if (days == 1) {
       return 'يوم واحد';
     } else if (days == 2) {
@@ -69,9 +70,9 @@ class ArMessages implements LookupMessages {
   }
 
   @override
-  String aboutAMonth(int days) => 'حوالي شهر';
+  String aboutAMonth(int days, AgoOrFromNow _) => 'حوالي شهر';
   @override
-  String months(int months) {
+  String months(int months, AgoOrFromNow _) {
     if (months == 1) {
       return 'منذ شهر';
     } else if (months == 2) {
@@ -85,9 +86,9 @@ class ArMessages implements LookupMessages {
   }
 
   @override
-  String aboutAYear(int year) => 'قبل سنة';
+  String aboutAYear(int year, AgoOrFromNow _) => 'قبل سنة';
   @override
-  String years(int years) {
+  String years(int years, AgoOrFromNow _) {
     if (years == 1) {
       return 'منذ سنة';
     } else if (years == 2) {
@@ -114,27 +115,27 @@ class ArShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => '$seconds ثا';
+  String lessThanOneMinute(int seconds, AgoOrFromNow _) => '$seconds ثا';
   @override
-  String aboutAMinute(int minutes) => '~1 د';
+  String aboutAMinute(int minutes, AgoOrFromNow _) => '~1 د';
   @override
-  String minutes(int minutes) => '$minutes د';
+  String minutes(int minutes, AgoOrFromNow _) => '$minutes د';
   @override
-  String aboutAnHour(int minutes) => '~1 س';
+  String aboutAnHour(int minutes, AgoOrFromNow _) => '~1 س';
   @override
-  String hours(int hours) => '$hours س';
+  String hours(int hours, AgoOrFromNow _) => '$hours س';
   @override
-  String aDay(int hours) => '~1 ي';
+  String aDay(int hours, AgoOrFromNow _) => '~1 ي';
   @override
-  String days(int days) => '$days ي';
+  String days(int days, AgoOrFromNow _) => '$days ي';
   @override
-  String aboutAMonth(int days) => '~1 ش';
+  String aboutAMonth(int days, AgoOrFromNow _) => '~1 ش';
   @override
-  String months(int months) => '$months ش';
+  String months(int months, AgoOrFromNow _) => '$months ش';
   @override
-  String aboutAYear(int year) => '~1 س';
+  String aboutAYear(int year, AgoOrFromNow _) => '~1 س';
   @override
-  String years(int years) => '$years س';
+  String years(int years, AgoOrFromNow _) => '$years س';
   @override
   String wordSeparator() => ' ';
 }
