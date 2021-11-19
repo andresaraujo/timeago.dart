@@ -12,6 +12,8 @@ final localesMap = <String, LookupMessages>{
   'zh_CN': ZhCnMessages(),
   'it': ItMessages(),
   'fa': FaMessages(),
+  'fi': FiMessages(),
+  'fi_short': FiShortMessages(),
   'ru': RuMessages(),
   'tr': TrMessages(),
   'pl': PlMessages(),
