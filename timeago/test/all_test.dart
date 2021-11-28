@@ -7,14 +7,14 @@ final now = new DateTime.now();
 
 void main() {
   group('timeago', () {
-    test('should format with default locale', () async {
+    test('should format with default locale', () {
       final clock = now.add(Duration(seconds: 1));
 
       var result = timeago.format(now, clock: clock);
       expect(result, equals('a moment ago'));
     });
 
-    test('should format with locale', () async {
+    test('should format with locale', () {
       final clock = now.add(Duration(seconds: 120));
 
       var result = timeago.format(now, locale: 'es', clock: clock);
@@ -29,7 +29,7 @@ void main() {
       expect(result, equals('a moment ago'));
     });
 
-    test('should allow to override a locale', () async {
+    test('should allow to override a locale', () {
       var clock = now.add(Duration(seconds: 1));
 
       // Override 'en' locale messages
@@ -46,7 +46,7 @@ void main() {
       timeago.setLocaleMessages('en', timeago.EnMessages());
     });
 
-    test('should allow to add a new locale', () async {
+    test('should allow to add a new locale', () {
       var clock = now.add(Duration(seconds: 170));
 
       // Add 'en_short' locale messages
@@ -57,7 +57,7 @@ void main() {
       expect(result, equals('3m'));
     });
 
-    test('should allow from now dates', () async {
+    test('should allow from now dates', () {
       var clock = now.subtract(Duration(seconds: 1700));
 
       var result = timeago.format(now, clock: clock);
@@ -67,12 +67,75 @@ void main() {
       expect(result, equals('28 minutes from now'));
     });
 
-    test('should allow from now dates without clock set', () async {
+    test('should allow from now dates without clock set', () {
       var result = timeago.format(now.add(Duration(seconds: 1700)));
       expect(result, equals('a moment ago'));
 
       result =
           timeago.format(now.add(Duration(seconds: 1700)), allowFromNow: true);
+      expect(result, equals('28 minutes from now'));
+    });
+  });
+
+  group('timeago duration', () {
+    test('should format with default locale', () {
+      final duration = Duration(seconds: 1);
+
+      var result = timeago.formatDuration(duration);
+      expect(result, equals('a moment ago'));
+    });
+
+    test('should format with locale', () {
+      final duration = Duration(seconds: 120);
+
+      var result = timeago.formatDuration(duration, locale: 'es');
+      expect(result, equals('hace 2 minutos'));
+    });
+
+    test('should format with default locale, if locale messages doesnt exist',
+        () {
+      final duration = Duration(seconds: 1);
+
+      var result = timeago.formatDuration(duration, locale: 'ko');
+      expect(result, equals('a moment ago'));
+    });
+
+    test('should allow to override a locale', () {
+      var duration = Duration(seconds: 1);
+
+      // Override 'en' locale messages
+      timeago.setLocaleMessages('en', CustomEnglishMessages());
+
+      // Default 'en' locale
+      var result = timeago.formatDuration(duration);
+      expect(result, equals('1 second ago'));
+
+      duration = Duration(seconds: 5);
+      result = timeago.formatDuration(duration);
+      expect(result, equals('5 seconds ago'));
+
+      timeago.setLocaleMessages('en', timeago.EnMessages());
+    });
+
+    test('should allow to add a new locale', () {
+      var duration = Duration(seconds: 170);
+
+      // Add 'en_short' locale messages
+      timeago.setLocaleMessages('en_short', timeago.EnShortMessages());
+
+      // use 'en_short'
+      var result = timeago.formatDuration(duration, locale: 'en_short');
+      expect(result, equals('3m'));
+    });
+
+    test(
+        'should allow from now dates with negative duration and allowFromNow enabled',
+        () {
+      var duration = Duration(seconds: -1700);
+      var result = timeago.formatDuration(duration);
+      expect(result, equals('a moment ago'));
+
+      result = timeago.formatDuration(duration, allowFromNow: true);
       expect(result, equals('28 minutes from now'));
     });
   });

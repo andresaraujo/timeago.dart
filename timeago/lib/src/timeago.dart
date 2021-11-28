@@ -20,7 +20,7 @@ Map<String, LookupMessages> _lookupMessagesMap = {
 /// ```
 void setDefaultLocale(String locale) {
   assert(_lookupMessagesMap.containsKey(locale),
-      '[locale] must be a registered locale');
+  '[locale] must be a registered locale');
   _default = locale;
 }
 
@@ -51,7 +51,8 @@ String format(DateTime date,
     {String? locale, DateTime? clock, bool allowFromNow = false}) {
   final _locale = locale ?? _default;
   if (_lookupMessagesMap[_locale] == null) {
-    print("Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
+    print(
+        "Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
   }
   final _allowFromNow = allowFromNow;
   final messages = _lookupMessagesMap[_locale] ?? EnMessages();
@@ -59,7 +60,6 @@ String format(DateTime date,
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
   String prefix, suffix;
-
   if (_allowFromNow && elapsed < 0) {
     elapsed = date.isBefore(_clock) ? elapsed : elapsed.abs();
     prefix = messages.prefixFromNow();
@@ -69,6 +69,41 @@ String format(DateTime date,
     suffix = messages.suffixAgo();
   }
 
+  return _format(elapsed, prefix, suffix, messages);
+}
+
+/// Formats provided [duration] to a fuzzy time like 'a moment ago'
+///
+/// - If [locale] is passed will look for message for that locale, if you want
+///   to add or override locales use [setLocaleMessages]. Defaults to 'en'
+/// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
+///   5 minutes from now in 'en' locale will display as "5 minutes from now"
+String formatDuration(Duration duration,
+    {String? locale, bool allowFromNow = false}) {
+  final _locale = locale ?? _default;
+  if (_lookupMessagesMap[_locale] == null) {
+    print(
+        "Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
+  }
+  final _allowFromNow = allowFromNow;
+  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
+  var elapsed = duration.inMilliseconds;
+
+  String prefix, suffix;
+  if (_allowFromNow && elapsed < 0) {
+    elapsed = elapsed.abs();
+    prefix = messages.prefixFromNow();
+    suffix = messages.suffixFromNow();
+  } else {
+    prefix = messages.prefixAgo();
+    suffix = messages.suffixAgo();
+  }
+
+  return _format(elapsed, prefix, suffix, messages);
+}
+
+String _format(int elapsed, String prefix, String suffix,
+    LookupMessages messages) {
   final num seconds = elapsed / 1000;
   final num minutes = seconds / 60;
   final num hours = minutes / 60;
