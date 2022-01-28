@@ -14,6 +14,7 @@ export 'package:timeago/src/messages/fr_messages.dart';
 export 'package:timeago/src/messages/gr_messages.dart';
 export 'package:timeago/src/messages/he_messages.dart';
 export 'package:timeago/src/messages/hi_messages.dart';
+export 'package:timeago/src/messages/hu_messages.dart';
 export 'package:timeago/src/messages/id_messages.dart';
 export 'package:timeago/src/messages/it_messages.dart';
 export 'package:timeago/src/messages/ja_messages.dart';
