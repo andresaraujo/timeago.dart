@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0
+- Add missing export ur_messages.dart @mumairofficial
+- Add Estonian translation for messages and short messages. @tlindi
+- Add Finnish translation @ademar111190
+- Add Hungarian messages. @danielmolnar
+
 ## 3.1.0
 - Add warning when using a locale that has not been added.
   ```dart
