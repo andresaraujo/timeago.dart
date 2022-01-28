@@ -36,11 +36,12 @@ main() async {
   timeago.setLocaleMessages('gr', timeago.GrMessages());
   timeago.setLocaleMessages('gr_short', timeago.GrShortMessages());
   timeago.setLocaleMessages('he', timeago.HeMessages());
-  timeago.setLocaleMessages('he_short', timeago.HeShortMessages());
   timeago.setLocaleMessages('he', timeago.HeMessages());
   timeago.setLocaleMessages('he_short', timeago.HeShortMessages());
   timeago.setLocaleMessages('hi', timeago.HiMessages());
   timeago.setLocaleMessages('hi_short', timeago.HiShortMessages());
+  timeago.setLocaleMessages('hu', timeago.HuMessages());
+  timeago.setLocaleMessages('hu_short', timeago.HuShortMessages());
   timeago.setLocaleMessages('id', timeago.IdMessages());
   timeago.setLocaleMessages('it', timeago.ItMessages());
   timeago.setLocaleMessages('it_short', timeago.ItShortMessages());
@@ -77,6 +78,7 @@ main() async {
   timeago.setLocaleMessages('tr', timeago.TrMessages());
   timeago.setLocaleMessages('uk', timeago.UkMessages());
   timeago.setLocaleMessages('uk_short', timeago.UkShortMessages());
+  timeago.setLocaleMessages('ur', timeago.UrMessages());
   timeago.setLocaleMessages('vi', timeago.ViMessages());
   timeago.setLocaleMessages('vi_short', timeago.ViShortMessages());
   timeago.setLocaleMessages('zh_CN', timeago.ZhCnMessages());
