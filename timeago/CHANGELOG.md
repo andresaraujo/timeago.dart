@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.2.1
+- Fix japanese messages @nukotsuka
+
 ## 3.2.0
 - Add missing export ur_messages.dart @mumairofficial
 - Add Estonian translation for messages and short messages. @tlindi
