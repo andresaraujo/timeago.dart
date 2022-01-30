@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:timeago_flutter/timeago_flutter.dart';
 
 final localesMap = <String, LookupMessages>{
@@ -61,8 +62,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(accentColor: Colors.blue),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      theme: ThemeData.dark(),
+      home: const MyHomePage(title: 'timeago demo'),
     );
   }
 }
@@ -100,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
       return;
     }
     setState(() {
+      _baseDate = DateTime.now();
       _showFutureDates = value;
     });
   }
@@ -116,45 +118,48 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Column(
-        children: <Widget>[
-          ListTile(
-            title: const Text('Locale'),
-            trailing: DropdownButton(
-              value: _locale,
-              items: _buildLocaleButtons(),
-              onChanged: _chageLocale,
-            ),
-          ),
-          CheckboxListTile(
-            title: const Text('Future date'),
-            value: _showFutureDates,
-            onChanged: _onFutureChange,
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              child: GridView.count(
-                shrinkWrap: true,
-                primary: false,
-                crossAxisCount: 2,
-                physics: const ScrollPhysics(),
-                children:
-                    _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+    return Sizer(
+      builder: (context, orientation, deviceType) => Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: Column(
+          children: <Widget>[
+            ListTile(
+              title: const Text('Locale'),
+              trailing: DropdownButton(
+                value: _locale,
+                items: _buildLocaleButtons(),
+                onChanged: _chageLocale,
               ),
             ),
-          ),
-        ],
+            CheckboxListTile(
+              title: const Text('Future date'),
+              value: _showFutureDates,
+              onChanged: _onFutureChange,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: GridView.count(
+                  shrinkWrap: true,
+                  primary: false,
+                  crossAxisCount: deviceType == DeviceType.mobile ? 4 : 8,
+                  physics: const ScrollPhysics(),
+                  children:
+                      _buildTimeagolist(_locale, _baseDate, _showFutureDates),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 
   List<Widget> _buildTimeagolist(
       String locale, DateTime baseDate, bool showFutureDates) {
-    addOrSubstract(DateTime date, bool showFutureDates, Duration duration) {
+    DateTime addOrSubstract(
+        DateTime date, bool showFutureDates, Duration duration) {
       return showFutureDates ? date.add(duration) : date.subtract(duration);
     }
 
