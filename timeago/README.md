@@ -15,11 +15,17 @@ The easiest way to use this library via top-level function `format(date)`:
 import 'package:timeago/timeago.dart' as timeago;
 
 main() {
-    final fifteenAgo = new DateTime.now().subtract(new Duration(minutes: 15));
+    final fifteenAgoDuration = new Duration(minutes: 15);
+    final fifteenAgo = new DateTime.now().subtract(fifteenAgoDuration);
 
     print(timeago.format(fifteenAgo)); // 15 minutes ago
     print(timeago.format(fifteenAgo, locale: 'en_short')); // 15m
     print(timeago.format(fifteenAgo, locale: 'es')); // hace 15 minutos
+
+    // or use the Duration object directly
+    print(timeago.formatDuration(fifteenAgo)); // 15 minutes ago
+    print(timeago.formatDuration(fifteenAgo, locale: 'en_short')); // 15m
+    print(timeago.formatDuration(fifteenAgo, locale: 'es')); // hace 15 minutos
 }
 ```
 
