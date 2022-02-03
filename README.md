@@ -91,6 +91,18 @@ class MyCustomMessages implements LookupMessages {
 - TimerRefresh
 - TimerRefreshWidget
 
+## Local development
+
+1. Install Melos (https://pub.dev/packages/melos):
+
+`dart pub global activate melos`
+
+2. Bootstrap dependencies:
+
+`melos bootstrap`
+
+3. Open desired package in VSCode or Webstorm
+
 ### Live Demo
 
 [Here](http://andresaraujo.github.io/timeago.dart/)
