@@ -14,3 +14,4 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           workingDir: packages/timeago_flutter_example
+          baseHref: /timeago.dart/
