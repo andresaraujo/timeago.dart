@@ -29,7 +29,7 @@ main() {
 
 timeago library **ONLY** includes `en` and `es` messages loadded by default.
 
-To add more of the supported languages use `timeago.setLocaleMessages(..)`. See [locale messages](packages/timeago/lib/source/messages).
+To add more of the supported languages use `timeago.setLocaleMessages(..)`. See [locale messages](packages/timeago/lib/src/messages).
 
 ### Adding locales
 
