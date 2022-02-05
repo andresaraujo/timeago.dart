@@ -1,6 +1,6 @@
 # timeago
 
-A library useful for creating fuzzy timestamps. (e.g. "5 minutes ago")
+`timeago` is a dart library that converts a date into a humanized text. Instead of showing a date  `2020-12-12 18:30`  with `timeago` you can display something like `"now", "an hour ago", "~1y", etc`
 
 | timeago         | [![pub package](https://img.shields.io/pub/v/timeago.svg?label=timeago&color=blue)](https://pub.dartlang.org/packages/timeago)                         | core library    |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
@@ -26,9 +26,10 @@ main() {
 ```
 
 ##### IMPORTANT
-timeago library **ONLY** includes `en` and `es` messages loadded by default. 
 
-To add more of the supported languages use `timeago.setLocaleMessages(..)`. See [locale messages](lib/source/messages).
+timeago library **ONLY** includes `en` and `es` messages loadded by default.
+
+To add more of the supported languages use `timeago.setLocaleMessages(..)`. See [locale messages](packages/timeago/lib/source/messages).
 
 ### Adding locales
 
@@ -42,56 +43,50 @@ print(timeago.format(fifteenAgo, locale: 'es')); // environ 15 minutes
 ### Overriding locales or adding custom messages
 
 ```dart
-// Override "en" locale messages with custom messages that are more precise
+// Override "en" locale messages with custom messages that are more precise and short
 timeago.setLocaleMessages('en', MyCustomMessages());
 
 
 // my_custom_messages.dart
 class MyCustomMessages implements LookupMessages {
-  @override
-  String prefixAgo() => '';
-  @override
-  String prefixFromNow() => '';
-  @override
-  String suffixAgo() => '';
-  @override
-  String suffixFromNow() => '';
-  @override
-  String lessThanOneMinute(int seconds) => 'now';
-  @override
-  String aboutAMinute(int minutes) => '${minutes}m';
-  @override
-  String minutes(int minutes) => '${minutes}m';
-  @override
-  String aboutAnHour(int minutes) => '${minutes}m';
-  @override
-  String hours(int hours) => '${hours}h';
-  @override
-  String aDay(int hours) => '${hours}h';
-  @override
-  String days(int days) => '${days}d';
-  @override
-  String aboutAMonth(int days) => '${days}d';
-  @override
-  String months(int months) => '${months}mo';
-  @override
-  String aboutAYear(int year) => '${year}y';
-  @override
-  String years(int years) => '${years}y';
-  @override
-  String wordSeparator() => ' ';
+  @override String prefixAgo() => '';
+  @override String prefixFromNow() => '';
+  @override String suffixAgo() => '';
+  @override String suffixFromNow() => '';
+  @override String lessThanOneMinute(int seconds) => 'now';
+  @override String aboutAMinute(int minutes) => '${minutes}m';
+  @override String minutes(int minutes) => '${minutes}m';
+  @override String aboutAnHour(int minutes) => '${minutes}m';
+  @override String hours(int hours) => '${hours}h';
+  @override String aDay(int hours) => '${hours}h';
+  @override String days(int days) => '${days}d';
+  @override String aboutAMonth(int days) => '${days}d';
+  @override String months(int months) => '${months}mo';
+  @override String aboutAYear(int year) => '${year}y';
+  @override String years(int years) => '${years}y';
+  @override String wordSeparator() => ' ';
 }
+
 ```
 
----
+## Scope
 
-## timeago_flutter widgets
+While there are many request for adding more complex functionality I want keep this library as simple as possible to allow minimal maintenance.
+
+The focus of this library should be
+
+1. Provide a single `format` function that transforms a `date` to a humanized value
+2. Give the abstractions for users to add their own languages or overriding them as they please
+3. Provide languages contributed by the community so users can add them _as they need_ we should not add all languages by default.
+4. Library should not depend on any dependency
+
+# timeago_flutter widgets
 
 - Timeago
 - TimerRefresh
 - TimerRefreshWidget
 
-## Local development
+# Local development
 
 1. Install Melos (https://pub.dev/packages/melos):
 
@@ -103,6 +98,7 @@ class MyCustomMessages implements LookupMessages {
 
 3. Open desired package in VSCode or Webstorm
 
-### Live Demo
+# Live Demo
 
 [Here](http://andresaraujo.github.io/timeago.dart/)
+
