@@ -11,7 +11,7 @@ class FiMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'kuluttua';
   @override
-  String lessThanOneMinute(int seconds) => 'hetki/-en';
+  String lessThanOneMinute(int seconds) => 'hetki';
   @override
   String aboutAMinute(int minutes) => 'noin minuutti';
   @override
@@ -21,7 +21,7 @@ class FiMessages implements LookupMessages {
   @override
   String hours(int hours) => '$hours tuntia';
   @override
-  String aDay(int hours) => 'päivä';
+  String aDay(int hours) => 'vuorokausi';
   @override
   String days(int days) => '$days päivää';
   @override
@@ -49,23 +49,23 @@ class FiShortMessages implements LookupMessages {
   @override
   String lessThanOneMinute(int seconds) => 'nyt';
   @override
-  String aboutAMinute(int minutes) => '1min';
+  String aboutAMinute(int minutes) => '1 min';
   @override
-  String minutes(int minutes) => '${minutes}m:ia';
+  String minutes(int minutes) => '${minutes} min:ia';
   @override
-  String aboutAnHour(int minutes) => '~1t';
+  String aboutAnHour(int minutes) => '~1 t';
   @override
-  String hours(int hours) => '${hours}t:ia';
+  String hours(int hours) => '${hours} t';
   @override
   String aDay(int hours) => '~pvä';
   @override
-  String days(int days) => '${days}pvää';
+  String days(int days) => '${days} pvää';
   @override
   String aboutAMonth(int days) => '~kk';
   @override
-  String months(int months) => '${months}kk:ta';
+  String months(int months) => '${months} kk:ta';
   @override
-  String aboutAYear(int year) => '~1v';
+  String aboutAYear(int year) => '~1 v';
   @override
   String years(int years) => '${years}v:ta';
   @override
