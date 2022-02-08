@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.2
+- Fix fi messages @tlindi
+
+
 ## 3.2.1
 - Fix japanese messages @nukotsuka
 
