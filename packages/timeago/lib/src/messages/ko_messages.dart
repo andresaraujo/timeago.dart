@@ -15,7 +15,7 @@ class KoMessages implements LookupMessages {
   @override
   String aboutAMinute(int minutes) => '약 1분';
   @override
-  String minutes(int minutes) => '${minutes} 분';
+  String minutes(int minutes) => '${minutes}분';
   @override
   String aboutAnHour(int minutes) => '약 1시간';
   @override
