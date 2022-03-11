@@ -5,13 +5,13 @@ class KoMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
-  String prefixFromNow() => '';
+  String prefixFromNow() => '지금부터';
   @override
   String suffixAgo() => '전';
   @override
   String suffixFromNow() => '후';
   @override
-  String lessThanOneMinute(int seconds) => '방금';
+  String lessThanOneMinute(int seconds) => '${seconds}';
   @override
   String aboutAMinute(int minutes) => '약 1분';
   @override
