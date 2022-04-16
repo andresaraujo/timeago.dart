@@ -35,6 +35,7 @@ export 'package:timeago/src/messages/rw_messages.dart';
 export 'package:timeago/src/messages/sv_messages.dart';
 export 'package:timeago/src/messages/ta_messages.dart';
 export 'package:timeago/src/messages/th_messages.dart';
+export 'package:timeago/src/messages/tk_messages.dart';
 export 'package:timeago/src/messages/tr_messages.dart';
 export 'package:timeago/src/messages/uk_messages.dart';
 export 'package:timeago/src/messages/ur_messages.dart';
