@@ -23,13 +23,14 @@ class ArMessages implements LookupMessages {
       return '$seconds ثانية';
     }
   }
+
   @override
-  String aboutAMinute(int minutes) => 'حوالي دقيقة';
+  String aboutAMinute(int minutes) => 'دقيقة تقريباً';
+  
+
   @override
   String minutes(int minutes) {
-    if (minutes == 1) {
-      return 'دقيقة واحدة';
-    } else if (minutes == 2) {
+    if (minutes == 2) {
       return 'دقيقتين';
     } else if (minutes > 2 && minutes < 11) {
       return '$minutes دقائق';
@@ -39,12 +40,10 @@ class ArMessages implements LookupMessages {
   }
 
   @override
-  String aboutAnHour(int minutes) => 'حوالي الساعة';
+  String aboutAnHour(int minutes) => 'ساعة تقريباً';
   @override
   String hours(int hours) {
-    if (hours == 1) {
-      return 'ساعة';
-    } else if (hours == 2) {
+    if (hours == 2) {
       return 'ساعتين';
     } else if (hours > 2 && hours < 11) {
       return '$hours ساعات';
@@ -57,9 +56,7 @@ class ArMessages implements LookupMessages {
   String aDay(int hours) => 'يوم';
   @override
   String days(int days) {
-    if (days == 1) {
-      return 'يوم واحد';
-    } else if (days == 2) {
+    if (days == 2) {
       return 'يومين';
     } else if (days > 2 && days < 11) {
       return '$days ايام';
