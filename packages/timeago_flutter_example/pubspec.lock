@@ -95,13 +95,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.12.11"
-  material_color_utilities:
-    dependency: transitive
-    description:
-      name: material_color_utilities
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.4"
   meta:
     dependency: transitive
     description:
@@ -115,7 +108,7 @@ packages:
       name: path
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.1"
+    version: "1.8.0"
   sizer:
     dependency: "direct main"
     description:
@@ -134,7 +127,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.2"
+    version: "1.8.1"
   stack_trace:
     dependency: transitive
     description:
@@ -169,13 +162,13 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.9"
+    version: "0.4.3"
   timeago:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "../timeago"
-      relative: true
-    source: path
+      name: timeago
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "3.2.2"
   timeago_flutter:
     dependency: "direct main"
@@ -204,7 +197,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.2"
+    version: "2.1.1"
 sdks:
   dart: ">=2.14.0 <3.0.0"
   flutter: ">=1.17.0"
