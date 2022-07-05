@@ -1,7 +1,7 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 /// Bosnian Messages
-class DeMessages implements LookupMessages {
+class BsMessages implements LookupMessages {
   @override
   String prefixAgo() => 'prije';
   @override
@@ -37,7 +37,7 @@ class DeMessages implements LookupMessages {
 }
 
 /// Bosnian short Messages
-class DeShortMessages implements LookupMessages {
+class BsShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
