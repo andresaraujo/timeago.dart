@@ -10,6 +10,8 @@ final localesMap = <String, LookupMessages>{
   'bs': BsMessages(),
   'de': DeMessages(),
   'en_custom': CustomEnglish(),
+  'et': EtMessages(),
+  'et_short': EtShortMessages(),
   'fa': FaMessages(),
   'fi': FiMessages(),
   'fi_short': FiShortMessages(),
