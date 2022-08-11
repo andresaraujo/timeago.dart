@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.3.0
+- Add support for am messages @knatnaela
+- Add support for bs messages @admirhusic
+- Add support for my messages @altotunchitoo
+- Add support for tk messages @atageldi194229
+- Adds missing messages to flutter example
+- Fixes to ko messages @hororoc @eic1223 @ChangJoo-Park
+- Fixes to ar messages
+
 ## 3.2.2
 - Fix fi messages @tlindi
 
