@@ -7,6 +7,7 @@ import 'package:timeago/src/messages/de_messages.dart';
 import 'package:timeago/src/messages/dv_messages.dart';
 import 'package:timeago/src/messages/en_messages.dart';
 import 'package:timeago/src/messages/es_messages.dart';
+import 'package:timeago/src/messages/et_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 import 'messages/ar_messages.dart';
@@ -34,6 +35,8 @@ Map<String, LookupMessages> _lookupMessagesMap = {
   'en_short': EnShortMessages(),
   'es': EsMessages(),
   'es_short': EsShortMessages(),
+  'et': EtMessages(),
+  'et_short': EtShortMessages(),
 };
 
 /// Sets the default [locale]. By default it is `en`.
