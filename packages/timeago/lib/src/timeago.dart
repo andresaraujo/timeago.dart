@@ -31,6 +31,7 @@ import 'package:timeago/src/messages/pl_messages.dart';
 import 'package:timeago/src/messages/pt_br_messages.dart';
 import 'package:timeago/src/messages/ro_messages.dart';
 import 'package:timeago/src/messages/ru_messages.dart';
+import 'package:timeago/src/messages/rw_messages.dart';
 
 import 'messages/ar_messages.dart';
 
@@ -98,6 +99,8 @@ Map<String, LookupMessages> _lookupMessagesMap = {
   'ro_short': RoShortMessages(),
   'ru': RuMessages(),
   'ru_short': RuShortMessages(),
+  'rw': RwMessages(),
+  'rw_short': RwShortMessages(),
 };
 
 /// Sets the default [locale]. By default it is `en`.
