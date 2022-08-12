@@ -1,4 +1,5 @@
 import 'package:timeago/src/messages/am_messages.dart';
+import 'package:timeago/src/messages/az_messages.dart';
 import 'package:timeago/src/messages/en_messages.dart';
 import 'package:timeago/src/messages/es_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
@@ -12,6 +13,8 @@ Map<String, LookupMessages> _lookupMessagesMap = {
   'am_short': AmShortMessages(),
   'ar': ArMessages(),
   'ar_short': ArShortMessages(),
+  'az': AzMessages(),
+  'az_short': AzShortMessages(),
   'en': EnMessages(),
   'en_short': EnShortMessages(),
   'es': EsMessages(),
