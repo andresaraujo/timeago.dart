@@ -19,6 +19,7 @@ import 'package:timeago/src/messages/id_messages.dart';
 import 'package:timeago/src/messages/it_messages.dart';
 import 'package:timeago/src/messages/ja_messages.dart';
 import 'package:timeago/src/messages/km_messages.dart';
+import 'package:timeago/src/messages/ko_messages.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
 import 'messages/ar_messages.dart';
@@ -67,6 +68,7 @@ Map<String, LookupMessages> _lookupMessagesMap = {
   'ja': JaMessages(),
   'km': KmMessages(),
   'km_short': KmShortMessages(),
+  'ko': KoMessages(),
 };
 
 /// Sets the default [locale]. By default it is `en`.
