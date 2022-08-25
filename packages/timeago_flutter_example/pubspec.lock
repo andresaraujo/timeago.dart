@@ -178,11 +178,11 @@ packages:
     source: hosted
     version: "0.4.9"
   timeago:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "../timeago"
-      relative: true
-    source: path
+      name: timeago
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "3.3.0"
   timeago_flutter:
     dependency: "direct main"
