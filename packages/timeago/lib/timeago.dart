@@ -1,6 +1,7 @@
 export 'package:timeago/src/messages/am_messages.dart';
 export 'package:timeago/src/messages/ar_messages.dart';
 export 'package:timeago/src/messages/az_messages.dart';
+export 'package:timeago/src/messages/bn_messages.dart';
 export 'package:timeago/src/messages/bs_messages.dart';
 export 'package:timeago/src/messages/ca_messages.dart';
 export 'package:timeago/src/messages/cs_messages.dart';
