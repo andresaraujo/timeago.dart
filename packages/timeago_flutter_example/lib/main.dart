@@ -56,6 +56,7 @@ final localesMap = <String, LookupMessages>{
   'th_short': ThShortMessages(),
   'tk': TkMessages(),
   'tr': TrMessages(),
+  'tr_short': TrShortMessages(),
   'uk': UkMessages(),
   'uk_short': UkShortMessages(),
   'ur': UrMessages(),
