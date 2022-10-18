@@ -47,15 +47,15 @@ class TRShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'şimdi';
+  String lessThanOneMinute(int seconds) => 'az önce';
   @override
   String aboutAMinute(int minutes) => '1dk';
   @override
   String minutes(int minutes) => '${minutes}dk';
   @override
-  String aboutAnHour(int minutes) => '~1dk';
+  String aboutAnHour(int minutes) => '~1sa';
   @override
-  String hours(int hours) => '${hours}s';
+  String hours(int hours) => '${hours}sa';
   @override
   String aDay(int hours) => '~1g';
   @override
