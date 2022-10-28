@@ -1,23 +1,23 @@
 import 'package:intl/intl.dart';
 import 'package:timeago/src/messages/lookupmessages.dart';
 
-/// Czech Messages
-class CsMessages implements LookupMessages {
+/// Slovakian Messages
+class SkMessages implements LookupMessages {
   @override
-  String prefixAgo() => 'před';
+  String prefixAgo() => 'pred';
   @override
   String prefixFromNow() => '';
   @override
   String suffixAgo() => '';
   @override
-  String suffixFromNow() => 'od teď';
+  String suffixFromNow() => 'od teraz';
   @override
-  String lessThanOneMinute(int seconds) => 'chvílí';
+  String lessThanOneMinute(int seconds) => 'chvíľou';
   @override
-  String aboutAMinute(int minutes) => 'minutou';
+  String aboutAMinute(int minutes) => 'minútou';
   @override
   String minutes(int minutes) =>
-      _pluralize(minutes, 'minutou', 'minutami', 'minutami');
+      _pluralize(minutes, 'minútou', 'minútami', 'minútami');
   @override
   String aboutAnHour(int minutes) => 'hodinou';
   @override
@@ -26,22 +26,22 @@ class CsMessages implements LookupMessages {
   @override
   String aDay(int hours) => 'dnem';
   @override
-  String days(int days) => _pluralize(days, 'dnem', 'dny', 'dny');
+  String days(int days) => _pluralize(days, 'dňom', 'dňami', 'dňami');
   @override
-  String aboutAMonth(int days) => 'měsícem';
+  String aboutAMonth(int days) => 'mesiacom';
   @override
   String months(int months) =>
-      _pluralize(months, 'měsícem', 'měsíci', 'měsíci');
+      _pluralize(months, 'mesiacom', 'mesiacmi', 'mesiacmi');
   @override
-  String aboutAYear(int year) => 'rokem';
+  String aboutAYear(int year) => 'rokom';
   @override
-  String years(int years) => _pluralize(years, 'rokem', 'roky', 'roky');
+  String years(int years) => _pluralize(years, 'rokom', 'rokmi', 'rokmi');
   @override
   String wordSeparator() => ' ';
 }
 
-/// Czech short Messages
-class CsShortMessages implements LookupMessages {
+/// Slovakian short Messages
+class SkShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
@@ -51,7 +51,7 @@ class CsShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'teď';
+  String lessThanOneMinute(int seconds) => 'teraz';
   @override
   String aboutAMinute(int minutes) => '1 min';
   @override
@@ -61,23 +61,24 @@ class CsShortMessages implements LookupMessages {
   @override
   String hours(int hours) => '$hours hod';
   @override
-  String aDay(int hours) => '~1 den';
+  String aDay(int hours) => '~1 deň';
   @override
-  String days(int days) => _pluralize(days, 'den', 'dny', 'dní');
+  String days(int days) => _pluralize(days, 'deň', 'dni', 'dní');
   @override
-  String aboutAMonth(int days) => '~1 měsíc';
+  String aboutAMonth(int days) => '~1 mesiac';
   @override
-  String months(int months) => _pluralize(months, 'měsíc', 'měsíce', 'měsíců');
+  String months(int months) =>
+      _pluralize(months, 'mesiac', 'mesiace', 'mesiacov');
   @override
   String aboutAYear(int year) => '~1 rok';
   @override
-  String years(int years) => _pluralize(years, 'rok', 'roky', 'roků');
+  String years(int years) => _pluralize(years, 'rok', 'roky', 'rokov');
   @override
   String wordSeparator() => ' ';
 }
 
 String _pluralize(int n, String form1, String form2, String form3) {
   final form =
-      Intl.plural(n, one: form1, few: form2, other: form3, locale: 'cs');
+      Intl.plural(n, one: form1, few: form2, other: form3, locale: 'sk');
   return '$n $form';
 }
