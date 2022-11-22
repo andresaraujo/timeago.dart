@@ -101,4 +101,4 @@ The focus of this library should be
 
 # Live Demo
 
-[Here](http://andresaraujo.github.io/timeago.dart/)
+[Here](https://andresaraujo.github.io/timeago.dart/)
