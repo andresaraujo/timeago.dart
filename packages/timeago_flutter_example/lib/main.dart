@@ -26,6 +26,7 @@ final localesMap = <String, LookupMessages>{
   'hi': HiShortMessages(),
   'hu': HuMessages(),
   'id': IdMessages(),
+  'id_short': IdShortMessages(),
   'it': ItMessages(),
   'ja': JaMessages(),
   'km': KmMessages(),

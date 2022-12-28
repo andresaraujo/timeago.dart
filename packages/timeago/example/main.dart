@@ -43,6 +43,7 @@ main() async {
   timeago.setLocaleMessages('hu', timeago.HuMessages());
   timeago.setLocaleMessages('hu_short', timeago.HuShortMessages());
   timeago.setLocaleMessages('id', timeago.IdMessages());
+  timeago.setLocaleMessages('id_short', timeago.IdShortMessages());
   timeago.setLocaleMessages('it', timeago.ItMessages());
   timeago.setLocaleMessages('it_short', timeago.ItShortMessages());
   timeago.setLocaleMessages('ja', timeago.JaMessages());
