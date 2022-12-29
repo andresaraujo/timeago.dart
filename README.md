@@ -9,8 +9,6 @@
 ---
 
 
-
-
 The easiest way to use this library via top-level function `format(date)`:
 
 ```dart
@@ -27,15 +25,18 @@ main() {
 
 ##### IMPORTANT
 
-timeago library **ONLY** includes `en` and `es` messages loadded by default.
+timeago library **ONLY** includes `en` and `es` messages loaded by default.
 
 To add more of the supported languages use `timeago.setLocaleMessages(..)`. See [locale messages](packages/timeago/lib/src/messages).
+
+##### Standard for language code
+
+This library uses ISO 639-1 language code to identify the language. For more information see [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
 
 ### Adding locales
 
 ```dart
-// Add french messages
-timeago.setLocaleMessages('fr', timeago.FrMessages());
+timeago.setLocaleMessages('fr', timeago.FrMessages()); // Add french messages
 
 print(timeago.format(fifteenAgo, locale: 'es')); // environ 15 minutes
 ```
@@ -101,4 +102,3 @@ The focus of this library should be
 # Live Demo
 
 [Here](http://andresaraujo.github.io/timeago.dart/)
-

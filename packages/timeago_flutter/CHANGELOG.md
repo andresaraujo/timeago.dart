@@ -1,3 +1,5 @@
+## [1.2.0] - Update timeago dependency to ˆ3.3.0
+
 ## [1.1.0] - Update timeago dependency to ˆ3.2.0
 
 ## [1.0.0] - Update for null safety. @andresaraujo

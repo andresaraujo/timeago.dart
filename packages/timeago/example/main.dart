@@ -75,6 +75,7 @@ main() async {
   timeago.setLocaleMessages('ta', timeago.TaMessages());
   timeago.setLocaleMessages('th', timeago.ThMessages());
   timeago.setLocaleMessages('th_short', timeago.ThShortMessages());
+  timeago.setLocaleMessages('tk', timeago.TkMessages());
   timeago.setLocaleMessages('tr', timeago.TrMessages());
   timeago.setLocaleMessages('uk', timeago.UkMessages());
   timeago.setLocaleMessages('uk_short', timeago.UkShortMessages());
