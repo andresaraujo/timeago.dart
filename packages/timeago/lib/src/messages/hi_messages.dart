@@ -7,7 +7,7 @@ class HiMessages implements LookupMessages {
   @override
   String prefixFromNow() => '';
   @override
-  String suffixAgo() => 'पूर्व';
+  String suffixAgo() => 'पहले';
   @override
   String suffixFromNow() => 'अब से';
   @override
