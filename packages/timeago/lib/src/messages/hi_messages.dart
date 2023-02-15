@@ -11,9 +11,9 @@ class HiMessages implements LookupMessages {
   @override
   String suffixFromNow() => 'अब से';
   @override
-  String lessThanOneMinute(int seconds) => 'एक क्षण पहले';
+  String lessThanOneMinute(int seconds) => 'एक क्षण';
   @override
-  String aboutAMinute(int minutes) => 'एक मिनट पहले';
+  String aboutAMinute(int minutes) => 'एक मिनट';
   @override
   String minutes(int minutes) => '$minutes मिनट';
   @override
@@ -21,7 +21,7 @@ class HiMessages implements LookupMessages {
   @override
   String hours(int hours) => '$hours घंटे';
   @override
-  String aDay(int hours) => 'एक दिन पहले';
+  String aDay(int hours) => 'एक दिन';
   @override
   String days(int days) => '$days दिन';
   @override
@@ -29,9 +29,9 @@ class HiMessages implements LookupMessages {
   @override
   String months(int months) => '$months महीने';
   @override
-  String aboutAYear(int year) => 'एक साल पहले';
+  String aboutAYear(int year) => 'एक साल';
   @override
-  String years(int years) => '$years वर्षों पहले';
+  String years(int years) => '$years वर्षों';
   @override
   String wordSeparator() => ' ';
 }
