@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.4.0
+- Upgrade intl dependency to 0.18.0 @nguyenxdat
+- Fix link in readme @mehulpamale
+- Fix flutter example analyzer warning
+
 ## 3.3.0
 - Add support for am messages @knatnaela
 - Add support for bs messages @admirhusic
