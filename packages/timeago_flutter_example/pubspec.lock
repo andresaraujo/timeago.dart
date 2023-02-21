@@ -206,7 +206,7 @@ packages:
       path: "../timeago"
       relative: true
     source: path
-    version: "3.3.0"
+    version: "3.4.0"
   timeago_flutter:
     dependency: "direct main"
     description:
