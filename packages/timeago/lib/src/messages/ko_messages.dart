@@ -11,7 +11,7 @@ class KoMessages implements LookupMessages {
   @override
   String suffixFromNow() => '후';
   @override
-  String lessThanOneMinute(int seconds) => '조금';
+  String lessThanOneMinute(int seconds) => '방금';
   @override
   String aboutAMinute(int minutes) => '약 1분';
   @override
