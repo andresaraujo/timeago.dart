@@ -1,3 +1,7 @@
+## [3.4.0]
+- Add support for `timeago` 3.4.0
+- Now this package version should be in sync with `timeago` version
+
 ## [1.2.0] - Update timeago dependency to ˆ3.3.0
 
 ## [1.1.0] - Update timeago dependency to ˆ3.2.0
