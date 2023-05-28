@@ -49,9 +49,6 @@ void main() {
     test('should allow to override a locale in format call', () async {
       var clock = now.add(Duration(seconds: 1));
 
-      // Override 'en' locale messages
-      timeago.setLocaleMessages('en', CustomEnglishMessages());
-
       // Default 'en' locale
       var result = timeago.format(now,
           clock: clock, overrideMessages: CustomEnglishMessages());
