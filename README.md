@@ -1,13 +1,12 @@
 # timeago
 
-`timeago` is a dart library that converts a date into a humanized text. Instead of showing a date  `2020-12-12 18:30`  with `timeago` you can display something like `"now", "an hour ago", "~1y", etc`
+`timeago` is a dart library that converts a date into a humanized text. Instead of showing a date `2020-12-12 18:30` with `timeago` you can display something like `"now", "an hour ago", "~1y", etc`
 
 | timeago         | [![pub package](https://img.shields.io/pub/v/timeago.svg?label=timeago&color=blue)](https://pub.dartlang.org/packages/timeago)                         | core library    |
-|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
 | timeago_flutter | [![pub package](https://img.shields.io/pub/v/timeago_flutter.svg?label=timeago_flutter&color=blue)](https://pub.dartlang.org/packages/timeago_flutter) | flutter widgets |
 
 ---
-
 
 The easiest way to use this library via top-level function `format(date)`:
 
@@ -18,16 +17,16 @@ main() {
     final fifteenAgo = DateTime.now().subtract(Duration(minutes: 15));
 
     print(timeago.format(fifteenAgo)); // 15 minutes ago
-    print(timeago.format(fifteenAgo, locale: 'en_short')); // 15m
-    print(timeago.format(fifteenAgo, locale: 'es')); // hace 15 minutos
+    print(timeago.format(fifteenAgo, locale: DefaultLocaleShort.en)); // 15m
+    print(timeago.format(fifteenAgo, locale: DefaultLocale.es)); // hace 15 minutos
 }
 ```
 
 ##### IMPORTANT
 
-timeago library **ONLY** includes `en` and `es` messages loaded by default.
+timeago library includes most of the common locales by default.
 
-To add more of the supported languages use `timeago.setLocaleMessages(..)`. See [locale messages](packages/timeago/lib/src/messages).
+To add more of the supported languages, you can implement the class `LookupMessages` and then add it using `timeago.setLocaleMessages(..)`. See [locale messages](packages/timeago/lib/src/messages).
 
 ##### Standard for language code
 

@@ -25,7 +25,7 @@ void main() {
         () async {
       final clock = now.add(Duration(seconds: 1));
 
-      var result = timeago.format(now, locale: 'ko', clock: clock);
+      var result = timeago.format(now, locale: 'unknown', clock: clock);
       expect(result, equals('a moment ago'));
     });
 
