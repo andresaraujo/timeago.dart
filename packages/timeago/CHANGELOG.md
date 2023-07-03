@@ -2,6 +2,13 @@
 
 ## 3.5.0
 - Add latvian messages @igdmitrov
+- Add Belarusian messages 
+- Add Serbian messages 
+- Add Croatian messages @andre0805
+- Fix ko messages @JYeop
+- Fix Hindi messages @MominRaza
+- Add short ID messages @dyvue
+- Add short TR messages @gulmensedat
 
 ## 3.4.0
 - Upgrade intl dependency to 0.18.0 @nguyenxdat
