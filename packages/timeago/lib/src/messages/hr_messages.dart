@@ -1,6 +1,7 @@
 import 'package:timeago/timeago.dart' as timeago;
 
-class CroatianMessages implements timeago.LookupMessages {
+/// Croatian messages
+class HrMessages implements timeago.LookupMessages {
   @override
   String prefixAgo() => 'prije';
 
