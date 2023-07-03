@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.5.0
+- Add latvian messages @igdmitrov
+
 ## 3.4.0
 - Upgrade intl dependency to 0.18.0 @nguyenxdat
 - Fix link in readme @mehulpamale

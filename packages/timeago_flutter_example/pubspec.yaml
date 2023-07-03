@@ -4,14 +4,14 @@ description: A Flutter example for timeago_flutter package on the top of timeago
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.0.0"
 
 dependencies:
   timeago_flutter: 
     path: ../timeago_flutter
   flutter:
     sdk: flutter
-  cupertino_icons: ^0.1.3
+  cupertino_icons: ^1.0.5
   sizer: ^2.0.15
 
 dev_dependencies:
