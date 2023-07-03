@@ -37,7 +37,7 @@ class TrMessages implements LookupMessages {
 }
 
 /// Turkish short Messages
-class TRShortMessages implements LookupMessages {
+class TrShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
