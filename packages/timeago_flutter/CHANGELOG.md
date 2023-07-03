@@ -1,3 +1,6 @@
+## [3.5.0]
+- Add support for `timeago` 3.5.0
+
 ## [3.4.0]
 - Add support for `timeago` 3.4.0
 - Now this package version should be in sync with `timeago` version
