@@ -11,25 +11,25 @@ class PtBrMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'poucos segundos';
+  String lessThanOneMinute(int seconds) => 'alguns segundos';
   @override
-  String aboutAMinute(int minutes) => '1 minuto';
+  String aboutAMinute(int minutes) => 'cerca de um minuto';
   @override
   String minutes(int minutes) => '${minutes} minutos';
   @override
-  String aboutAnHour(int minutes) => '1 hora';
+  String aboutAnHour(int minutes) => 'cerca de uma hora';
   @override
   String hours(int hours) => '${hours} horas';
   @override
-  String aDay(int hours) => '1 dia';
+  String aDay(int hours) => 'um dia';
   @override
   String days(int days) => '${days} dias';
   @override
-  String aboutAMonth(int days) => '1 mês';
+  String aboutAMonth(int days) => 'cerca de um mês';
   @override
   String months(int months) => '${months} meses';
   @override
-  String aboutAYear(int year) => '1 ano';
+  String aboutAYear(int year) => 'cerca de um ano';
   @override
   String years(int years) => '${years} anos';
   @override
