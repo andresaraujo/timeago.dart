@@ -1,3 +1,6 @@
+## [3.6.0]
+- Add support for `timeago` 3.6.0
+
 ## [3.5.0]
 - Add support for `timeago` 3.5.0
 

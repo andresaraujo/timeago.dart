@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.6.0
+- Fix pt_BR messages @mateusfccp
+- Melos update to v3 @vbuberen
+
 ## 3.5.0
 - Add latvian messages @igdmitrov
 - Add Belarusian messages 

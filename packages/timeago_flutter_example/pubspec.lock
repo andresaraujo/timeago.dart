@@ -198,14 +198,14 @@ packages:
       path: "../timeago"
       relative: true
     source: path
-    version: "3.5.0"
+    version: "3.6.0"
   timeago_flutter:
     dependency: "direct main"
     description:
       path: "../timeago_flutter"
       relative: true
     source: path
-    version: "3.5.0"
+    version: "3.6.0"
   typed_data:
     dependency: transitive
     description:
