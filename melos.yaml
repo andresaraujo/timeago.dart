@@ -22,8 +22,8 @@ scripts:
       melos exec -c 6 --fail-fast -- \
         "flutter test --no-pub"
     description: Run `flutter test` for a specific package.
-    select-package:
-      dir-exists:
+    packageFilters:
+      dirExists:
         - test
       ignore:
         - "*web*"

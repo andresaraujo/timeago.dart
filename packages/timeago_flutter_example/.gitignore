@@ -11,3 +11,4 @@ ios/
 build/
 .idea
 .flutter-plugins
+pubspec_overrides.yaml

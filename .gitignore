@@ -3,3 +3,8 @@
 
 # platforms and metadata
 .metadata
+
+pubspec_overrides.yaml
+
+.DS_Store
+.dart_tool/

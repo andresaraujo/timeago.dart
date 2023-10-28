@@ -13,4 +13,4 @@ dependencies:
 dev_dependencies:
   test: ^1.21.4
   build_runner: ^2.2.0
-  build_web_compilers: ^3.2.5
+  build_web_compilers: ^4.0.6

@@ -30,7 +30,6 @@
 .pub/
 build/
 
-.idea/
 .vscode/
 
 # platforms and metadata
@@ -39,3 +38,5 @@ build/
 **/ios/
 **/macos/
 **/web/
+
+pubspec_overrides.yaml
