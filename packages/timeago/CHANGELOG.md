@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.6.1
+- Make timeago compatible with intl 0.18 and 0.19 @Mecharyry
+
 ## 3.6.0
 - Fix pt_BR messages @mateusfccp
 - Melos update to v3 @vbuberen
