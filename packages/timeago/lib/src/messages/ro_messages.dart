@@ -11,7 +11,7 @@ class RoMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'o clipită';
+  String lessThanOneMinute(int seconds) => 'o clipă';
   @override
   String aboutAMinute(int minutes) => 'un minut';
   @override
