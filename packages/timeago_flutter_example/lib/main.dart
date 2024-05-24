@@ -8,6 +8,8 @@ final localesMap = <String, LookupMessages>{
   'ar_short': ArShortMessages(),
   'az': AzMessages(),
   'be': BeMessages(),
+  'bn': BnMessages(),
+  'bn_short': BnShortMessages(),
   'bs': BsMessages(),
   'ca': CaMessages(),
   'cs': CsMessages(),
