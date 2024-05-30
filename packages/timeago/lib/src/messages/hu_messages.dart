@@ -3,7 +3,7 @@ import 'package:timeago/src/messages/lookupmessages.dart';
 /// Hungarian Messages
 class HuMessages implements LookupMessages {
   @override
-  String prefixAgo() => 'ezelött';
+  String prefixAgo() => 'ezelőtt';
   @override
   String prefixFromNow() => 'mostantól';
   @override
@@ -39,7 +39,7 @@ class HuMessages implements LookupMessages {
 /// Hungarian  short Messages
 class HuShortMessages implements LookupMessages {
   @override
-  String prefixAgo() => 'ezelött';
+  String prefixAgo() => 'ezelőtt';
   @override
   String prefixFromNow() => 'mostantól';
   @override
