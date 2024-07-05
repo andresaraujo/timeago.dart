@@ -30,11 +30,11 @@ class BnMessages implements LookupMessages {
   @override
   String lessThanOneMinute(int seconds) => 'কিছুক্ষন';
   @override
-  String aboutAMinute(int minutes) => 'এক মিনিট';
+  String aboutAMinute(int minutes) => 'প্রায় এক মিনিট';
   @override
   String minutes(int minutes) => '$minutes মিনিট';
   @override
-  String aboutAnHour(int minutes) => 'এক ঘন্টা';
+  String aboutAnHour(int minutes) => 'প্রায় এক ঘন্টা';
   @override
   String hours(int hours) => '$hours ঘন্টা';
   @override
@@ -42,11 +42,12 @@ class BnMessages implements LookupMessages {
   @override
   String days(int days) => '${convertToBanglaNumerals(days.toString())} দিন';
   @override
-  String aboutAMonth(int days) => 'এক মাস';
+  String aboutAMonth(int days) => 'প্রায় এক মাস';
   @override
-  String months(int months) => '${convertToBanglaNumerals(months.toString())} মাস';
+  String months(int months) =>
+      '${convertToBanglaNumerals(months.toString())} মাস';
   @override
-  String aboutAYear(int year) => 'এক বছর';
+  String aboutAYear(int year) => 'প্রায় এক বছর';
   @override
   String years(int years) => '${convertToBanglaNumerals(years.toString())} বছর';
   @override
