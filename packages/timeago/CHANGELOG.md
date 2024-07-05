@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.7.0
+- Add support for `bn` messages @ishafiul
+- Fix grammar in `hu` messages @dJani97
+- Fix grammar in `ro` messages @ovidiuvaro
+
 ## 3.6.1
 - Make timeago compatible with intl 0.18 and 0.19 @Mecharyry
 

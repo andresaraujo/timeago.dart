@@ -26,30 +26,27 @@ class BnMessages implements LookupMessages {
   @override
   String suffixAgo() => 'আগে';
   @override
-  String suffixFromNow() => 'পরে';
+  String suffixFromNow() => 'এখন থেকে';
   @override
-  String lessThanOneMinute(int seconds) => 'এক মুহূর্ত';
+  String lessThanOneMinute(int seconds) => 'কিছুক্ষন';
   @override
   String aboutAMinute(int minutes) => 'এক মিনিট';
   @override
-  String minutes(int minutes) =>
-      '${convertToBanglaNumerals(minutes.toString())} মিনিট';
+  String minutes(int minutes) => '$minutes মিনিট';
   @override
-  String aboutAnHour(int minutes) => 'প্রায় এক ঘন্টা';
+  String aboutAnHour(int minutes) => 'এক ঘন্টা';
   @override
-  String hours(int hours) =>
-      '${convertToBanglaNumerals(hours.toString())} ঘন্টা';
+  String hours(int hours) => '$hours ঘন্টা';
   @override
   String aDay(int hours) => 'এক দিন';
   @override
   String days(int days) => '${convertToBanglaNumerals(days.toString())} দিন';
   @override
-  String aboutAMonth(int days) => 'প্রায় এক মাস';
+  String aboutAMonth(int days) => 'এক মাস';
   @override
-  String months(int months) =>
-      '${convertToBanglaNumerals(months.toString())} মাস';
+  String months(int months) => '${convertToBanglaNumerals(months.toString())} মাস';
   @override
-  String aboutAYear(int year) => 'প্রায় এক বছর';
+  String aboutAYear(int year) => 'এক বছর';
   @override
   String years(int years) => '${convertToBanglaNumerals(years.toString())} বছর';
   @override
