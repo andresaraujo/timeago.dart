@@ -67,27 +67,28 @@ class BnShortMessages implements LookupMessages {
   @override
   String lessThanOneMinute(int seconds) => 'এখন';
   @override
-  String aboutAMinute(int minutes) => '১মি';
+  String aboutAMinute(int minutes) => '১মিনিট ';
   @override
   String minutes(int minutes) =>
-      '${convertToBanglaNumerals(minutes.toString())}মি';
+      '${convertToBanglaNumerals(minutes.toString())}মিনিট';
   @override
-  String aboutAnHour(int minutes) => '~১ঘ';
+  String aboutAnHour(int minutes) => '~১ঘন্টা';
   @override
-  String hours(int hours) => '${convertToBanglaNumerals(hours.toString())}ঘ';
+  String hours(int hours) =>
+      '${convertToBanglaNumerals(hours.toString())}ঘন্টা';
   @override
   String aDay(int hours) => '~১দি';
   @override
   String days(int days) => '${convertToBanglaNumerals(days.toString())}দি';
   @override
-  String aboutAMonth(int days) => '~১মা';
+  String aboutAMonth(int days) => '~১মাস';
   @override
   String months(int months) =>
-      '${convertToBanglaNumerals(months.toString())}মা';
+      '${convertToBanglaNumerals(months.toString())}মাস';
   @override
-  String aboutAYear(int year) => '~১ব';
+  String aboutAYear(int year) => '~১বছর';
   @override
-  String years(int years) => '${convertToBanglaNumerals(years.toString())}ব';
+  String years(int years) => '${convertToBanglaNumerals(years.toString())}বছর';
   @override
   String wordSeparator() => ' ';
 }
