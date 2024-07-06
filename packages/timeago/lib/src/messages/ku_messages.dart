@@ -85,23 +85,23 @@ class KuShortMessages implements LookupMessages {
   @override
   String aboutAMinute(int minutes) => '1 خولەک';
   @override
-  String minutes(int minutes) => 'خولەک $minutes';
+  String minutes(int minutes) => '$minutes خولەک';
   @override
   String aboutAnHour(int minutes) => 'کاژێر ~1';
   @override
-  String hours(int hours) => 'کاژێر $hours';
+  String hours(int hours) => '$hours کاژێر';
   @override
   String aDay(int hours) => '~1 ڕۆژ';
   @override
-  String days(int days) => 'رۆژ $days';
+  String days(int days) => '$days رۆژ';
   @override
   String aboutAMonth(int days) => '~1 مانگ';
   @override
-  String months(int months) => 'مانگ $months';
+  String months(int months) => '$months مانگ';
   @override
   String aboutAYear(int year) => '~1 ساڵ';
   @override
-  String years(int years) => 'ساڵ $years ';
+  String years(int years) => '$years ساڵ';
   @override
   String wordSeparator() => ' ';
 }
