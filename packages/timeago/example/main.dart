@@ -14,6 +14,8 @@ main() async {
   timeago.setLocaleMessages('az_short', timeago.AzShortMessages());
   timeago.setLocaleMessages('ca', timeago.CaMessages());
   timeago.setLocaleMessages('ca_short', timeago.CaShortMessages());
+  timeago.setLocaleMessages('bn', timeago.BnMessages());
+  timeago.setLocaleMessages('bn_short', timeago.BnShortMessages());
   timeago.setLocaleMessages('cs', timeago.CsMessages());
   timeago.setLocaleMessages('cs_short', timeago.CsShortMessages());
   timeago.setLocaleMessages('bn', timeago.BnMessages());
