@@ -33,6 +33,8 @@ final localesMap = <String, LookupMessages>{
   'id_short': IdShortMessages(),
   'it': ItMessages(),
   'ja': JaMessages(),
+  'ka': KaMessages(),
+  'ka_short': KaShortMessages(),
   'km': KmMessages(),
   'ko': KoMessages(),
   'ku': KuMessages(),
