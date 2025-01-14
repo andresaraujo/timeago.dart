@@ -23,6 +23,7 @@ export 'package:timeago/src/messages/hu_messages.dart';
 export 'package:timeago/src/messages/id_messages.dart';
 export 'package:timeago/src/messages/it_messages.dart';
 export 'package:timeago/src/messages/ja_messages.dart';
+export 'package:timeago/src/messages/ka_messages.dart';
 export 'package:timeago/src/messages/km_messages.dart';
 export 'package:timeago/src/messages/ko_messages.dart';
 export 'package:timeago/src/messages/ku_messages.dart';
