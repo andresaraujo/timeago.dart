@@ -29,7 +29,7 @@ class UkMessages implements LookupMessages {
   @override
   String months(int months) => '$months ${_convert(months, 'months')}';
   @override
-  String aboutAYear(int year) => 'рік';
+  String aboutAYear(int months) => 'рік';
   @override
   String years(int years) => '$years ${_convert(years, 'years')}';
   @override
@@ -116,7 +116,7 @@ class UkShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months міс.';
   @override
-  String aboutAYear(int year) => '~1 р.';
+  String aboutAYear(int months) => '~1 р.';
   @override
   String years(int years) => '$years р.';
   @override

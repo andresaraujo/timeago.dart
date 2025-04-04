@@ -63,7 +63,7 @@ class MyCustomMessages implements LookupMessages {
   @override String days(int days) => '${days}d';
   @override String aboutAMonth(int days) => '${days}d';
   @override String months(int months) => '${months}mo';
-  @override String aboutAYear(int year) => '${year}y';
+  @override String aboutAYear(int months) => '${months}mo';
   @override String years(int years) => '${years}y';
   @override String wordSeparator() => ' ';
 }

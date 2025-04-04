@@ -29,7 +29,7 @@ class AzMessages implements LookupMessages {
   @override
   String months(int months) => '$months ay';
   @override
-  String aboutAYear(int year) => 'təxminən 1 il';
+  String aboutAYear(int months) => 'təxminən 1 il';
   @override
   String years(int years) => '$years il';
   @override
@@ -65,7 +65,7 @@ class AzShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months ay';
   @override
-  String aboutAYear(int year) => '~1 il';
+  String aboutAYear(int months) => '~1 il';
   @override
   String years(int years) => '$years il';
   @override

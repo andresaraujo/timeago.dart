@@ -29,7 +29,7 @@ class MnMessages implements LookupMessages {
   @override
   String months(int months) => '$months сарын';
   @override
-  String aboutAYear(int year) => 'жил орчмын';
+  String aboutAYear(int months) => 'жил орчмын';
   @override
   String years(int years) => '$years жилийн';
   @override
@@ -65,7 +65,7 @@ class MnShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months с';
   @override
-  String aboutAYear(int year) => '~1 ж';
+  String aboutAYear(int months) => '~1 ж';
   @override
   String years(int years) => '$years ж';
   @override

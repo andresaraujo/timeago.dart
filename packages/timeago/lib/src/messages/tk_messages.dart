@@ -29,7 +29,7 @@ class TkMessages implements LookupMessages {
   @override
   String months(int months) => '$months aý';
   @override
-  String aboutAYear(int year) => 'bir ýyl';
+  String aboutAYear(int months) => 'bir ýyl';
   @override
   String years(int years) => '$years ýyl';
   @override

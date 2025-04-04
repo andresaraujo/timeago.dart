@@ -29,7 +29,7 @@ class KoMessages implements LookupMessages {
   @override
   String months(int months) => '${months}달';
   @override
-  String aboutAYear(int year) => '약 1년';
+  String aboutAYear(int months) => '약 1년';
   @override
   String years(int years) => '${years}년';
   @override

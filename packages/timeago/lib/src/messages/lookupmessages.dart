@@ -40,7 +40,7 @@ abstract class LookupMessages {
   String months(int months);
 
   /// Format when time is about a year
-  String aboutAYear(int year);
+  String aboutAYear(int months);
 
   /// Format when time is about a year
   String years(int years);

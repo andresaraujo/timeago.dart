@@ -91,7 +91,7 @@ class HrMessages implements timeago.LookupMessages {
   }
 
   @override
-  String aboutAYear(int year) => 'oko jedne godine';
+  String aboutAYear(int months) => 'oko jedne godine';
 
   @override
   String years(int years) {

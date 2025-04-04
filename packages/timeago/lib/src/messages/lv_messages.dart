@@ -29,7 +29,7 @@ class LvMessages implements LookupMessages {
   @override
   String months(int months) => '$months ${_convert(months, 'months')}';
   @override
-  String aboutAYear(int year) => 'gada';
+  String aboutAYear(int months) => 'gada';
   @override
   String years(int years) => '$years ${_convert(years, 'years')}';
   @override
@@ -99,7 +99,7 @@ class LvShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months mēn.';
   @override
-  String aboutAYear(int year) => '~1 g.';
+  String aboutAYear(int months) => '~1 g.';
   @override
   String years(int years) => '$years g.';
   @override

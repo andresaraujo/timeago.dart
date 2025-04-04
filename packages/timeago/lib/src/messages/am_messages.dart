@@ -12,7 +12,7 @@ class AmMessages implements LookupMessages {
   String aboutAMonth(int days) => 'አንድ ወር ገደማ';
 
   @override
-  String aboutAYear(int year) => 'አንድ ዓመት ገደማ';
+  String aboutAYear(int months) => 'አንድ ዓመት ገደማ';
 
   @override
   String aboutAnHour(int minutes) => 'ለአንድ ሰዓት ያህል';
@@ -105,7 +105,7 @@ class AmShortMessages implements LookupMessages {
   @override
   String months(int months) => '${months}ወር';
   @override
-  String aboutAYear(int year) => '~1ዓ';
+  String aboutAYear(int months) => '~1ዓ';
   @override
   String years(int years) => '${years}ዓ';
   @override

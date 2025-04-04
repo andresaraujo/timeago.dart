@@ -29,7 +29,7 @@ class ZhCnMessages implements LookupMessages {
   @override
   String months(int months) => '约 ${months} 月';
   @override
-  String aboutAYear(int year) => '约1年';
+  String aboutAYear(int months) => '约1年';
   @override
   String years(int years) => '约 ${years} 年';
   @override

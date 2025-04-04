@@ -29,7 +29,7 @@ class EsMessages implements LookupMessages {
   @override
   String months(int months) => '$months meses';
   @override
-  String aboutAYear(int year) => 'un año';
+  String aboutAYear(int months) => 'un año';
   @override
   String years(int years) => '$years años';
   @override
@@ -65,7 +65,7 @@ class EsShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months meses';
   @override
-  String aboutAYear(int year) => '~1 año';
+  String aboutAYear(int months) => '~1 año';
   @override
   String years(int years) => '$years años';
   @override

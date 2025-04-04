@@ -29,7 +29,7 @@ class SvMessages implements LookupMessages {
   @override
   String months(int months) => '$months månader';
   @override
-  String aboutAYear(int year) => 'ungefär ett år';
+  String aboutAYear(int months) => 'ungefär ett år';
   @override
   String years(int years) => '$years år';
   @override
@@ -65,7 +65,7 @@ class SvShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months mån';
   @override
-  String aboutAYear(int year) => '~1 år';
+  String aboutAYear(int months) => '~1 år';
   @override
   String years(int years) => '$years år';
   @override

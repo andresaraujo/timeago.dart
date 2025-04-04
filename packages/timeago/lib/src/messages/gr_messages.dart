@@ -29,7 +29,7 @@ class GrMessages implements LookupMessages {
   @override
   String months(int months) => '$months μήνες';
   @override
-  String aboutAYear(int year) => 'περίπου ένα χρόνο';
+  String aboutAYear(int months) => 'περίπου ένα χρόνο';
   @override
   String years(int years) => '$years χρόνια';
   @override
@@ -65,7 +65,7 @@ class GrShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months μνς';
   @override
-  String aboutAYear(int year) => '~1 χρ';
+  String aboutAYear(int months) => '~1 χρ';
   @override
   String years(int years) => '$years χρ';
   @override

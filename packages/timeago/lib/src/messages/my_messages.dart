@@ -48,7 +48,7 @@ class MyMessages implements LookupMessages {
       'လွန်ခဲ့သော ${NumberFormat.compact(locale: 'my').format(months)} လ';
 
   @override
-  String aboutAYear(int year) => 'လွန်ခဲ့သော ၁ နှစ်ခန့်';
+  String aboutAYear(int months) => 'လွန်ခဲ့သော ၁ နှစ်ခန့်';
 
   @override
   String years(int years) =>
@@ -101,7 +101,7 @@ class MyShortMessages implements LookupMessages {
       '${NumberFormat.compact(locale: 'my').format(months)}လ';
 
   @override
-  String aboutAYear(int year) => '၁နှစ်';
+  String aboutAYear(int months) => '၁နှစ်';
 
   @override
   String years(int years) =>

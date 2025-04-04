@@ -29,7 +29,7 @@ class DaMessages implements LookupMessages {
   @override
   String months(int months) => '$months måneder';
   @override
-  String aboutAYear(int year) => 'omkring et år';
+  String aboutAYear(int months) => 'omkring et år';
   @override
   String years(int years) => '$years år';
   @override
@@ -65,7 +65,7 @@ class DaShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months md';
   @override
-  String aboutAYear(int year) => '~1 år';
+  String aboutAYear(int months) => '~1 år';
   @override
   String years(int years) => '$years år';
   @override

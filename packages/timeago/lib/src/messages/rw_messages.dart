@@ -29,7 +29,7 @@ class RwMessages implements LookupMessages {
   @override
   String months(int months) => 'amezi $months';
   @override
-  String aboutAYear(int year) => 'umwaka';
+  String aboutAYear(int months) => 'umwaka';
   @override
   String years(int years) => 'imyaka$years';
   @override
@@ -65,7 +65,7 @@ class RwShortMessages implements LookupMessages {
   @override
   String months(int months) => 'amezi $months';
   @override
-  String aboutAYear(int year) => 'umwaka';
+  String aboutAYear(int months) => 'umwaka';
   @override
   String years(int years) => 'imyaka $years';
   @override
