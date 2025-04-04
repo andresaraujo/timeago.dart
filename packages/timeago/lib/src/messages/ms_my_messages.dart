@@ -29,7 +29,7 @@ class MsMyMessages implements LookupMessages {
   @override
   String months(int months) => '$months bulan';
   @override
-  String aboutAYear(int year) => 'setahun';
+  String aboutAYear(int months) => 'setahun';
   @override
   String years(int years) => '$years tahun';
   @override
@@ -65,7 +65,7 @@ class MsMyShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months bln';
   @override
-  String aboutAYear(int year) => '~1 thn';
+  String aboutAYear(int months) => '~1 thn';
   @override
   String years(int years) => '$years thn';
   @override

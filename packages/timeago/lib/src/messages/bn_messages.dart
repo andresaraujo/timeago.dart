@@ -29,7 +29,7 @@ class BnMessages implements LookupMessages {
   @override
   String months(int months) => '$months মাস';
   @override
-  String aboutAYear(int year) => 'এক বছর';
+  String aboutAYear(int months) => 'এক বছর';
   @override
   String years(int years) => '$years বছর';
   @override
@@ -65,7 +65,7 @@ class BnShortMessages implements LookupMessages {
   @override
   String months(int months) => '${months}মাস';
   @override
-  String aboutAYear(int year) => '~1বছর';
+  String aboutAYear(int months) => '~1বছর';
   @override
   String years(int years) => '${years}বছর';
   @override

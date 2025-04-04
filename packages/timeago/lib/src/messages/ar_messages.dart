@@ -26,7 +26,6 @@ class ArMessages implements LookupMessages {
 
   @override
   String aboutAMinute(int minutes) => 'دقيقة تقريباً';
-  
 
   @override
   String minutes(int minutes) {
@@ -80,7 +79,7 @@ class ArMessages implements LookupMessages {
   }
 
   @override
-  String aboutAYear(int year) => 'سنة تقريباً';
+  String aboutAYear(int months) => 'سنة تقريباً';
   @override
   String years(int years) {
     if (years == 2) {
@@ -125,7 +124,7 @@ class ArShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months ش';
   @override
-  String aboutAYear(int year) => '~1 س';
+  String aboutAYear(int months) => '~1 س';
   @override
   String years(int years) => '$years س';
   @override

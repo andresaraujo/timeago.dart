@@ -29,7 +29,7 @@ class SrMessages implements LookupMessages {
   @override
   String months(int months) => '$months месеци';
   @override
-  String aboutAYear(int year) => '~1 година';
+  String aboutAYear(int months) => '~1 година';
   @override
   String years(int years) => '$years године';
   @override
@@ -65,7 +65,7 @@ class SrShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months м.';
   @override
-  String aboutAYear(int year) => '~1 г.';
+  String aboutAYear(int months) => '~1 г.';
   @override
   String years(int years) => '$years г.';
   @override

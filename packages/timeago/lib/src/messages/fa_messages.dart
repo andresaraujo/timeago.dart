@@ -29,7 +29,7 @@ class FaMessages implements LookupMessages {
   @override
   String months(int months) => '${months} ماه';
   @override
-  String aboutAYear(int year) => '~یک سال';
+  String aboutAYear(int months) => '~یک سال';
   @override
   String years(int years) => '${years} سال';
   @override

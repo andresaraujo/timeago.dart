@@ -29,7 +29,7 @@ class DeMessages implements LookupMessages {
   @override
   String months(int months) => '$months Monaten';
   @override
-  String aboutAYear(int year) => '~1 Jahr';
+  String aboutAYear(int months) => '~1 Jahr';
   @override
   String years(int years) => '$years Jahren';
   @override
@@ -65,7 +65,7 @@ class DeShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months Mo.';
   @override
-  String aboutAYear(int year) => '~1 Jr.';
+  String aboutAYear(int months) => '~1 Jr.';
   @override
   String years(int years) => '$years Jr.';
   @override

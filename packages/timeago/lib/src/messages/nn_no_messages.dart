@@ -29,7 +29,7 @@ class NnNoShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months mnd';
   @override
-  String aboutAYear(int year) => '~1 år';
+  String aboutAYear(int months) => '~1 år';
   @override
   String years(int years) => '$years år';
   @override
@@ -65,7 +65,7 @@ class NnNoMessages implements LookupMessages {
   @override
   String months(int months) => '$months månadar';
   @override
-  String aboutAYear(int year) => 'omtrent eit år';
+  String aboutAYear(int months) => 'omtrent eit år';
   @override
   String years(int years) => '$years år';
   @override
