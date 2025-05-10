@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.7.1
+- Update intl dependency range
+
 ## 3.7.0
 - Add support for `bn` messages @ishafiul
 - Fix grammar in `hu` messages @dJani97
