@@ -36,7 +36,7 @@ class LvMessages implements LookupMessages {
   String wordSeparator() => ' ';
 
   String _convert(int number, String type) {
-    var mod = number % 10;
+    int mod = number % 10;
 
     if (mod == 1) {
       switch (type) {

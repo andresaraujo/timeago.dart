@@ -1,27 +1,27 @@
 import 'package:timeago/src/messages/lookupmessages.dart';
 
-/// Russian messages
-class RuMessages implements LookupMessages {
+/// Belarusian messages (code based by russian and ukrainian translations)
+class BeMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
-  String prefixFromNow() => 'через';
+  String prefixFromNow() => 'праз';
   @override
-  String suffixAgo() => 'назад';
+  String suffixAgo() => 'таму';
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'минуту';
+  String lessThanOneMinute(int seconds) => 'хвіліна';
   @override
-  String aboutAMinute(int minutes) => 'минуту';
+  String aboutAMinute(int minutes) => 'хвіліна';
   @override
   String minutes(int minutes) => '$minutes ${_convert(minutes, 'minutes')}';
   @override
-  String aboutAnHour(int minutes) => 'час';
+  String aboutAnHour(int minutes) => 'гадзіна';
   @override
   String hours(int hours) => '$hours ${_convert(hours, 'hours')}';
   @override
-  String aDay(int hours) => 'день';
+  String aDay(int hours) => 'дзень';
   @override
   String days(int days) => '$days ${_convert(days, 'days')}';
   @override
@@ -36,17 +36,17 @@ class RuMessages implements LookupMessages {
   String wordSeparator() => ' ';
 
   String _convert(int number, String type) {
-    var mod = number % 10;
-    var modH = number % 100;
+    int mod = number % 10;
+    int modH = number % 100;
 
     if (mod == 1 && modH != 11) {
       switch (type) {
         case 'minutes':
-          return 'минуту';
+          return 'хвіліну';
         case 'hours':
-          return 'час';
+          return 'гадзіна';
         case 'days':
-          return 'день';
+          return 'дзень';
         case 'months':
           return 'месяц';
         case 'years':
@@ -58,37 +58,37 @@ class RuMessages implements LookupMessages {
         !<int>[12, 13, 14].contains(modH)) {
       switch (type) {
         case 'minutes':
-          return 'минуты';
+          return 'хвіліны';
         case 'hours':
-          return 'часа';
+          return 'гадзіны';
         case 'days':
           return 'дня';
         case 'months':
           return 'месяца';
         case 'years':
-          return 'года';
+          return 'гады';
         default:
           return '';
       }
     }
     switch (type) {
       case 'minutes':
-        return 'минут';
+        return 'хвілін';
       case 'hours':
-        return 'часов';
+        return 'гадзін';
       case 'days':
-        return 'дней';
+        return 'дзён';
       case 'months':
-        return 'месяцев';
+        return 'месяцаў';
       case 'years':
-        return 'лет';
+        return 'гадоў';
       default:
         return '';
     }
   }
 }
 
-class RuShortMessages implements LookupMessages {
+class BeShortMessages implements LookupMessages {
   @override
   String prefixAgo() => '';
   @override
@@ -98,19 +98,19 @@ class RuShortMessages implements LookupMessages {
   @override
   String suffixFromNow() => '';
   @override
-  String lessThanOneMinute(int seconds) => 'только что';
+  String lessThanOneMinute(int seconds) => 'толькі што';
   @override
-  String aboutAMinute(int minutes) => '1 мин.';
+  String aboutAMinute(int minutes) => '~1 мін.';
   @override
-  String minutes(int minutes) => '$minutes мин.';
+  String minutes(int minutes) => '$minutes мін.';
   @override
-  String aboutAnHour(int minutes) => '~1 ч.';
+  String aboutAnHour(int minutes) => '~1 гад.';
   @override
-  String hours(int hours) => '$hours ч.';
+  String hours(int hours) => '$hours гад.';
   @override
-  String aDay(int hours) => '~1 д.';
+  String aDay(int hours) => '~1 дзн.';
   @override
-  String days(int days) => '$days д.';
+  String days(int days) => '$days дзн.';
   @override
   String aboutAMonth(int days) => '~1 мес.';
   @override

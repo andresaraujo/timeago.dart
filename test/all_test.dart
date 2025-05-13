@@ -3,40 +3,40 @@ library timeago.test;
 import 'package:test/test.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
-final now = new DateTime.now();
+final DateTime now = new DateTime.now();
 
 void main() {
   group('timeago', () {
     test('should format with default locale', () async {
-      final clock = now.add(Duration(seconds: 1));
+      final DateTime clock = now.add(Duration(seconds: 1));
 
-      var result = timeago.format(now, clock: clock);
+      String result = timeago.format(now, clock: clock);
       expect(result, equals('a moment ago'));
     });
 
     test('should format with locale', () async {
-      final clock = now.add(Duration(seconds: 120));
+      final DateTime clock = now.add(Duration(seconds: 120));
 
-      var result = timeago.format(now, locale: 'es', clock: clock);
+      String result = timeago.format(now, locale: 'es', clock: clock);
       expect(result, equals('hace 2 minutos'));
     });
 
     test('should format with default locale, if locale messages doesnt exist',
         () async {
-      final clock = now.add(Duration(seconds: 1));
+      final DateTime clock = now.add(Duration(seconds: 1));
 
-      var result = timeago.format(now, locale: 'ko', clock: clock);
+      String result = timeago.format(now, locale: 'ko', clock: clock);
       expect(result, equals('a moment ago'));
     });
 
     test('should allow to override a locale', () async {
-      var clock = now.add(Duration(seconds: 1));
+      DateTime clock = now.add(Duration(seconds: 1));
 
       // Override 'en' locale messages
       timeago.setLocaleMessages('en', CustomEnglishMessages());
 
       // Default 'en' locale
-      var result = timeago.format(now, clock: clock);
+      String result = timeago.format(now, clock: clock);
       expect(result, equals('1 second ago'));
 
       clock = now.add(Duration(seconds: 5));
@@ -47,20 +47,20 @@ void main() {
     });
 
     test('should allow to add a new locale', () async {
-      var clock = now.add(Duration(seconds: 170));
+      DateTime clock = now.add(Duration(seconds: 170));
 
       // Add 'en_short' locale messages
       timeago.setLocaleMessages('en_short', timeago.EnShortMessages());
 
       // use 'en_short'
-      var result = timeago.format(now, locale: 'en_short', clock: clock);
+      String result = timeago.format(now, locale: 'en_short', clock: clock);
       expect(result, equals('3m'));
     });
 
     test('should allow from now dates', () async {
-      var clock = now.subtract(Duration(seconds: 1700));
+      DateTime clock = now.subtract(Duration(seconds: 1700));
 
-      var result = timeago.format(now, clock: clock);
+      String result = timeago.format(now, clock: clock);
       expect(result, equals('a moment ago'));
 
       result = timeago.format(now, clock: clock, allowFromNow: true);
@@ -68,7 +68,7 @@ void main() {
     });
 
     test('should allow from now dates without clock set', () async {
-      var result = timeago.format(now.add(Duration(seconds: 1700)));
+      String result = timeago.format(now.add(Duration(seconds: 1700)));
       expect(result, equals('a moment ago'));
 
       result =

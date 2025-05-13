@@ -37,8 +37,8 @@ class UkMessages implements LookupMessages {
 }
 
 String _convert(int number, String type) {
-  var mod = number % 10;
-  var modH = number % 100;
+  int mod = number % 10;
+  int modH = number % 100;
 
   if (mod == 1 && modH != 11) {
     switch (type) {

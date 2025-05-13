@@ -4,7 +4,7 @@ import 'package:timeago/src/messages/lookupmessages.dart';
 
 String _default = 'en';
 
-Map<String, LookupMessages> _lookupMessagesMap = {
+Map<String, LookupMessages> _lookupMessagesMap = <String, LookupMessages>{
   'en': EnMessages(),
   'en_short': EnShortMessages(),
   'es': EsMessages(),
@@ -49,14 +49,14 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
 String format(DateTime date,
     {String? locale, DateTime? clock, bool allowFromNow = false}) {
-  final _locale = locale ?? _default;
+  final String _locale = locale ?? _default;
   if (_lookupMessagesMap[_locale] == null) {
     print("Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
   }
-  final _allowFromNow = allowFromNow;
-  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
-  final _clock = clock ?? DateTime.now();
-  var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
+  final bool _allowFromNow = allowFromNow;
+  final LookupMessages messages = _lookupMessagesMap[_locale] ?? EnMessages();
+  final DateTime _clock = clock ?? DateTime.now();
+  int elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
   String prefix, suffix;
 
@@ -101,7 +101,7 @@ String format(DateTime date,
     result = messages.years(years.round());
   }
 
-  return [prefix, result, suffix]
-      .where((str) => str.isNotEmpty)
+  return <String>[prefix, result, suffix]
+      .where((String str) => str.isNotEmpty)
       .join(messages.wordSeparator());
 }
