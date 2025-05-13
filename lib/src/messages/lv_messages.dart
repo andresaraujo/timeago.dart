@@ -39,35 +39,23 @@ class LvMessages implements LookupMessages {
     int mod = number % 10;
 
     if (mod == 1) {
-      switch (type) {
-        case 'minutes':
-          return 'minūtes';
-        case 'hours':
-          return 'stundas';
-        case 'days':
-          return 'dienas';
-        case 'months':
-          return 'mēneša';
-        case 'years':
-          return 'gada';
-        default:
-          return '';
-      }
+      return switch (type) {
+        'minutes' => 'minūtes',
+        'hours' => 'stundas',
+        'days' => 'dienas',
+        'months' => 'mēneša',
+        'years' => 'gada',
+        _ => ''
+      };
     }
-    switch (type) {
-      case 'minutes':
-        return 'minūtēm';
-      case 'hours':
-        return 'stundām';
-      case 'days':
-        return 'dienām';
-      case 'months':
-        return 'mēnešiem';
-      case 'years':
-        return 'gadiem';
-      default:
-        return '';
-    }
+    return switch (type) {
+      'minutes' => 'minūtēm',
+      'hours' => 'stundām',
+      'days' => 'dienām',
+      'months' => 'mēnešiem',
+      'years' => 'gadiem',
+      _ => ''
+    };
   }
 }
 

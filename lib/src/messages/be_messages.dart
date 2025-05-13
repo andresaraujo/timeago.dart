@@ -40,51 +40,33 @@ class BeMessages implements LookupMessages {
     int modH = number % 100;
 
     if (mod == 1 && modH != 11) {
-      switch (type) {
-        case 'minutes':
-          return 'хвіліну';
-        case 'hours':
-          return 'гадзіна';
-        case 'days':
-          return 'дзень';
-        case 'months':
-          return 'месяц';
-        case 'years':
-          return 'год';
-        default:
-          return '';
-      }
+      return switch (type) {
+        'minutes' => 'хвіліну',
+        'hours' => 'гадзіна',
+        'days' => 'дзень',
+        'months' => 'месяц',
+        'years' => 'год',
+        _ => ''
+      };
     } else if (<int>[2, 3, 4].contains(mod) &&
         !<int>[12, 13, 14].contains(modH)) {
-      switch (type) {
-        case 'minutes':
-          return 'хвіліны';
-        case 'hours':
-          return 'гадзіны';
-        case 'days':
-          return 'дня';
-        case 'months':
-          return 'месяца';
-        case 'years':
-          return 'гады';
-        default:
-          return '';
-      }
+      return switch (type) {
+        'minutes' => 'хвіліны',
+        'hours' => 'гадзіны',
+        'days' => 'дня',
+        'months' => 'месяца',
+        'years' => 'гады',
+        _ => ''
+      };
     }
-    switch (type) {
-      case 'minutes':
-        return 'хвілін';
-      case 'hours':
-        return 'гадзін';
-      case 'days':
-        return 'дзён';
-      case 'months':
-        return 'месяцаў';
-      case 'years':
-        return 'гадоў';
-      default:
-        return '';
-    }
+    return switch (type) {
+      'minutes' => 'хвілін',
+      'hours' => 'гадзін',
+      'days' => 'дзён',
+      'months' => 'месяцаў',
+      'years' => 'гадоў',
+      _ => ''
+    };
   }
 }
 

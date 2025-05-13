@@ -41,51 +41,33 @@ String _convert(int number, String type) {
   int modH = number % 100;
 
   if (mod == 1 && modH != 11) {
-    switch (type) {
-      case 'minutes':
-        return 'хвилину';
-      case 'hours':
-        return 'годину';
-      case 'days':
-        return 'день';
-      case 'months':
-        return 'місяць';
-      case 'years':
-        return 'рік';
-      default:
-        return '';
-    }
+    return switch (type) {
+      'minutes' => 'хвилину',
+      'hours' => 'годину',
+      'days' => 'день',
+      'months' => 'місяць',
+      'years' => 'рік',
+      _ => ''
+    };
   } else if (<int>[2, 3, 4].contains(mod) &&
       !<int>[12, 13, 14].contains(modH)) {
-    switch (type) {
-      case 'minutes':
-        return 'хвилини';
-      case 'hours':
-        return 'години';
-      case 'days':
-        return 'дні';
-      case 'months':
-        return 'місяця';
-      case 'years':
-        return 'роки';
-      default:
-        return '';
-    }
+    return switch (type) {
+      'minutes' => 'хвилини',
+      'hours' => 'години',
+      'days' => 'дні',
+      'months' => 'місяця',
+      'years' => 'роки',
+      _ => ''
+    };
   }
-  switch (type) {
-    case 'minutes':
-      return 'хвилин';
-    case 'hours':
-      return 'годин';
-    case 'days':
-      return 'днів';
-    case 'months':
-      return 'місяців';
-    case 'years':
-      return 'років';
-    default:
-      return '';
-  }
+  return switch (type) {
+    'minutes' => 'хвилин',
+    'hours' => 'годин',
+    'days' => 'днів',
+    'months' => 'місяців',
+    'years' => 'років',
+    _ => ''
+  };
 }
 
 class UkShortMessages implements LookupMessages {

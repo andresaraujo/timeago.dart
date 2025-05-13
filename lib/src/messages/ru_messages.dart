@@ -40,51 +40,33 @@ class RuMessages implements LookupMessages {
     int modH = number % 100;
 
     if (mod == 1 && modH != 11) {
-      switch (type) {
-        case 'minutes':
-          return 'минуту';
-        case 'hours':
-          return 'час';
-        case 'days':
-          return 'день';
-        case 'months':
-          return 'месяц';
-        case 'years':
-          return 'год';
-        default:
-          return '';
-      }
+      return switch (type) {
+        'minutes' => 'минуту',
+        'hours' => 'час',
+        'days' => 'день',
+        'months' => 'месяц',
+        'years' => 'год',
+        _ => ''
+      };
     } else if (<int>[2, 3, 4].contains(mod) &&
         !<int>[12, 13, 14].contains(modH)) {
-      switch (type) {
-        case 'minutes':
-          return 'минуты';
-        case 'hours':
-          return 'часа';
-        case 'days':
-          return 'дня';
-        case 'months':
-          return 'месяца';
-        case 'years':
-          return 'года';
-        default:
-          return '';
-      }
+      return switch (type) {
+        'minutes' => 'минуты',
+        'hours' => 'часа',
+        'days' => 'дня',
+        'months' => 'месяца',
+        'years' => 'года',
+        _ => ''
+      };
     }
-    switch (type) {
-      case 'minutes':
-        return 'минут';
-      case 'hours':
-        return 'часов';
-      case 'days':
-        return 'дней';
-      case 'months':
-        return 'месяцев';
-      case 'years':
-        return 'лет';
-      default:
-        return '';
-    }
+    return switch (type) {
+      'minutes' => 'минут',
+      'hours' => 'часов',
+      'days' => 'дней',
+      'months' => 'месяцев',
+      'years' => 'лет',
+      _ => ''
+    };
   }
 }
 
