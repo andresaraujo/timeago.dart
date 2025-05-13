@@ -45,7 +45,7 @@ class LvMessages implements LookupMessages {
         'days' => 'dienas',
         'months' => 'mēneša',
         'years' => 'gada',
-        _ => ''
+        _ => '',
       };
     }
     return switch (type) {
@@ -54,7 +54,7 @@ class LvMessages implements LookupMessages {
       'days' => 'dienām',
       'months' => 'mēnešiem',
       'years' => 'gadiem',
-      _ => ''
+      _ => '',
     };
   }
 }

@@ -47,7 +47,7 @@ String _convert(int number, String type) {
       'days' => 'день',
       'months' => 'місяць',
       'years' => 'рік',
-      _ => ''
+      _ => '',
     };
   } else if (<int>[2, 3, 4].contains(mod) &&
       !<int>[12, 13, 14].contains(modH)) {
@@ -57,7 +57,7 @@ String _convert(int number, String type) {
       'days' => 'дні',
       'months' => 'місяця',
       'years' => 'роки',
-      _ => ''
+      _ => '',
     };
   }
   return switch (type) {
@@ -66,7 +66,7 @@ String _convert(int number, String type) {
     'days' => 'днів',
     'months' => 'місяців',
     'years' => 'років',
-    _ => ''
+    _ => '',
   };
 }
 

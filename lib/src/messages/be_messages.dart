@@ -46,7 +46,7 @@ class BeMessages implements LookupMessages {
         'days' => 'дзень',
         'months' => 'месяц',
         'years' => 'год',
-        _ => ''
+        _ => '',
       };
     } else if (<int>[2, 3, 4].contains(mod) &&
         !<int>[12, 13, 14].contains(modH)) {
@@ -56,7 +56,7 @@ class BeMessages implements LookupMessages {
         'days' => 'дня',
         'months' => 'месяца',
         'years' => 'гады',
-        _ => ''
+        _ => '',
       };
     }
     return switch (type) {
@@ -65,7 +65,7 @@ class BeMessages implements LookupMessages {
       'days' => 'дзён',
       'months' => 'месяцаў',
       'years' => 'гадоў',
-      _ => ''
+      _ => '',
     };
   }
 }

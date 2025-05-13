@@ -26,7 +26,6 @@ class ArMessages implements LookupMessages {
 
   @override
   String aboutAMinute(int minutes) => 'دقيقة تقريباً';
-  
 
   @override
   String minutes(int minutes) {

@@ -94,8 +94,10 @@ main() async {
   final updateMainContainer = () {
     final now = new DateTime.now();
     final difference = now.difference(loadedTime);
-    mainContainer?.text =
-        timeago.format(now.subtract(difference), locale: locale);
+    mainContainer?.text = timeago.format(
+      now.subtract(difference),
+      locale: locale,
+    );
   };
 
   querySelectorAll(".locale-link").onClick.listen((event) async {
@@ -120,34 +122,72 @@ addItem(String text) {
 
 createListItems() {
   final currentTime = new DateTime.now();
-  addItem(timeago.format(
+  addItem(
+    timeago.format(
       currentTime.subtract(new Duration(microseconds: 1 * 44 * 1000)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 1)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 5)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(minutes: 50)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(hours: 5)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 1)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 5)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 30)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 30 * 5)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 365)),
-      locale: locale));
-  addItem(timeago.format(currentTime.subtract(new Duration(days: 365 * 5)),
-      locale: locale));
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(minutes: 1)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(minutes: 5)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(minutes: 50)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(hours: 5)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(currentTime.subtract(new Duration(days: 1)), locale: locale),
+  );
+  addItem(
+    timeago.format(currentTime.subtract(new Duration(days: 5)), locale: locale),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(days: 30)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(days: 30 * 5)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(days: 365)),
+      locale: locale,
+    ),
+  );
+  addItem(
+    timeago.format(
+      currentTime.subtract(new Duration(days: 365 * 5)),
+      locale: locale,
+    ),
+  );
 
   addItem("-");
 
   addItem(
-      timeUntil(currentTime.add(new Duration(microseconds: 1 * 44 * 1000))));
+    timeUntil(currentTime.add(new Duration(microseconds: 1 * 44 * 1000))),
+  );
   addItem(timeUntil(currentTime.add(new Duration(minutes: 1))));
   addItem(timeUntil(currentTime.add(new Duration(minutes: 5))));
   addItem(timeUntil(currentTime.add(new Duration(minutes: 50))));

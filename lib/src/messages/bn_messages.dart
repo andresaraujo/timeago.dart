@@ -51,23 +51,23 @@ class BnShortMessages implements LookupMessages {
   @override
   String aboutAMinute(int minutes) => '1মিনিট';
   @override
-  String minutes(int minutes) => '${minutes}মাস';
+  String minutes(int minutes) => '$minutesমাস';
   @override
   String aboutAnHour(int minutes) => '~1ঘন্টা';
   @override
-  String hours(int hours) => '${hours}ঘন্টা';
+  String hours(int hours) => '$hoursঘন্টা';
   @override
   String aDay(int hours) => '~1দিন';
   @override
-  String days(int days) => '${days}দিন';
+  String days(int days) => '$daysদিন';
   @override
   String aboutAMonth(int days) => '~1মাস';
   @override
-  String months(int months) => '${months}মাস';
+  String months(int months) => '$monthsমাস';
   @override
   String aboutAYear(int year) => '~1বছর';
   @override
-  String years(int years) => '${years}বছর';
+  String years(int years) => '$yearsবছর';
   @override
   String wordSeparator() => ' ';
 }

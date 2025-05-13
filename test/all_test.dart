@@ -1,9 +1,9 @@
-library timeago.test;
+library;
 
 import 'package:test/test.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
-final DateTime now = new DateTime.now();
+final DateTime now = DateTime.now();
 
 void main() {
   group('timeago', () {
@@ -21,13 +21,15 @@ void main() {
       expect(result, equals('hace 2 minutos'));
     });
 
-    test('should format with default locale, if locale messages doesnt exist',
-        () async {
-      final DateTime clock = now.add(Duration(seconds: 1));
+    test(
+      'should format with default locale, if locale messages doesnt exist',
+      () async {
+        final DateTime clock = now.add(Duration(seconds: 1));
 
-      String result = timeago.format(now, locale: 'ko', clock: clock);
-      expect(result, equals('a moment ago'));
-    });
+        String result = timeago.format(now, locale: 'ko', clock: clock);
+        expect(result, equals('a moment ago'));
+      },
+    );
 
     test('should allow to override a locale', () async {
       DateTime clock = now.add(Duration(seconds: 1));
@@ -71,8 +73,10 @@ void main() {
       String result = timeago.format(now.add(Duration(seconds: 1700)));
       expect(result, equals('a moment ago'));
 
-      result =
-          timeago.format(now.add(Duration(seconds: 1700)), allowFromNow: true);
+      result = timeago.format(
+        now.add(Duration(seconds: 1700)),
+        allowFromNow: true,
+      );
       expect(result, equals('28 minutes from now'));
     });
   });

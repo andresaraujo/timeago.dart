@@ -91,23 +91,23 @@ class AmShortMessages implements LookupMessages {
   @override
   String aboutAMinute(int minutes) => '1ደ';
   @override
-  String minutes(int minutes) => '${minutes}ደ';
+  String minutes(int minutes) => '$minutesደ';
   @override
   String aboutAnHour(int minutes) => '~1ሰ';
   @override
-  String hours(int hours) => '${hours}ሰ';
+  String hours(int hours) => '$hoursሰ';
   @override
   String aDay(int hours) => '~1ቀ';
   @override
-  String days(int days) => '${days}ቀ';
+  String days(int days) => '$daysቀ';
   @override
   String aboutAMonth(int days) => '~1ወር';
   @override
-  String months(int months) => '${months}ወር';
+  String months(int months) => '$monthsወር';
   @override
   String aboutAYear(int year) => '~1ዓ';
   @override
-  String years(int years) => '${years}ዓ';
+  String years(int years) => '$yearsዓ';
   @override
   String wordSeparator() => ' ';
 }

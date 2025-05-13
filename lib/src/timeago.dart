@@ -19,8 +19,10 @@ Map<String, LookupMessages> _lookupMessagesMap = <String, LookupMessages>{
 /// setDefaultLocale('fr');
 /// ```
 void setDefaultLocale(String locale) {
-  assert(_lookupMessagesMap.containsKey(locale),
-      '[locale] must be a registered locale');
+  assert(
+    _lookupMessagesMap.containsKey(locale),
+    '[locale] must be a registered locale',
+  );
   _default = locale;
 }
 
@@ -47,21 +49,28 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
 ///   the elapsed time. Defaults to DateTime.now()
 /// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
-String format(DateTime date,
-    {String? locale, DateTime? clock, bool allowFromNow = false}) {
-  final String _locale = locale ?? _default;
-  if (_lookupMessagesMap[_locale] == null) {
-    print("Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
+String format(
+  DateTime date, {
+  String? locale,
+  DateTime? clock,
+  bool allowFromNow = false,
+}) {
+  final String currentLocale = locale ?? _default;
+  if (_lookupMessagesMap[currentLocale] == null) {
+    print(
+      "Locale [$currentLocale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]",
+    );
   }
-  final bool _allowFromNow = allowFromNow;
-  final LookupMessages messages = _lookupMessagesMap[_locale] ?? EnMessages();
-  final DateTime _clock = clock ?? DateTime.now();
-  int elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
+  final bool doAllowFromNow = allowFromNow;
+  final LookupMessages messages =
+      _lookupMessagesMap[currentLocale] ?? EnMessages();
+  final DateTime usedClock = clock ?? DateTime.now();
+  int elapsed = usedClock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 
   String prefix, suffix;
 
-  if (_allowFromNow && elapsed < 0) {
-    elapsed = date.isBefore(_clock) ? elapsed : elapsed.abs();
+  if (doAllowFromNow && elapsed < 0) {
+    elapsed = date.isBefore(usedClock) ? elapsed : elapsed.abs();
     prefix = messages.prefixFromNow();
     suffix = messages.suffixFromNow();
   } else {
@@ -101,7 +110,9 @@ String format(DateTime date,
     result = messages.years(years.round());
   }
 
-  return <String>[prefix, result, suffix]
-      .where((String str) => str.isNotEmpty)
-      .join(messages.wordSeparator());
+  return <String>[
+    prefix,
+    result,
+    suffix,
+  ].where((String str) => str.isNotEmpty).join(messages.wordSeparator());
 }

@@ -51,19 +51,19 @@ class FiShortMessages implements LookupMessages {
   @override
   String aboutAMinute(int minutes) => '1 min';
   @override
-  String minutes(int minutes) => '${minutes} min:ia';
+  String minutes(int minutes) => '$minutes min:ia';
   @override
   String aboutAnHour(int minutes) => '~1 t';
   @override
-  String hours(int hours) => '${hours} t';
+  String hours(int hours) => '$hours t';
   @override
   String aDay(int hours) => '~pvä';
   @override
-  String days(int days) => '${days} pvää';
+  String days(int days) => '$days pvää';
   @override
   String aboutAMonth(int days) => '~kk';
   @override
-  String months(int months) => '${months} kk:ta';
+  String months(int months) => '$months kk:ta';
   @override
   String aboutAYear(int year) => '~1 v';
   @override

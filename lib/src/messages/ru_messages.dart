@@ -46,7 +46,7 @@ class RuMessages implements LookupMessages {
         'days' => 'день',
         'months' => 'месяц',
         'years' => 'год',
-        _ => ''
+        _ => '',
       };
     } else if (<int>[2, 3, 4].contains(mod) &&
         !<int>[12, 13, 14].contains(modH)) {
@@ -56,7 +56,7 @@ class RuMessages implements LookupMessages {
         'days' => 'дня',
         'months' => 'месяца',
         'years' => 'года',
-        _ => ''
+        _ => '',
       };
     }
     return switch (type) {
@@ -65,7 +65,7 @@ class RuMessages implements LookupMessages {
       'days' => 'дней',
       'months' => 'месяцев',
       'years' => 'лет',
-      _ => ''
+      _ => '',
     };
   }
 }

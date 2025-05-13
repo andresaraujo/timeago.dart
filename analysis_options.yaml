@@ -1,3 +1,4 @@
+include: package:lints/recommended.yaml
 analyzer:
   errors:
     unused_import: error
