@@ -8,6 +8,8 @@ final listContainer = querySelector("#list");
 var locale = 'en';
 
 main() async {
+  timeago.setLocaleMessages('am', timeago.AmMessages());
+  timeago.setLocaleMessages('am_short', timeago.AmShortMessages());
   timeago.setLocaleMessages('ar', timeago.ArMessages());
   timeago.setLocaleMessages('ar_short', timeago.ArShortMessages());
   timeago.setLocaleMessages('az', timeago.AzMessages());
