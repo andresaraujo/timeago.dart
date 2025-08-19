@@ -29,7 +29,7 @@ class RoMessages implements LookupMessages {
   @override
   String months(int months) => '$months luni';
   @override
-  String aboutAYear(int year) => 'un an';
+  String aboutAYear(int months) => 'un an';
   @override
   String years(int years) => '$years ani';
   @override
@@ -65,7 +65,7 @@ class RoShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months luni';
   @override
-  String aboutAYear(int year) => '~1 ani';
+  String aboutAYear(int months) => '~1 ani';
   @override
   String years(int years) => '$years ani';
   @override

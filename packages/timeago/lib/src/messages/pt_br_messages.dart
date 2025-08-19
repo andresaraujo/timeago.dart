@@ -29,7 +29,7 @@ class PtBrMessages implements LookupMessages {
   @override
   String months(int months) => '${months} meses';
   @override
-  String aboutAYear(int year) => 'cerca de um ano';
+  String aboutAYear(int months) => 'cerca de um ano';
   @override
   String years(int years) => '${years} anos';
   @override
@@ -65,7 +65,7 @@ class PtBrShortMessages implements LookupMessages {
   @override
   String months(int months) => '${months} meses';
   @override
-  String aboutAYear(int year) => '~1 ano';
+  String aboutAYear(int months) => '~1 ano';
   @override
   String years(int years) => '${years} anos';
   @override

@@ -29,7 +29,7 @@ class ViMessages implements LookupMessages {
   @override
   String months(int months) => '$months tháng';
   @override
-  String aboutAYear(int year) => 'khoảng 1 năm';
+  String aboutAYear(int months) => 'khoảng 1 năm';
   @override
   String years(int years) => '$years năm';
   @override
@@ -65,7 +65,7 @@ class ViShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months tháng';
   @override
-  String aboutAYear(int year) => '~1 năm';
+  String aboutAYear(int months) => '~1 năm';
   @override
   String years(int years) => '$years năm';
   @override

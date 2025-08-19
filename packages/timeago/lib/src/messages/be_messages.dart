@@ -29,7 +29,7 @@ class BeMessages implements LookupMessages {
   @override
   String months(int months) => '$months ${_convert(months, 'months')}';
   @override
-  String aboutAYear(int year) => 'год';
+  String aboutAYear(int months) => 'год';
   @override
   String years(int years) => '$years ${_convert(years, 'years')}';
   @override
@@ -116,7 +116,7 @@ class BeShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months мес.';
   @override
-  String aboutAYear(int year) => '~1 г.';
+  String aboutAYear(int months) => '~1 г.';
   @override
   String years(int years) => '$years г.';
   @override

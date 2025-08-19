@@ -29,7 +29,7 @@ class ThMessages implements LookupMessages {
   @override
   String months(int months) => '$months เดือน';
   @override
-  String aboutAYear(int year) => 'ประมาณหนึ่งปี';
+  String aboutAYear(int months) => 'ประมาณหนึ่งปี';
   @override
   String years(int years) => '$years ปี';
   @override
@@ -65,7 +65,7 @@ class ThShortMessages implements LookupMessages {
   @override
   String months(int months) => '$months ด';
   @override
-  String aboutAYear(int year) => '~1 ป';
+  String aboutAYear(int months) => '~1 ป';
   @override
   String years(int years) => '$years ป';
   @override

@@ -29,7 +29,7 @@ class IdMessages implements LookupMessages {
   @override
   String months(int months) => '$months bulan';
   @override
-  String aboutAYear(int year) => 'sekitar setahun';
+  String aboutAYear(int months) => 'sekitar setahun';
   @override
   String years(int years) => '$years tahun';
   @override
@@ -65,7 +65,7 @@ class IdShortMessages implements LookupMessages {
   @override
   String months(int months) => '${months}bln';
   @override
-  String aboutAYear(int year) => '~1th';
+  String aboutAYear(int months) => '~1th';
   @override
   String years(int years) => '${years}th';
   @override
