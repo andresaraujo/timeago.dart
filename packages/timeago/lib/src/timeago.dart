@@ -48,13 +48,18 @@ void setLocaleMessages(String locale, LookupMessages lookupMessages) {
 /// - If [allowFromNow] is passed, format will use the From prefix, ie. a date
 ///   5 minutes from now in 'en' locale will display as "5 minutes from now"
 String format(DateTime date,
-    {String? locale, DateTime? clock, bool allowFromNow = false}) {
+    {String? locale,
+    DateTime? clock,
+    bool allowFromNow = false,
+    LookupMessages? overrideMessages}) {
   final _locale = locale ?? _default;
   if (_lookupMessagesMap[_locale] == null) {
-    print("Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
+    print(
+        "Locale [$_locale] has not been added, using [$_default] as fallback. To add a locale use [setLocaleMessages]");
   }
   final _allowFromNow = allowFromNow;
-  final messages = _lookupMessagesMap[_locale] ?? EnMessages();
+  final messages =
+      overrideMessages ?? (_lookupMessagesMap[_locale] ?? EnMessages());
   final _clock = clock ?? DateTime.now();
   var elapsed = _clock.millisecondsSinceEpoch - date.millisecondsSinceEpoch;
 

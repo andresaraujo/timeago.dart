@@ -46,6 +46,20 @@ void main() {
       timeago.setLocaleMessages('en', timeago.EnMessages());
     });
 
+    test('should allow to override a locale in format call', () async {
+      var clock = now.add(Duration(seconds: 1));
+
+      // Default 'en' locale
+      var result = timeago.format(now,
+          clock: clock, overrideMessages: CustomEnglishMessages());
+      expect(result, equals('1 second ago'));
+
+      clock = now.add(Duration(seconds: 5));
+      result = timeago.format(now,
+          clock: clock, overrideMessages: CustomEnglishMessages());
+      expect(result, equals('5 seconds ago'));
+    });
+
     test('should allow to add a new locale', () async {
       var clock = now.add(Duration(seconds: 170));
 
